@@ -12,7 +12,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   You'll learn everything from what software you require, how to install it 
   and the basics of modding the Subnautica games. 
   Within the guide you'll write you own mod, step by step, to set you up to build your own, bigger and better, mods.
-baseurl: "/Subnautica" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ""
 github_username:  mroshaw
