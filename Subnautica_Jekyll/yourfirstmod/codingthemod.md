@@ -1,95 +1,17 @@
-# Your first Subnautica mod
+---
+layout: default
+title: Coding your mod
+nav_order: 4
+parent: Your first mod
+---
 
-## Creating a Visual Studio C# project
-
-Hop into Visual Studio and create a new project. You can use the "Class Library (.NET Framework)" template for this:
-
-![](.\media\classlibrarytemplate.png)
-
-**NOTE:** The "Class Library" template is not the one you want as it targets .NET Standard or .NET Core. You specifically want to select the template for .NET Framework
-
-Let's call it `MyFirstSubnauicaMod_BZ`, set a location and select `.NET Framework 4.7.2`. Click the Create button, and you're done! Who said this was difficult, right?!
-
-**NOTE:** You must select `.NET Framework 4.7.2`. If you don't see it, go back to the Visual Studio installer and select it. Alternatively, you can download it manually from [Microsoft.com](https://dotnet.microsoft.com/download/visual-studio-sdks)
-
-Okay, there's more to it than that before we start.
-
-In the Solution Explorer window, right click the "Solution" and change the name to something like `My Subnautica Mods`. This will allow us to create multiple mod projects within the same solution, allow code reuse and a single Git repository keeping everything together.
-
-You should have something like this:
-
-![](.\media\newprojectsolutionexplorer.png)
-
-You can ignore the other projects that you can see there.
-
-## Adding References
-
-Now we need to add references into our new project, so that we can reference our tools and Subnautica files.
-
-Right click `References` and select `Add Reference`. Click `Browse` and locate and add the following files:
-
-| Filename                   | Default / Sample Location                  |
-| -------------------------- | ------------------------------------------ |
-| UnityEngine.dll            | \<game>\\SubnauticaBelowZero_Data\\Managed |
-| UnityEngine.CoreModule.dll | \<game>\\SubnauticaBelowZero_Data\\Managed |
-| UnityEngine.UI.dll         | \<game>\\SubnauticaBelowZero_Data\\Managed |
-| 0Harmony.dll               | \<game>\\ BepInEx\\Core                    |
-| QModInstaller.dll          | \<game>\\BepInEx\\plugins\\QModManager     |
-| SMLHelper.dll              | \<game>\\BepInEx\\Core                     |
-
-If you've run Publicizer, as recommended, you should add these references:
-
-| Filename                                 | Default / Sample Location                                    |
-| ---------------------------------------- | ------------------------------------------------------------ |
-| Assembly-CSharp_publicized.dll           | \<game>\\SubnauticaBelowZero_Data\\Managed\\publicized_assemblies |
-| Assembly-CSharp-firstpass_publicized.dll | \<game>\\SubnauticaBelowZero_Data\\Managed\\publicized_assemblies |
-
-If you've not run Publicizer, add these:
-
-| Filename                      | Default / Sample Location                |
-| ----------------------------- | ---------------------------------------- |
-| Assembly-CSharp.dll           | game>\\SubnauticaBelowZero_Data\\Managed |
-| Assembly-CSharp-firstpass.dll | game>\\SubnauticaBelowZero_Data\\Managed |
-
-## Configuring your Assembly
-
-You'll want to change some of the settings of your compiled DLL.
-
-Right click the project in the Solution Explorer and select `Properties`.
-
-You'll see an Assembly Name and Default Namespace. If you've done a good job in picking a project name, you can leave these as is. Click the `Assembly` button and you'll see something like this:
-
-![](.\media\assemblyinformation.png)
-
-Again, you can leave Title as it is, or change it, and you can set some of the data items here with your name and copyright info. Your initial version will be 1.0.0.0, so leave this as is too. Click OK to close that dialog.
-
-Still in Properties, click the Build item. Here, we want to `Allow unsafe code`. This prevents any issues when we try to use protected methods and fields that have been "unlocked" for us via the Publicizer. If you've chosen not to use the Publicizer, you can leave this as is.
-
-One more thing we can do here is to setup our project to automatically deploy our mod after each successful build. We do this via the `Build Events` options. In Post-build event command line, you can add something like this:
-
-```
-mkdir "C:\Games\Steam\steamapps\common\SubnauticaZero\QMods\$(TargetName)"
-copy /Y "$(TargetPath)" "C:\Games\Steam\steamapps\common\SubnauticaZero\QMods\$(TargetName)"
-copy /Y "$(ProjectDir)\mod.json" "C:\Games\Steam\steamapps\common\SubnauticaZero\QMods\$(TargetName)\mod.json"
-```
-
-What this does is:
-
-1.  Creates a folder for our mod in the QMod folder, if one doesn't already exist
-
-2.  Copies the compiled mod DLL into the folder
-
-3.  Copies the `mod.json` file into the folder
-
-Right, I think we're about ready to write some code!
-
-## Coding your mod
+# Coding your mod
 
 In order to activate your mod, QModManager needs to know a bit about it. This is where the `mod.json` file comes in. Every mod has to have a `mod.json` file, so right click your project, select `Add new item...` and in the name, use `mod.json`. If Visual Studio has picked a template, don't worry, just select all and delete the content that it's added.
 
 Now, enter in the details about your mod:
 
-```{json}
+```json
 {
   "Id": "MyFirstSubnauticaMod_BZ",
   "DisplayName": "My First Subnautica Mod",
@@ -124,7 +46,7 @@ By default, the template will have created a class for you. Right click `Class1.
 
 You\'ll want to refer to those lovely references we added, so first up, add these statements. This will also set you up with a great feature of QMod, which is a log file that you can write to for debugging:
 
-```{csharp}
+```c#
 using System.Reflection;
 using HarmonyLib;
 using QModManager.API.ModLoading;
@@ -133,7 +55,7 @@ using Logger = QModManager.Utility.Logger;
 
 We'll need to tell Harmony to patch our code, so add this into the `Patch()` method:
 
-```{csharp}
+```c#
 [QModPatch]
 public static void Patch()
 {
@@ -148,7 +70,7 @@ public static void Patch()
 
 The `modName` generated above needs to be unique across mods -- this prevents mods interfering or otherwise messing with each other. The `<someuniquevalue>` should be replaced with something, well, unique. I tend to use my Discord / Github username, but it's entirely up to you:
 
-```{csharp
+```c#
 var modName = ($"mroshaw_{assembly.GetName().Name}");
 ```
 
@@ -168,7 +90,7 @@ using HarmonyLib;
 
 We're going to patch the "Knife", and make it do mega damage. So, we'll tell Harmony to patch the "Awake" method of the "Knife" class:
 
-```{csharp}
+```c#
 [HarmonyPatch(typeof(Knife))]
 [HarmonyPatch("Start")]
 internal class KnifeDamageMod
@@ -182,7 +104,7 @@ The `Start` method is a really useful class method. If implemented in a class, i
 
 We're going to manipulate the properties of the Knife, after it's been started. At this point, we're going to tweak the damage field to make it super powerful. This is what the code looks like:
 
-```{csharp}
+```c#
 [HarmonyPatch(typeof(Knife))]
 [HarmonyPatch("Start")]
 internal class KnifeDamageMod

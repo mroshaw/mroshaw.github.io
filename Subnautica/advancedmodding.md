@@ -1,4 +1,10 @@
-# The Modding Process
+---
+layout: default
+title: Advanced modding
+nav_order: 7
+---
+
+# Advance modding
 
 Okay, so you can ignore this section if you like. I think it's useful to talk a bit about planning, designing and balancing your mod.
 

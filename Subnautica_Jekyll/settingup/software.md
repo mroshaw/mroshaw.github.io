@@ -1,6 +1,11 @@
-# Getting Started
+---
+layout: default
+title: Software and tools
+nav_order: 1
+parent: Setting up for development
+---
 
-## Tools you'll need
+# Software you'll need
 
 You'll want to setup your development machine with the following tools:
 

@@ -1,4 +1,11 @@
-## Testing you mod
+---
+layout: default
+title: Testing your mod
+nav_order: 5
+parent: Your first mod
+---
+
+# Testing you mod
 
 You should now be able to fire up the game and do some testing.
 

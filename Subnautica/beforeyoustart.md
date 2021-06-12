@@ -1,4 +1,10 @@
-# Before you start
+---
+layout: default
+title: Before you begin
+nav_order: 5
+---
+
+# Before you begin
 
 Coding and writing mods is fun! It's more fun with the support of a community of brilliant, helpful, fellow modders. This guide wouldn't have been possible without the help and support of this community. Supporting such a community is as much about giving and sharing as it is about receiving help and support.
 

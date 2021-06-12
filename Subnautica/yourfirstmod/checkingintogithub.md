@@ -1,4 +1,11 @@
-## Checking in to GitHub
+---
+layout: default
+title: Checking into GitHub
+nav_order: 6
+parent: Your first mod
+---
+
+# Checking in to GitHub
 
 Well, mod created. Good work! If you took my advice and registered for an account on GitHub - good for you! You won't regret it! Now you've tested your first build, you can check your code into GitHub. This is easy in Visual Studio, or you can use GitHub Desktop.
 
