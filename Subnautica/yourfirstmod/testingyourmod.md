@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Testing your mod
-nav_order: 5
+nav_order: 6
 parent: Your first mod
 ---
 

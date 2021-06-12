@@ -15,7 +15,7 @@ You'll want to setup your development machine with the following tools:
 
 -   **QMod Manager** - this will help integrate your mod into the game, as well as provide useful functions to simplify your code.
 
--   **SML Helper** - not mandatory, but this mod provides loads of useful functions so that you don't have to write them yourself.
+-   **SML Helper** - not mandatory, but this mod provides loads of useful functions so that you don't have to "reinvent the wheel" when it comes to working with the lower level tools and functions involved in modding the game.
 
 -   **BepInExPublicizer** - not mandatory, but this plugin "unlocks" protected methods and fields in game objects that makes modding much more powerful.
 
@@ -25,7 +25,7 @@ You'll want to setup your development machine with the following tools:
 
 -   **Subnautica / Below Zero** - you'll need to have games themselves installed, of course!
 
-Here's a simple checklist of the tools, the versions used at the time of writing, and where to get them. You can check these off once you've set them all up, too.
+Here's a simple checklist of the tools, the versions used at the time of writing, and where to get them:
 
 | Tool Name                | Version Used           | Where to download                                            |
 | ------------------------ | ---------------------- | ------------------------------------------------------------ |
@@ -41,6 +41,16 @@ Here's a simple checklist of the tools, the versions used at the time of writing
 
 Don't forget to endorse the mods that you download and use from Nexusmods.
 
+Now, there are loads of tools and applications out there that can be used in modding games. The ones I've listed above have given me everything I need to make the simple mods I've been building, but you may find you need something more, or something different. There's no right answer to what tools and software to use: have a look around, and find the right thing for you and for what you want to do.
+
+Something to be very aware of is that development of these tools is pretty active and things tend to change quite frequently. It's really, really important to avail yourself of the latest versions and double check compatibility and support.
+
+On that note, it's worth bookmarking these pages:
+
+- [QModManager wiki](https://github.com/SubnauticaModding/QModManager/wiki)
+- [SMLHelper wiki](https://github.com/SubnauticaModding/SMLHelper/wiki)
+- [VersionChecker wiki](https://github.com/tobeyStraitjacket/VersionChecker/wiki)
+
 Once you've got everything downloaded, let's get it all setup and ready to go.
 
-**NOTE:** Don't worry too much about version numbers. Generally, the latest is fine, though look out for .NET Framework and compatibility between mods.
+Don't worry too much about version numbers. Generally, the latest is fine, though look out for .NET Framework and compatibility between mods.

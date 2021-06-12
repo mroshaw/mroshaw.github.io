@@ -39,7 +39,7 @@ Unzip the file that you download into \<game>\\BepInEx\\plugins\\Bepinex-Publici
 
 Run the game then exit. Return to Windows Explorer and go to this folder:
 
-`<game>\\SubnauticaZero_Data\\Managed\\publicized_assemblies`
+`<game>\SubnauticaZero_Data\Managed\publicized_assemblies`
 
 You'll see some new files that we'll include in our project.
 

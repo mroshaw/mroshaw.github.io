@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Coding your mod
-nav_order: 4
+nav_order: 5
 parent: Your first mod
 ---
 
