@@ -27,4 +27,6 @@ A couple of things jump out:
 1. There's a `Start` method. This is great, as we can hook that method and modify an instance of this class when it's initiated by the game.
 2. There's a `damage` field. It's like Christmas has come early, as this is just what we're looking to change!
 
+Again, this is a very simple scenario, and more often than not, it's not as clear-cut or simple. However, ultimately the answer is in there somewhere and time and experience will help you find it quicker and more efficiently, the more you mess around and make mods.
+
 So, if we can hook into the `Start` method, and increase the `damage` value of the `Knife` class instance, we should be in business. Let's see if we're right.
