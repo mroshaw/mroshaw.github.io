@@ -110,3 +110,4 @@ Some ideas to take this even further:
 2. Perhaps the player should pay a penalty for using an overpowered knife? How could you deplete the players oxygen by an appropriate amount, perhaps because of the effort involved in doing the extra damage?
 
 The answers are there, they just need a lot of digging to find, or a lot of time and patience from a Discord group!
+
