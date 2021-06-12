@@ -5,7 +5,7 @@ nav_order: 4
 parent: Your first mod
 ---
 
-Exploring the game files
+# Exploring the game files
 
 To build our mod, we need to find out some stuff. The goal is to mod the damage of the knife. Some key questions to answer, then:
 
@@ -18,7 +18,7 @@ You should see a bunch of stuff down the left hand side of the screen that might
 
 dnSpy has some brilliant search functionality, so in the search box at the bottom of the screen, change the `Search for` drop down to `class` and enter the word "Knife" and hit return. You should see a class called `Knife` in the left side of the screen, and you can expand it to see it's `methods` and `fields`:
 
-![](C:\Users\mrosh\Google Drive\Development\Visual Studio Projects\GitHub Pages\Subnautica\yourfirstmod\knifeclassresults.png)
+![](./media/knifeclassresults.png)
 
 Now, let me just tell you now - it's often not as easy as this! In some ways, you're second guessing the developers here, and hoping they've called their objects something reasonably similar to what you're looking for. This is not always the case - I'm looking at you, SnowFox. Hoverbike my ass...
 
