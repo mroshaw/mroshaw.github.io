@@ -1,9 +1,11 @@
-​---
+---
 layout: default
 title: Adding references
 nav_order: 2
 parent: Your first mod
-​---
+---
+
+
 
 # Adding References
 
@@ -34,3 +36,6 @@ If you've not run Publicizer, add these:
 | Assembly-CSharp.dll           | game>\\SubnauticaBelowZero_Data\\Managed |
 | Assembly-CSharp-firstpass.dll | game>\\SubnauticaBelowZero_Data\\Managed |
 
+With regards to references: you're not going to need all of these, all of the time. You might not need any of them, you might need to add new references if you decide to use a different set of modding tools and libraries.
+
+Things change all the time, and there are often many ways to "skin a cat" in the coding world. These references give me what I need to make my simple mods, and your mileage may vary.
