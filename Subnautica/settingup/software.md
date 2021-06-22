@@ -15,7 +15,7 @@ You'll want to setup your development machine with the following tools:
 
 -   **QMod Manager** - this will help integrate your mod into the game, as well as provide useful functions to simplify your code.
 
--   **SML Helper** - not mandatory, but this mod provides loads of useful functions so that you don't have to "reinvent the wheel" when it comes to working with the lower level tools and functions involved in modding the game.
+-   **SML Helper** - not mandatory, but this mod provides loads of useful functions so that you don't have to "reinvent the wheel" when it comes to working with the lower level tools and functions involved in modding the game. For example, SML Helper takes away a lot of work when it comes to hooking methods with Harmony, and presenting menus with QMod Manager.
 
 -   **BepInExPublicizer** - not mandatory, but this plugin "unlocks" protected methods and fields in game objects that makes modding much more powerful.
 
@@ -31,13 +31,13 @@ Here's a simple checklist of the tools, the versions used at the time of writing
 | ------------------------ | ---------------------- | ------------------------------------------------------------ |
 | Visual Studio            | 2019 Community Edition | [Microsoft.com](https://visualstudio.microsoft.com/vs/community/) |
 | dnSpy                    | 6.18                   | [Github.com](https://github.com/dnSpy/dnSpy/releases)        |
-| QModManager              | 4.15                   | [Nexusmods.com](https://www.nexusmods.com/subnautica/mods/201?tab=files) |
+| QModManager              | 4.2                    | [Nexusmods.com](https://www.nexusmods.com/subnautica/mods/201?tab=files) |
 | SML Helper               | 2.9.7                  | [Nexusmods.com](https://www.nexusmods.com/subnautica/mods/113?tab=files) |
-| QModManager (Below Zero) | 1.0.0                  | [Nexusmods.com](https://www.nexusmods.com/subnauticabelowzero/mods/1?tab=files) |
+| QModManager (Below Zero) | 4.2                    | [Nexusmods.com](https://www.nexusmods.com/subnauticabelowzero/mods/1?tab=files) |
 | SML Helper (Below Zero)  | 2.9.7                  | [Nexusmods.com](https://www.nexusmods.com/subnauticabelowzero/mods/34?tab=files) |
 | BepInEx-Publicizer       | 1.0.0                  | [Github.com](https://github.com/MrPurple6411/Bepinex-Tools/releases/tag/1.0.0-Publicizer) |
 | Vortex                   | 1.4.12                 | [Nexusmods.com](https://www.nexusmods.com/site/mods/1?tab=files) |
-| GetHub Desktop           | 2.8.3                  | [Github.com](https://desktop.github.com/)                    |
+| GitHub Desktop           | 2.8.3                  | [Github.com](https://desktop.github.com/)                    |
 
 Don't forget to endorse the mods that you download and use from Nexusmods.
 
