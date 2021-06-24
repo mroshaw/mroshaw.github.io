@@ -25,32 +25,30 @@ You'll want to setup your development machine with the following tools:
 
 -   **Subnautica / Below Zero** - you'll need to have games themselves installed, of course!
 
-Here's a simple checklist of the tools, the versions used at the time of writing, and where to get them:
+Here's a simple checklist of the tools that I've used in this tutorial and where to get them:
 
-| Tool Name                | Version Used           | Where to download                                            |
-| ------------------------ | ---------------------- | ------------------------------------------------------------ |
-| Visual Studio            | 2019 Community Edition | [Microsoft.com](https://visualstudio.microsoft.com/vs/community/) |
-| dnSpy                    | 6.18                   | [Github.com](https://github.com/dnSpy/dnSpy/releases)        |
-| QModManager              | 4.2                    | [Nexusmods.com](https://www.nexusmods.com/subnautica/mods/201?tab=files) |
-| SML Helper               | 2.9.7                  | [Nexusmods.com](https://www.nexusmods.com/subnautica/mods/113?tab=files) |
-| QModManager (Below Zero) | 4.2                    | [Nexusmods.com](https://www.nexusmods.com/subnauticabelowzero/mods/1?tab=files) |
-| SML Helper (Below Zero)  | 2.9.7                  | [Nexusmods.com](https://www.nexusmods.com/subnauticabelowzero/mods/34?tab=files) |
-| BepInEx-Publicizer       | 1.0.0                  | [Github.com](https://github.com/MrPurple6411/Bepinex-Tools/releases/tag/1.0.0-Publicizer) |
-| Vortex                   | 1.4.12                 | [Nexusmods.com](https://www.nexusmods.com/site/mods/1?tab=files) |
-| GitHub Desktop           | 2.8.3                  | [Github.com](https://desktop.github.com/)                    |
+| Tool Name                | Where to download                                            |
+| ------------------------ | ------------------------------------------------------------ |
+| Visual Studio            | [Microsoft.com](https://visualstudio.microsoft.com/vs/community/) |
+| dnSpy                    | [Github.com](https://github.com/dnSpy/dnSpy/releases)        |
+| QModManager              | [Nexusmods.com](https://www.nexusmods.com/subnautica/mods/201?tab=files) |
+| SML Helper               | [Nexusmods.com](https://www.nexusmods.com/subnautica/mods/113?tab=files) |
+| QModManager (Below Zero) | [Nexusmods.com](https://www.nexusmods.com/subnauticabelowzero/mods/1?tab=files) |
+| SML Helper (Below Zero)  | [Nexusmods.com](https://www.nexusmods.com/subnauticabelowzero/mods/34?tab=files) |
+| BepInEx-Publicizer       | [Github.com](https://github.com/MrPurple6411/Bepinex-Tools/releases/tag/1.0.0-Publicizer) |
+| Vortex                   | [Nexusmods.com](https://www.nexusmods.com/site/mods/1?tab=files) |
+| GitHub Desktop           | [Github.com](https://desktop.github.com/)                    |
 
-Don't forget to endorse the mods that you download and use from Nexusmods.
+Something to be very aware of is that development of these tools is pretty active and things tend to change quite frequently. It's really, really important to avail yourself of the latest versions and double check compatibility and support between various tools and game versions.
 
-Now, there are loads of tools and applications out there that can be used in modding games. The ones I've listed above have given me everything I need to make the simple mods I've been building, but you may find you need something more, or something different. There's no right answer to what tools and software to use: have a look around, and find the right thing for you and for what you want to do.
-
-Something to be very aware of is that development of these tools is pretty active and things tend to change quite frequently. It's really, really important to avail yourself of the latest versions and double check compatibility and support.
-
-On that note, it's worth bookmarking these pages:
+On that note, it's worth bookmarking these pages, where you'll always find the latest and greatest versions and details of these tools:
 
 - [QModManager wiki](https://github.com/SubnauticaModding/QModManager/wiki)
 - [SMLHelper wiki](https://github.com/SubnauticaModding/SMLHelper/wiki)
 - [VersionChecker wiki](https://github.com/tobeyStraitjacket/VersionChecker/wiki)
 
-Once you've got everything downloaded, let's get it all setup and ready to go.
+Don't forget to endorse the mods that you download and use from Nexusmods.
 
-Don't worry too much about version numbers. Generally, the latest is fine, though look out for .NET Framework and compatibility between mods.
+Now, there are loads of other tools and applications out there that can be used in modding games. The ones I've listed above have given me everything I need to make the simple mods I've been building, but you may find you need something more, or something different. There's no right answer to what tools and software to use: have a look around, and find the right thing for you and for what you want to do.
+
+Once you've got everything downloaded, let's get it all setup and ready to go.
