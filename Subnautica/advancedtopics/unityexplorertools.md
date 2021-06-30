@@ -11,13 +11,11 @@ One of the biggest challenges when you begin modding is finding out, well, where
 
 A fantastic way to help you with this is by using one of the many awesome "Unity Explorer" tools that are out there today. Whereas dnSpy allows you to peruse the compiled code for information, these tools allow you to explore "real time" instances of the code, so you can directly observe behaviour and the changes your code is making to the game.
 
-For this tutorial, I'm using "Unity Explorer" by sinai-dev. You can download this great tool from their GitHub repository:
-
-https://github.com/sinai-dev/UnityExplorer/releases
+For this tutorial, I'm using "Unity Explorer" by sinai-dev. You can download this great tool from [their GitHub repository](https://github.com/sinai-dev/UnityExplorer/releases).
 
 There are a number of such tools available for download, and you're encouraged to search them out, give them a try, and find out what works best for you.
 
-For now, down the latest version of "Unity Explorer" for BepInEx version 5, which is the version that ships with QModManager at the time of writing. Be sure to check the [QModManager](https://github.com/SubnauticaModding/QModManager/wiki) Wiki for any changes to this dependency!
+For now, down the latest version of "Unity Explorer" for BepInEx version 5, which is the version that ships with QModManager at the time of writing. Be sure to check the [QModManager](https://github.com/SubnauticaModding/QModManager/wiki) Wiki for any changes to this dependency.
 
 Simply unzip the DLL and copy it into the game BepInEx plugins folder. For me, that's:
 
@@ -29,7 +27,7 @@ Now launch the game and you should see something like this. If you don't, try pr
 
 Once you've got this working, click play and load up a save game.
 
-Within the Object Explorer, search for "Player". You should see a "top level" object called "Player", shown in green text. Click on this, and you'll see a "real time" view of properties of the player character! You can review and tweak properties within this, to find values of interest and observe the behaviour of changes that you make, in real time.
+Within the Object Explorer, search for "Player". You should see a "top level" object called "Player", shown in green text. Click on this, and you'll see a "real time" view of properties of the player character. You can review and tweak properties within this, to find values of interest and observe the behaviour of changes that you make, in real time.
 
 ![](.\media\unityexplorerplayerhealth.png)
 
