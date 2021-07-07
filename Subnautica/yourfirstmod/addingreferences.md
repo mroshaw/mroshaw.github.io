@@ -20,7 +20,7 @@ Right click `References` and select `Add Reference`. Click `Browse` and locate a
 | UnityEngine.UI.dll         | \<game>\\SubnauticaBelowZero_Data\\Managed |
 | 0Harmony.dll               | \<game>\\ BepInEx\\Core                    |
 | QModInstaller.dll          | \<game>\\BepInEx\\plugins\\QModManager     |
-| SMLHelper.dll              | \<game>\\BepInEx\\Core                     |
+| SMLHelper.dll              | \<game>\\QMods\SMLHelper_BZ                |
 
 If you've run Publicizer, as recommended, you should add these references:
 
