@@ -11,6 +11,12 @@ You'll want to change some of the settings of your compiled DLL.
 
 Right click the project in the Solution Explorer and select `Properties`.
 
+In case you've forgotten, your project sits within your solution and can be seen in the Solution Explorer:
+
+![](.\media\SolutionProject.png)
+
+In the image above, the `solution` is in red, and the `project` is in yellow. It's the project that you want to right click.
+
 You'll see an Assembly Name and Default Namespace. If you've done a good job in picking a project name, you can leave these as is. Click the `Assembly` button and you'll see something like this:
 
 ![](.\media\assemblyinformation.png)
