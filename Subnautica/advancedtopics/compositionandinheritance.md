@@ -35,7 +35,7 @@ Instead of having to travel up and down a hierarchy, you can simply search withi
 LiveMixin playHealth = Player.main.GetComponent<LiveMixin>();
 ```
 
-You can also use other Unity methods to grab lists of components. For example, to get all of the Aquarium Modules attached to the SeaTruck:
+You can also use other Unity methods to grab lists of components. For example, to get all of the Aquarium Modules attached to the Seatruck:
 
 ```c#
 SeaTruckAquarium[] seaTruckAquariums = seaTruck.GetComponentsInChildren<SeaTruckAquarium>();
@@ -45,4 +45,7 @@ foreach (SeaTruckAquarium seaTruckAquarium in seaTruckAquariums)
 }
 ```
 
+Now, there are use cases for inheritance and use cases for composition. Whilst it's true that lots of the game functionality in Subnautica is coded using components, inheritance still plays a part, and it's typically that you'll find both in use while developing mods for these games.
+
 I'll add more information on Composition here as I learn!
+
