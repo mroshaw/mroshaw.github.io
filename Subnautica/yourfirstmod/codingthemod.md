@@ -169,6 +169,9 @@ One other thing to consider here is the method definition. We have some options 
 
 1. We can always include `__instance` in our method arguments, and this will always pass in the instance on which the method was invoked.
 2. We can also pass in parameters from the game method, if we want to manipulate or refer to those, either directly or by reference.
+3. We can specify `__result` as a `ref` parameter of the same type used by the patched method, to override the return value of the patched method
+
+Note that in a scenario where you are using a `HarmonyPrefix` patch, you can use a return type of `bool` to determine whether to continue to execute the game class method (return `true`) or whether to skip the game class method (return `false`). That way, you can choose to do something first, then allow the method to continue or completely override the method altogether, bypassing the game code.
 
 Things get quite involved at this point, as there are a number of rules and options that apply to your method definition, depending on what you want to do and what Harmony annotation you're using. The best place to find out more is in the [Harmony documentation](https://harmony.pardeike.net/articles/patching.html), which explains the concepts in detail.
 
