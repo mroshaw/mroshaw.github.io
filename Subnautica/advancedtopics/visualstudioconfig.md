@@ -19,7 +19,7 @@ Build events allow us to a bit more with the compiled assembly, and associated f
 
 Here's a really straight forward `Post-build event` script that will run immediately after a successful build:
 
-```sh
+```powershell
 mkdir "C:\Games\Steam\steamapps\common\SubnauticaZero\QMods\$(TargetName)"
 xcopy /q/y/i "$(TargetPath)" "C:\Games\Steam\steamapps\common\SubnauticaZero\QMods\$(TargetName)" /E /H /C
 xcopy /q/y/i "$(ProjectDir)\mod.json" "C:\Games\Steam\steamapps\common\SubnauticaZero\QMods\$(TargetName)\mod.json" /E /H /C
