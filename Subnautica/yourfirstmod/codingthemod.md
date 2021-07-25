@@ -206,4 +206,4 @@ namespace MyFirstSubnauticaMod_BZ
 }
 ```
 
-You can build this now by right clicking the project and selecting `Build`. All going well, you'll see `Build succeeded`. If not, go back through and check your code. You can also find the full source for this part of the tutorial [on my GitHub](https://github.com/mroshaw/SubnauticaMods/tree/main/MyFirstSubnauticaMod_BZ).
+You can build this now by right clicking the project and selecting `Build`. All going well, you'll see `Build succeeded`. If not, go back through and check your code. You can also find the full source for this part of the tutorial [in this GitHub repository](https://github.com/mroshaw/BeginnersGuideModSubnautica).

@@ -14,13 +14,15 @@ Therefore, I would suggest you do two things before you begin:
 
 -   **Set yourself up a repository on [GitHub](https://github.com/)** -- sharing and collaborating on code is one of the best ways to learn and improve. It's easy to do, just get yourself onto GitHub.com and register. We'll cover creating your first repository in the next section.
 
-Finally, a couple more pointers before we start:
+Finally, a few more pointers before we start:
 
 1. The examples below will use Subnautica: Below Zero. The principals, process and concepts are identical for the original Subnautica game, but do note that the tutorial is specifically focused on BZ.
 
 2. Where I refer to \<game>, this is the folder in which your Subnautica game is installed. For example, for me, it's: 
 
    `C:\Games\Steam\steamapps\common\SubnauticaZero`
+   
+3. You can find the full source code for the sample mod in [this repository on GitHub](https://github.com/mroshaw/BeginnersGuideModSubnautica).
 
 Right, let's make a mod!
 
