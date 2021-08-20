@@ -7,11 +7,13 @@ parent: Advanced modding
 
 ---
 
-## Composition and inheritance
+# Composition and inheritance
 
 The Subnautica games are written using the Unity development environment. You can find out a wealth of information about Unity from a huge number of sources, though you might want to start at the [Unity home page](https://unity.com/).
 
 While an in-depth knowledge of Unity isn't required for modding, understanding it's core concepts will make it much easier to implement some of your ideas.
+
+## What is Composition?
 
 One of the first "Eureka!" moments for me, was learning about composition and how it differs from my ingrained knowledge of object oriented programming. I'm going to try to explain in the way that I rationalise this in my head, so please bear with me!
 
@@ -47,5 +49,7 @@ foreach (SeaTruckAquarium seaTruckAquarium in seaTruckAquariums)
 
 Now, there are use cases for inheritance and use cases for composition. Whilst it's true that lots of the game functionality in Subnautica is coded using components, inheritance still plays a part, and it's typically that you'll find both in use while developing mods for these games.
 
-I'll add more information on Composition here as I learn!
+## Why is Composition "good" for modding?
+
+Composition is great, because you don't need to know everything about an object to start to tweak and change it. 
 

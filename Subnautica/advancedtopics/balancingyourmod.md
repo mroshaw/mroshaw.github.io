@@ -5,7 +5,7 @@ nav_order: 1
 parent: Advanced modding
 ---
 
-## Balancing your mod
+# Balancing your mod
 
 There are a load of reasons for modding a game and it can be a very personal thing. In fact, many mod authors build mods for themselves, to make the game more like the game they themselves wanted it to be. They share their mods because, well, because they're generally very nice people who just like to share the love of their favourite games with people who feel the same way. Other's make mods to make the game easier, overcome or fix bugs, downright cheat - all valid and good reasons to tinker with game code!
 
