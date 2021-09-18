@@ -2,7 +2,7 @@
 layout: default
 title: Testing your mod
 nav_order: 6
-parent: Your first mod
+parent: Your first sn mod
 ---
 
 # Testing you mod
@@ -20,9 +20,9 @@ Exit the game and launch it once again. Load up a game and equip your knife -- t
 Open this in Notepad or your favourite text editor and have a look. You'll see lots of information in here, and you should also see entries prefixed with your mod name:
 
 ```
-[SMLHelper/Debug] Attempting to handle console command: tools
-[SMLHelper/Debug] No command listener registered for [tools].
-[MyFirstSubnauticaMod_BZ:DEBUG] Knife damage was: 20, is now: 40
+PumpCoroutine force syncing skippable request (UWE.SkippableLoadingPrefabRequest, 'Load prefab 'WorldEntities/Tools/Scanner'')
+PumpCoroutine force syncing skippable request (UWE.SkippableLoadingPrefabRequest, 'Load prefab 'WorldEntities/Tools/Builder'')
+[KnifeDamageMod_SN:DEBUG] Knife damage was: 20, is now: 40
 ```
 
 Now get out there and stab some sea life!

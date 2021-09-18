@@ -2,7 +2,7 @@
 layout: default
 title: Checking into GitHub
 nav_order: 7
-parent: Your first mod
+parent: Your first sn mod
 ---
 
 # Checking in to GitHub

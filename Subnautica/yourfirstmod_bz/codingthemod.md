@@ -2,7 +2,7 @@
 layout: default
 title: Coding your mod
 nav_order: 5
-parent: Your first mod
+parent: Your first bz mod
 ---
 
 # Coding your mod
@@ -13,12 +13,12 @@ Now, enter in the details about your mod:
 
 ```json
 {
-  "Id": "MyFirstSubnauticaMod_BZ",
-  "DisplayName": "My First Subnautica Mod",
+  "Id": "KnifeDamageMod_BZ",
+  "DisplayName": "Knife Damage Mod",
   "Author": "Oli Ollerenshaw",
   "Version": "1.0.0",
   "Enable": true,
-  "AssemblyName": "MyFirstSubnauticaMod_BZ.dll",
+  "AssemblyName": "KnifeDamageMod_BZ.dll",
   "VersionDependencies": {
     "SMLHelper": "2.9.6"
   },
@@ -84,7 +84,7 @@ using HarmonyLib;
 using QModManager.API.ModLoading;
 using Logger = QModManager.Utility.Logger;
 
-namespace MyFirstSubnauticaMod_BZ
+namespace KnifeDamageMod_BZ
 {
     [QModCore]
     public static class QMod
@@ -104,7 +104,7 @@ namespace MyFirstSubnauticaMod_BZ
 }
 ```
 
-Okay, so we probably want to do something with the game code! Again, personal preference, but I like to create a new class for each class that I'm impacting. For the tutorial, we'll just go with something simple. Do that by right clicking on your project and selecting `Add item...`. Select `Class` and give it a sensible name. For this tutorial, we'll go for `MyFirstMod.cs`.
+Okay, so we probably want to do something with the game code! Again, personal preference, but I like to create a new class for each class that I'm impacting. For the tutorial, we'll just go with something simple. Do that by right clicking on your project and selecting `Add item...`. Select `Class` and give it a sensible name. For this tutorial, we'll go for `KnifeDamageMod.cs`.
 
 At this stage, your Visual Studio project should look a bit like this:
 
@@ -119,10 +119,20 @@ using HarmonyLib;
 We're going to patch the "Knife", and make it do mega damage. So, we'll tell Harmony to patch the `Start` method of the `Knife` class:
 
 ```c#
-[HarmonyPatch(typeof(Knife))]
-[HarmonyPatch("Start")]
-internal class KnifeDamageMod
+using HarmonyLib;
+using Logger = QModManager.Utility.Logger;
+
+namespace KnifeDamageMod_BZ
 {
+    class KnifeDamageMod
+    {
+        [HarmonyPatch(typeof(Knife))]
+        [HarmonyPatch("Start")]
+        internal class PatchKnifeStart
+        {
+			// Our code goes here
+        }
+    }
 }
 ```
 
@@ -135,7 +145,7 @@ We're going to manipulate the properties of the Knife, after it's been started. 
 ```c#
 [HarmonyPatch(typeof(Knife))]
 [HarmonyPatch("Start")]
-internal class KnifeDamageMod
+internal class PatchKnifeStart
 {
     [HarmonyPostfix]
     public static void Postfix(Knife __instance)
@@ -181,16 +191,16 @@ Anyway, enough of this theoretical nonsense! Go back to your code and check that
 using HarmonyLib;
 using Logger = QModManager.Utility.Logger;
 
-namespace MyFirstSubnauticaMod_BZ
+namespace KnifeDamageMod_BZ
 {
     /// <summary>
     /// Class to mod the knife
     /// </summary>
-    class MyFirstMod
+    class KnifeDamageMod
     {
         [HarmonyPatch(typeof(Knife))]
         [HarmonyPatch("Start")]
-        internal class KnifeDamageMod
+        internal class PatchKnifeStart
         {
             [HarmonyPostfix]
             public static void Postfix(Knife __instance)
@@ -206,4 +216,8 @@ namespace MyFirstSubnauticaMod_BZ
 }
 ```
 
-You can build this now by right clicking the project and selecting `Build`. All going well, you'll see `Build succeeded`. If not, go back through and check your code. You can also find the full source for this part of the tutorial [in this GitHub repository](https://github.com/mroshaw/BeginnersGuideModSubnautica).
+You can build this now by right clicking the project and selecting `Build`. All going well, you'll see `Build succeeded`. If not, go back through and check your code.
+
+You can also find the full source for this part of the tutorial [in this GitHub repository](https://github.com/mroshaw/BeginnersGuideModSubnautica), so if you have any problems whatsoever, have a look at the source in the repo and compare it to what you have.
+
+Your `Post Build Scripts` should also have run, creating a folder in your game location and copying in the DLL and json files, giving the game everything it needs to run your snazzy new mod!

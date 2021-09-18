@@ -2,7 +2,7 @@
 layout: default
 title: Enhancing your mod
 nav_order: 7
-parent: Your first mod
+parent: Your first bz mod
 ---
 
 # Enhancing your mod
@@ -25,7 +25,7 @@ using SMLHelper.V2.Json;
 using SMLHelper.V2.Options.Attributes;
 using SMLHelper.V2.Handlers;
 
-namespace MyFirstSubnauticaMod_BZ
+namespace KnifeDamageMod_BZ
 {
     [QModCore]
     public static class QMod
@@ -50,7 +50,7 @@ namespace MyFirstSubnauticaMod_BZ
     // ### Enhancing the mod ###
     /// Set up the Mod menu
     /// </summary>
-    [Menu("My First Mod")]
+    [Menu("Knife Damage")]
     public class Config : ConfigFile
     {
         /// <summary>
@@ -65,22 +65,22 @@ namespace MyFirstSubnauticaMod_BZ
 
 SML Helper is utterly amazing, and it just makes the whole process so incredibly straight forward. What this code will do is to add a new menu with a slider control. Changes made to that control will be available to us in our code, by referring back to the `KnifeModifier` field in our class instance. Brilliant!
 
-So, the rest is even easier! Open up the `MyFirstMod.cs` file and find the code we wrote to modify the knife damage. We need to replace that "2" with the value our player has selected:
+So, the rest is even easier! Open up the `KinfeDamageMod.cs` file and find the code we wrote to modify the knife damage. We need to replace that "2" with the value our player has selected:
 
 ```c#
 using HarmonyLib;
 using Logger = QModManager.Utility.Logger;
 
-namespace MyFirstSubnauticaMod_BZ
+namespace KnifeDamageMod_BZ
 {
     /// <summary>
     /// Class to mod the knife
     /// </summary>
-    class MyFirstMod
+    class KnifeDamageMod
     {
         [HarmonyPatch(typeof(Knife))]
         [HarmonyPatch("Start")]
-        internal class KnifeDamageMod
+        internal class PatchKnifeStart
         {
             [HarmonyPostfix]
             public static void Postfix(Knife __instance)
@@ -88,7 +88,8 @@ namespace MyFirstSubnauticaMod_BZ
                 // ### Enhancing the mod ###
                 // Get the damage modifier
                 float damageModifier = QMod.Config.KnifeModifier;
-                // Double the knife damage
+
+                // Multiply the damage by our modifier
                 float knifeDamage = __instance.damage;
                 float newKnifeDamage = knifeDamage * damageModifier;
                 __instance.damage = newKnifeDamage;
@@ -100,7 +101,13 @@ namespace MyFirstSubnauticaMod_BZ
 }
 ```
 
-Make your changes, compile and then test again. Don't forget to check in `qmodmanager_log-SubnauticaZero.txt` if you're having problems.
+Make your changes, compile and then test again.
+
+When you start the game, go into Options > Mod and check out your new mod menu:
+
+![](.\media\knifedamagemodmenu.png)
+
+Move the slider to set the damage modifier and start your game. Don't forget to check in `qmodmanager_log-Subnautica.txt` if you're having problems.
 
 As you can see, you can slowly start to add more and more features to you mod, enhancing and testing as you go.
 
@@ -109,5 +116,5 @@ Some ideas to take this even further:
 1. The knife damage modifier is only applied in the `Start` method, so the player will have to restart the game if they want to change this while in mid-game. How could you solve this?
 2. Perhaps the player should pay a penalty for using an overpowered knife? How could you deplete the players oxygen by an appropriate amount, perhaps because of the effort involved in doing the extra damage?
 
-The answers are there, they just need a lot of digging to find, or a lot of time and patience from a Discord group!
+The answers are there, they just need a lot of digging to find, a lot of time and patience, and help and advice from a very friendly and helpful Discord group!
 

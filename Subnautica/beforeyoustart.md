@@ -16,13 +16,16 @@ Therefore, I would suggest you do two things before you begin:
 
 Finally, a few more pointers before we start:
 
-1. The examples below will use Subnautica: Below Zero. The principals, process and concepts are identical for the original Subnautica game, but do note that the tutorial is specifically focused on BZ.
+1. There are two "your first mod" sections coming up, one for the original Subnautica game and one for Below Zero. Just be aware that the principals, process and concepts are identical for each game, but in many cases the classes, methods and attributes for what might seem like similar objects may be very different. You'll see this first hand as we attempt to mod the knife that's in both games.
 
 2. Where I refer to \<game>, this is the folder in which your Subnautica game is installed. For example, for me, it's: 
 
    `C:\Games\Steam\steamapps\common\SubnauticaZero`
    
-3. You can find the full source code for the sample mod in [this repository on GitHub](https://github.com/mroshaw/BeginnersGuideModSubnautica).
+   and
+   
+   `C:\Games\Steam\steamapps\common\Subnautica`
+   
+3. You can find the full source code for the sample mods in [this repository on GitHub](https://github.com/mroshaw/BeginnersGuideModSubnautica).
 
-Right, let's make a mod!
-
+So, choose your path, is it going to be the original Subnautica or Below Zero? Take your pick, and let's code us a mod!
