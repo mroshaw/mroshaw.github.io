@@ -151,13 +151,13 @@ internal class PatchPlayerToolAwake
         // Check to see if this is the knife
         if (__instance.GetType() == typeof(Knife))
         {
-            Knife knife = __instance.GetComponent<Knife>();
+            Knife knife = __instance as Knife;
         }
     }
 }
 ```
 
-This just shows how amazingly simple it is to work with Unity's component model! You can read more about this later in the guide, but for now, what you can see is that we have identified the creation of a `PlayerTool` of type `Knife`, and we're grabbing a pointer to it.
+So, we have an instance of `PlayerTool` and we've cast it to the `Knife` type, so that we can start to make some changes.
 
 What you can also see here is that if the object is not of type `Knife`, we do nothing. As this is a `PostFix` patch, we just let the game carry on as if nothing has happened. Only when we see the `Knife` waking up, do we want to write some code.
 
@@ -172,7 +172,7 @@ internal class PatchPlayerToolAwake
         // Check to see if this is the knife
         if (__instance.GetType() == typeof(Knife))
         {
-            Knife knife = __instance.GetComponent<Knife>();
+            Knife knife = __instance as Knife;
             // Double the knife damage
             float knifeDamage = knife.damage;
             float newKnifeDamage = knifeDamage * 2;
@@ -227,7 +227,7 @@ namespace KnifeDamageMod_SN
             // Check to see if this is the knife
             if (__instance.GetType() == typeof(Knife))
             {
-                Knife knife = __instance.GetComponent<Knife>();
+                Knife knife = __instance as Knife;
                 // Double the knife damage
                 float knifeDamage = knife.damage;
                 float newKnifeDamage = knifeDamage * 2;

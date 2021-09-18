@@ -85,7 +85,7 @@ namespace KnifeDamageMod_SN
                 // Check to see if this is the knife
                 if (__instance.GetType() == typeof(Knife))
                 {
-                    Knife knife = __instance.GetComponent<Knife>();
+                    Knife knife = __instance as Knife;
 
                     // ### Enhancing the mod ###
                     // Get the damage modifier
