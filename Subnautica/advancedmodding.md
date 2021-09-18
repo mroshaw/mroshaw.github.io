@@ -5,7 +5,7 @@ nav_order: 8
 has_children: true
 ---
 
-# Advance modding
+# Advanced modding
 
 There is so much more to modding games than I've covered so far, and if you want to make some crazy mods, you'll have to delve a little deeper. I'm on this very journey myself right now, so I'll use this section to summarise my learnings on advanced tools and techniques "as they happen".
 
