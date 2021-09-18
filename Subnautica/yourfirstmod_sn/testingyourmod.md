@@ -2,7 +2,7 @@
 layout: default
 title: Testing your mod
 nav_order: 6
-parent: Your first sn mod
+parent: Your first Subnautica mod
 ---
 
 # Testing you mod

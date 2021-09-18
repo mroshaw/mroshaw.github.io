@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Your first sn mod
+title: Your first Subnautica mod
 nav_order: 7
 has_children: true
 ---

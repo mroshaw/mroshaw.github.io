@@ -2,7 +2,7 @@
 layout: default
 title: Exploring the game files
 nav_order: 4
-parent: Your first sn mod
+parent: Your first Subnautica mod
 ---
 
 # Exploring the game files

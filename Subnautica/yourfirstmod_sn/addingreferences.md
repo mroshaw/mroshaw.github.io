@@ -2,7 +2,7 @@
 layout: default
 title: Adding references
 nav_order: 2
-parent: Your first sn mod
+parent: Your first Subnautica mod
 ---
 
 

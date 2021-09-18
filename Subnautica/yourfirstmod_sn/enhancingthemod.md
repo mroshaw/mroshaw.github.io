@@ -2,7 +2,7 @@
 layout: default
 title: Enhancing your mod
 nav_order: 7
-parent: Your first sn mod
+parent: Your first Subnautica mod
 ---
 
 # Enhancing your mod

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Your first bz mod
+title: Your first Below Zero mod
 nav_order: 8
 has_children: true
 ---

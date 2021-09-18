@@ -2,7 +2,7 @@
 layout: default
 title: Exploring the game files
 nav_order: 4
-parent: Your first bz mod
+parent: Your first Below Zero mod
 ---
 
 # Exploring the game files

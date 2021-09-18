@@ -2,7 +2,7 @@
 layout: default
 title: Coding your mod
 nav_order: 5
-parent: Your first bz mod
+parent: Your first Below Zero mod
 ---
 
 # Coding your mod

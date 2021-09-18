@@ -2,7 +2,7 @@
 layout: default
 title: Testing your mod
 nav_order: 6
-parent: Your first bz mod
+parent: Your first Below Zero mod
 ---
 
 # Testing you mod

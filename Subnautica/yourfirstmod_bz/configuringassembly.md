@@ -2,7 +2,7 @@
 layout: default
 title: Configuring the Assembly
 nav_order: 3
-parent: Your first bz mod
+parent: Your first Below Zero mod
 ---
 
 ## Configuring the Assembly

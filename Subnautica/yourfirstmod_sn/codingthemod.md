@@ -2,7 +2,7 @@
 layout: default
 title: Coding your mod
 nav_order: 5
-parent: Your first sn mod
+parent: Your first Subnautica mod
 ---
 
 # Coding your mod

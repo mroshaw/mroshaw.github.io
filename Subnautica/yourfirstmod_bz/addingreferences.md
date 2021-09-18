@@ -2,7 +2,7 @@
 layout: default
 title: Adding references
 nav_order: 2
-parent: Your first bz mod
+parent: Your first Below Zero mod
 ---
 
 

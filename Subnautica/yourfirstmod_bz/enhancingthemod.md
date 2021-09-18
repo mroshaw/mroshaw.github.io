@@ -2,7 +2,7 @@
 layout: default
 title: Enhancing your mod
 nav_order: 7
-parent: Your first bz mod
+parent: Your first Below Zero mod
 ---
 
 # Enhancing your mod

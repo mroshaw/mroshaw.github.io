@@ -2,7 +2,7 @@
 layout: default
 title: Checking into GitHub
 nav_order: 7
-parent: Your first bz mod
+parent: Your first Below Zero mod
 ---
 
 # Checking in to GitHub

@@ -2,7 +2,7 @@
 layout: default
 title: Creating a Visual Studio project
 nav_order: 1
-parent: Your first bz mod
+parent: Your first Below Zero mod
 ---
 
 # Creating a Visual Studio C# project

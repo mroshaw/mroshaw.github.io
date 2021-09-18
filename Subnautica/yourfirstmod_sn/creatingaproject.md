@@ -2,7 +2,7 @@
 layout: default
 title: Creating a Visual Studio project
 nav_order: 1
-parent: Your first sn mod
+parent: Your first Subnautica mod
 ---
 
 # Creating a Visual Studio C# project
