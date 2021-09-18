@@ -14,13 +14,25 @@ If you have ever played Subnautica, you have more than likely encountered a huge
 
 ## Designing your creature
 
+### Overview
+
 Before you actually begin implementing a creature into Subnautica. You will want some sort of initial plan for how your creature will look, act, and interact with the world.
+
+### The basics
 
 You will need to have a model for your creature, preferably in the `.fbx` format. If you do have a model already, nice! If not, there are plenty of models online you could use, and there are also plenty of artists you can commission to create one.
 
-One thing you need to decide on is how your creature moves throughout the world. Will it be slow? Will it be fast? Will it wander long distances? Will it hunt small fish? Will it hunt you? Will it hunt leviathans? Will it sleep at night? Will it hide in the abyss at day but come out to hunt at night? Will it be a horror-related creature which relentlessly hunts the player? These are all things to consider, but it's ultimately up to you how it will behave.
+The main thing you need to decide on is how your creature will move throughout the world. Will it be slow? Will it be fast? Will it wander long distances? Will it be peaceful? Will it hunt small fish? Will it hunt you? Will it hunt leviathans? Will it sleep at night? Will it hide in the abyss at day but come out to hunt at night? Will it be a horror-related creature which relentlessly hunts the player? Will its body be rigid, or will it use "Trails" and flow naturally through the water? These are all things to consider, but it's ultimately up to you how it will look and behave.
 
-The most important thing to keep in mind for aggressive fish is that they have to be fun to play against. Insta-kill attacks are almost never fun. Even the Gargantuan Leviathan juvenile, with a bite force apparently as strong as that of roughly a hundred thousand nile crocodiles, doesn't have an insta-kill attack. Sometimes you have to take game design/balance over realism.
+### Aggressive fauna
+
+The most important thing to keep in mind for aggressive fish is that they have to be fun to play against.
+
+Insta-kill attacks are almost never fun. Even the Gargantuan Leviathan juvenile, with a bite force apparently as strong as that of roughly a hundred thousand nile crocodiles, doesn't have an insta-kill attack.
+
+Sometimes you have to take game design/balance over realism.
+
+### Placement in the world
 
 You also want to decide where your creature will spawn.
 * Leviathan spawns should be limited and should use SMLHelper's `CoordinatedSpawns` system.
@@ -28,7 +40,9 @@ You also want to decide where your creature will spawn.
   * Be careful to not make the spawns for your creatures too common, because they _will_ override vanilla spawns.
 * Do not add overly aggressive fauna into early game locations, unless you are looking to create a challenge.
 
-Things you may also want to decide on:
+### Other considerations
+
+There are many other things you can take into consideration before implementing your creature:
 * Lore (databank entry)
 * Cinematic attacks (like the Reaper Leviathan grab)
 * Whether the creature is edible or not
