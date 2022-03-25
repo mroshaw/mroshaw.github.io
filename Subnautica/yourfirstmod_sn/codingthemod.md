@@ -36,7 +36,7 @@ The important items here are the Assembly name, dependencies and game.
 
 **NOTE:** It's a good idea to keep on top of this, as well as the details of your Assembly, as mods like VersionChecker and QModManager itself, can make good use these values.
 
-Okay, we're looking good. Now we can write some C#.
+Okay, we're looking good. Now we can write some C#. Just to note, each time we add some code, I'll show the full content of the file at that point in time. It will make this section seem longer, but it will hopefully remove any confusion of what goes where and when.
 
 What I do, and this is completely down to personal preference, is to have a single class to handle registering the mod and managing options. I always call this class `QMod`, but you can call it whatever you want. We'll stick with this for the tutorial.
 
@@ -53,18 +53,30 @@ using QModManager.API.ModLoading;
 using Logger = QModManager.Utility.Logger;
 ```
 
-We'll need to tell Harmony to patch our code, so add this into the `Patch()` method:
+We'll need to tell Harmony to patch our code, so add this into a `Patch()` method with the appropriate Harmony annotations in place:
 
 ```c#
-[QModPatch]
-public static void Patch()
+using System.Reflection;
+using HarmonyLib;
+using QModManager.API.ModLoading;
+using Logger = QModManager.Utility.Logger;
+
+namespace KnifeDamageMod_SN
 {
-    var assembly = Assembly.GetExecutingAssembly();
-    var modName = ($"<someuniquevalue>_{assembly.GetName().Name}");
-    Logger.Log(Logger.Level.Info, $"Patching {modName}");
-    Harmony harmony = new Harmony(modName);
-    harmony.PatchAll(assembly);
-    Logger.Log(Logger.Level.Info, "Patched successfully!");
+    [QModCore]
+    public static class QMod
+    {
+        [QModPatch]
+        public static void Patch()
+        {
+            var assembly = Assembly.GetExecutingAssembly();
+            var modName = ($"mroshawmods_{assembly.GetName().Name}");
+            Logger.Log(Logger.Level.Info, $"Patching {modName}");
+            Harmony harmony = new Harmony(modName);
+            harmony.PatchAll(assembly);
+            Logger.Log(Logger.Level.Info, "Patched successfully!");
+        }
+    }
 }
 ```
 
@@ -73,6 +85,8 @@ The `modName` generated above needs to be unique across mods -- this prevents mo
 ```c#
 var modName = ($"mroshaw_{assembly.GetName().Name}");
 ```
+
+You may also note the use of the namespace. This, again, gives you an opportunity to ensure there is no ambiguity over which `QMod` class you're referring to in code. If you keep your namespace unique, clear and consistent, you reduce the risk of calling someone else's class methods in error.
 
 **NOTE:** You'll see some calls to the Logger here. These are super useful to help debug your code. Just remember to use `Level.Info` for high level logging only. For detailed logging, especially in code that gets called a lot, remember to use `Level.Debug`. The last thing you need is to fill players log files with millions of lines of debug text!
 
@@ -98,7 +112,6 @@ namespace KnifeDamageMod_SN
             Harmony harmony = new Harmony(modName);
             harmony.PatchAll(assembly);
             Logger.Log(Logger.Level.Info, "Patched successfully!");
-
         }
     }
 }
@@ -120,6 +133,9 @@ using Logger = QModManager.Utility.Logger;
 We're going to patch the "PlayerTool", remember, and because that's the class underpinning the `Knife` class that we want to patch. So, we'll tell Harmony to patch the `Awake` method of the `PlayerTool` class:
 
 ```c#
+using HarmonyLib;
+using Logger = QModManager.Utility.Logger;
+
 namespace KnifeDamageMod_SN
 {
     class KnifeDamageMod
@@ -128,30 +144,45 @@ namespace KnifeDamageMod_SN
         [HarmonyPatch("Awake")]
         internal class PatchPlayerToolAwake
         {
-            // Our code goes here
+            [HarmonyPostfix]
+            public static void Postfix(PlayerTool __instance)
+            {
+				// Our code goes here
+            }
         }
     }
 }
+
 ```
 
-The `Start` method is a really useful class method. If implemented in a class, it's something we can use that's always run only once when it comes to instances of that class. So, if we want to tweak something when a knife instance is created, this is the place to do it. Something that you should be aware of is that the `start` method is executed for **every instance** of the class. This is important when your patching object instances that might be components in more than one parent. For example, `SeaTrackMotor` class instances are used in a number of game objects, including not only the "Cab", but also the Aquarium and Docking modules. So patching `Start`on the `SeaTruckMotor`class will impact all of those instances, which may or may not be what you want.
+The `Awake` method is a really useful class method. If implemented in a class, it's something we can use that's always run only once when it comes to instances of that class. So, if we want to tweak something when a knife instance is created, this is the place to do it. Something that you should be aware of is that the `Awake` method is executed for **every instance** of the class. This is important when your patching object instances that might be components in more than one parent. For example, `SeaTrackMotor` class instances are used in a number of game objects, including not only the "Cab", but also the Aquarium and Docking modules. So patching `Awake`on the `SeaTruckMotor`class will impact all of those instances, which may or may not be what you want.
 
 **NOTE:** What you call your classes isn't important. It's the `annotations`that matter. You can find lots of information about these, and how Harmony works, in the [Harmony user guide](https://harmony.pardeike.net/articles/intro.html), but we'll talk a little about these below.
 
-First of all, we want to see if the `PlayerTool` that has been Awoken, so to speak, is actually the base class instance of our `Knife`:
+First of all, we want to see if the `PlayerTool` that has been woken up, so to speak, is actually the base class instance of our `Knife`:
 
 ```c#
-[HarmonyPatch(typeof(PlayerTool))]
-[HarmonyPatch("Awake")]
-internal class PatchPlayerToolAwake
+using HarmonyLib;
+using Logger = QModManager.Utility.Logger;
+
+
+namespace KnifeDamageMod_SN
 {
-    [HarmonyPostfix]
-    public static void Postfix(PlayerTool __instance)
+    class KnifeDamageMod
     {
-        // Check to see if this is the knife
-        if (__instance.GetType() == typeof(Knife))
+        [HarmonyPatch(typeof(PlayerTool))]
+        [HarmonyPatch("Awake")]
+        internal class PatchPlayerToolAwake
         {
-            Knife knife = __instance as Knife;
+            [HarmonyPostfix]
+            public static void Postfix(PlayerTool __instance)
+            {
+                // Check to see if this is the knife
+                if (__instance.GetType() == typeof(Knife))
+                {
+                    Knife knife = __instance as Knife;
+                }
+            }
         }
     }
 }
@@ -159,26 +190,37 @@ internal class PatchPlayerToolAwake
 
 So, we have an instance of `PlayerTool` and we've cast it to the `Knife` type, so that we can start to make some changes.
 
-What you can also see here is that if the object is not of type `Knife`, we do nothing. As this is a `PostFix` patch, we just let the game carry on as if nothing has happened. Only when we see the `Knife` waking up, do we want to write some code.
+What you can also see here is that if the object is not of type `Knife`, we do nothing. As this is a `PostFix` patch, we just let the game carry on as if nothing has happened. Only when we see the `Knife` waking up, do we want to execute code. So, any other `PlayerTool` that's instantiated and waking will continue to be unaffected by our mod.
 
 We're going to manipulate the properties of the Knife, so if we refer back to our dnSpy analysis, you'll recall the `Knife` had a `damage` attribute. We can access that now that we've got a handle to the `Knife` object:
 
 ```c#
-internal class PatchPlayerToolAwake
+using HarmonyLib;
+using Logger = QModManager.Utility.Logger;
+
+namespace KnifeDamageMod_SN
 {
-    [HarmonyPostfix]
-    public static void Postfix(PlayerTool __instance)
+    class KnifeDamageMod
     {
-        // Check to see if this is the knife
-        if (__instance.GetType() == typeof(Knife))
+        [HarmonyPatch(typeof(PlayerTool))]
+        [HarmonyPatch("Awake")]
+        internal class PatchPlayerToolAwake
         {
-            Knife knife = __instance as Knife;
-            // Double the knife damage
-            float knifeDamage = knife.damage;
-            float newKnifeDamage = knifeDamage * 2;
-            knife.damage = newKnifeDamage;
-            Logger.Log(Logger.Level.Debug, $"Knife damage was: {knifeDamage}," +
-                       $" is now: {newKnifeDamage}");
+            [HarmonyPostfix]
+            public static void Postfix(PlayerTool __instance)
+            {
+                // Check to see if this is the knife
+                if (__instance.GetType() == typeof(Knife))
+                {
+                    Knife knife = __instance as Knife;
+                    // Double the knife damage
+                    float knifeDamage = knife.damage;
+                    float newKnifeDamage = knifeDamage * damageModifier;
+                    knife.damage = newKnifeDamage;
+                    Logger.Log(Logger.Level.Debug, $"Knife damage was: {knifeDamage}," +
+                        $" is now: {newKnifeDamage}");
+                }
+            }
         }
     }
 }
@@ -201,9 +243,30 @@ And at what point should Harmony run your code? Well, that's where `[HarmonyPost
 
 One other thing to consider here is the method definition. We have some options here around what parameters we specify in our `PostFix` method:
 
-1. We can always include `__instance` in our method arguments, and this will always pass in the instance on which the method was invoked.
+1. We can always include `__instance` in our method arguments, and this will always pass in the class instance on which the method was invoked.
 2. We can also pass in parameters from the game method, if we want to manipulate or refer to those, either directly or by reference.
-3. We can specify `__result` as a `ref` parameter of the same type used by the patched method, to override the return value of the patched method
+3. We can specify `__result` as a `ref` parameter of the same type used by the patched method, to override the return value of the patched method, if it happens to have a return value. For example, if we're patching a method that takes two `int` parameters and returns a `float`, and we wanted to manipulate that return value, we could write:
+
+```c#
+[HarmonyPostPreFix]
+public static bool KnifeMethodWithReturn(Knife __instance, int param1, int param2, ref float __result)
+{
+    // Check the input params
+    if(param1 > param2)
+    {
+        // Manipulate the float return
+        __result = 0.0f;
+
+        // Bypass the patched method
+        return false;
+    }
+    else
+    {
+        // Continue to call the patched method
+        return true;
+    }
+}
+```
 
 Note that in a scenario where you are using a `HarmonyPrefix` patch, you can use a return type of `bool` to determine whether to continue to execute the game class method (return `true`) or whether to skip the game class method (return `false`). That way, you can choose to do something first, then allow the method to continue or completely override the method altogether, bypassing the game code.
 
@@ -238,9 +301,18 @@ namespace KnifeDamageMod_SN
         }
     }
 }
-
 ```
 
-You can build this now by right clicking the project and selecting `Build`. All going well, you'll see `Build succeeded`. If not, go back through and check your code. You can also find the full source for this part of the tutorial [in this GitHub repository](https://github.com/mroshaw/BeginnersGuideModSubnautica).
+Note that in a scenario where you are using a `HarmonyPrefix` patch, you can use a return type of `bool` to determine whether to continue to execute the game class method (return `true`) or whether to skip the game class method (return `false`). That way, you can choose to do something first, then allow the method to continue or completely override the method altogether, bypassing the game code.
+
+Things get quite involved at this point, as there are a number of rules and options that apply to your method definition, depending on what you want to do and what Harmony annotation you're using. The best place to find out more is in the [Harmony documentation](https://harmony.pardeike.net/articles/patching.html), which explains the concepts in detail.
+
+Anyway, enough of this theoretical nonsense! Go back to your code and check it's all there. If so, we're good to go!
+
+You can build this now by right clicking the project and selecting `Build`. All going well, you'll see `Build succeeded`. If not, go back through and check your code.
+
+You can also find the full source for this part of the tutorial [in this GitHub repository](https://github.com/mroshaw/BeginnersGuideModSubnautica), so if you have any problems whatsoever, have a look at the source in the repo and compare it to what you have.
 
 Your `Post Build Scripts` should also have run, creating a folder in your game location and copying in the DLL and json files, giving the game everything it needs to run your snazzy new mod!
+
+Congratulations! It's a beautiful bouncing baby knife mod!
