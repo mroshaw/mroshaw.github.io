@@ -9,7 +9,7 @@ parent: Advanced modding
 
 One of the biggest challenges when you begin modding is finding out, well, where to begin! The Unity component framework, and the developers individual style and process to implement Subnautica, mean it can be quite a challenge to dig around class, fields and code to try to find what you need.
 
-A fantastic way to help you with this is by using one of the many awesome "Unity Explorer" tools that are out there today. Whereas dnSpy allows you to peruse the compiled code for information, these tools allow you to explore "real time" instances of the code, so you can directly observe behaviour and the changes your code is making to the game.
+A fantastic way to help you with this is by using one of the many awesome "Unity Explorer" tools that are out there today. Whereas dnSpy allows you to peruse the de-compiled code for logic, methods names and parameter definitions, these tools allow you to explore "real time" instances of game objects within the game, so you can directly observe the configuration and components in use, their behaviour and the changes your code is making to the game.
 
 For this tutorial, I'm using "Unity Explorer" by sinai-dev. You can download this great tool from [their GitHub repository](https://github.com/sinai-dev/UnityExplorer/releases).
 
