@@ -19,6 +19,8 @@ You'll want to setup your development machine with the following tools:
 
 -   **BepInExPublicizer** - not mandatory, but this plugin "unlocks" protected methods and fields in game objects that makes modding much more powerful.
 
+-   **Unity Explorer** - again, not mandatory, but incredibly useful for exploring runtime games objects and components directly within the Subnautica games.
+
 -   **Vortex** - not mandatory, but useful for installing and updated base mods in your games.
 
 -   **GitHub Desktop** - not mandatory, but good to manage your source code in a Git repository, which will allow you to share and collaborate with others.
@@ -33,11 +35,12 @@ Here's a simple checklist of the tools that I've used in this tutorial and where
 | dnSpy                    | [Github.com](https://github.com/dnSpy/dnSpy/releases/latest) |
 | QModManager              | [Nexusmods.com](https://www.nexusmods.com/subnautica/mods/201?tab=files) |
 | SML Helper               | [Nexusmods.com](https://www.nexusmods.com/subnautica/mods/113?tab=files) |
-| QModManager (Below Zero) | [Nexusmods.com](https://www.nexusmods.com/subnauticabelowzero/mods/1?tab=files) |
-| SML Helper (Below Zero)  | [Nexusmods.com](https://www.nexusmods.com/subnauticabelowzero/mods/34?tab=files) |
+| QModManager (Below Zero) | [Nexusmods.com](https://www.nexusmods.com/subnauticabelowzero/mods/1?tab=files) / [Thunderstore.io](https://belowzero.thunderstore.io/package/Subnautica_Modding/QModManager_BZ/) |
+| SML Helper (Below Zero)  | [Nexusmods.com](https://www.nexusmods.com/subnauticabelowzero/mods/34?tab=files) / [Thunderstore.io](https://belowzero.thunderstore.io/package/Subnautica_Modding/SMLHelper_BZ/) |
 | BepInEx-Publicizer       | [Github.com](https://github.com/MrPurple6411/Bepinex-Tools/releases/latest) |
+| Unity Explorer           | [Github.com](https://github.com/sinai-dev/UnityExplorer)     |
 | Vortex                   | [Nexusmods.com](https://www.nexusmods.com/site/mods/1?tab=files) |
-| GitHub Desktop           | [Github.com](https://desktop.github.com/) |
+| GitHub Desktop           | [Github.com](https://desktop.github.com/)                    |
 
 Something to be very aware of is that development of these tools is pretty active and things tend to change quite frequently. It's really, really important to avail yourself of the latest versions and double check compatibility and support between various tools and game versions.
 
