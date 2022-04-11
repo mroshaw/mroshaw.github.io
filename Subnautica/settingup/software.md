@@ -9,7 +9,7 @@ parent: Setting up for development
 
 You'll want to setup your development machine with the following tools:
 
--   **Visual Studio** - this is where we'll write our mod code.
+-   **Visual Studio** - this is where we'll write our mod code. (Tip: VS 201X Community and VS Code are two dedicated Software Programms. We will only talk about the Visual Studio 201X Community. There are also other Visual Studio Version beside Community but that is paid Software so ignore them for now.)
 
 -   **dnSpy** - this essential tool helps you to explore the code in the game and find useful methods and fields to target and modify.
 
