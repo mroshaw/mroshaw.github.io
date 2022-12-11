@@ -17,7 +17,7 @@ Right click `References` and select `Add Reference`. Click `Browse` and locate a
 | -------------------------- | ------------------------------------------ |
 | UnityEngine.dll            | \<game>\\SubnauticaBelowZero_Data\\Managed |
 | UnityEngine.CoreModule.dll | \<game>\\SubnauticaBelowZero_Data\\Managed |
-| UnityEngine.UI.dll         | \<game>\\Subnautica_Data\\Managed          |
+| UnityEngine.UI.dll         | \<game>\\SubnauticaBelowZero_Data\\Managed |
 | 0Harmony.dll               | \<game>\\ BepInEx\\Core                    |
 | QModInstaller.dll          | \<game>\\BepInEx\\plugins\\QModManager     |
 | SMLHelper.dll              | \<game>\\QMods\SMLHelper_BZ                |
@@ -27,14 +27,14 @@ If you've run Publicizer, as recommended, you should add these references:
 | Filename                                 | Default / Sample Location                                    |
 | ---------------------------------------- | ------------------------------------------------------------ |
 | Assembly-CSharp_publicized.dll           | \<game>\\SubnauticaBelowZero_Data\\Managed\\publicized_assemblies |
-| Assembly-CSharp-firstpass_publicized.dll | \<game>\\Subnautica_Data\\Managed\\publicized_assemblies     |
+| Assembly-CSharp-firstpass_publicized.dll | \<game>\\SubnauticaBelowZero_Data\\Managed\\publicized_assemblies |
 
 If you've not run Publicizer, add these:
 
 | Filename                      | Default / Sample Location                |
 | ----------------------------- | ---------------------------------------- |
 | Assembly-CSharp.dll           | game>\\SubnauticaBelowZero_Data\\Managed |
-| Assembly-CSharp-firstpass.dll | game>\\Subnautica_Data\\Managed          |
+| Assembly-CSharp-firstpass.dll | game>\\SubnauticaBelowZero_Data\\Managed |
 
 With regards to references: you're not going to need all of these, all of the time. You might not need any of them, you might need to add new references if you decide to use a different set of modding tools and libraries.
 
