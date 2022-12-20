@@ -10,7 +10,7 @@ Coding and writing mods is fun! It's more fun with the support of a community of
 
 Therefore, I would suggest you do two things before you begin:
 
--   **Get yourself onto the [Subnautica Modding Discord](https://discord.gg/7vHbnmPWZe)** - lurk, get involved, learn, ask questions, it's all good!
+-   **Get yourself onto the [Subnautica Modding Discord](https://discord.gg/UpWuWwq)** - lurk, get involved, learn, ask questions, it's all good!
 
 -   **Set yourself up a repository on [GitHub](https://github.com/)** -- sharing and collaborating on code is one of the best ways to learn and improve. It's easy to do, just get yourself onto GitHub.com and register. We'll cover creating your first repository in the next section.
 
