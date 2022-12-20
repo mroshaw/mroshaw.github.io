@@ -13,6 +13,6 @@ Some useful links, if you want to contribute or find out more:
 - You can find and contribute to this guide via my [GitHub Pages repository](https://github.com/mroshaw/mroshaw.github.io).
 - You can find my published mods on my [Nexus Mods](https://www.nexusmods.com/users/74894083?tab=user+files) page.
 - And you can find all source code for my mods in my modding [GitHub repository](https://github.com/mroshaw/SubnauticaMods).
-- You can join the [Subnautica Modding Discord](https://discord.gg/aMhFuxkm) to talk more, ask questions, and learn!
+- You can join the [Subnautica Modding Discord](https://discord.gg/UpWuWwq) to talk more, ask questions, and learn!
 
 Thanks for reading and enjoy modding these great games!
