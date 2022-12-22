@@ -9,13 +9,13 @@ There have been considerable changes to the Subnautica game code over the course
 
 Ask yourself this question:
 
-1. > Do you want users of the “latest” version of Subnautica to play your mod?
+> Do you want users of the “latest” version of Subnautica to play your mod?
 
 If the answer is "yes", then you'll want to go down the BepInEx route. That's the only way to currently deploy mods to the latest "Living Large" version of the game. This has some caveats, the most significant of which is that the features of SML Helper are not yet available for mods using BepInEx. That may change in the future, however.
 
 If the answer is “no”, or “don’t know”, or “not sure”, then you may need to ask yourself a follow up:
 
-2. > Do you want or need the features of QMod Manager or SML Helper?
+> Do you want or need the features of QMod Manager or SML Helper?
 
 If the answer to that is “yes”, then you can go down the route of using QMod Manager and SML Helper to build your mod. Your mod won't, however, work with the latest "Living Large" version of the game. If the answer is "no", then you should definitely look to use BepInEx for your mod.
 
