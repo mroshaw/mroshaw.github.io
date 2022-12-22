@@ -13,14 +13,15 @@ Now we need to add references into our new project, so that we can reference our
 
 Right click `References` and select `Add Reference`. Click `Browse` and locate and add the following files:
 
-| Filename                   | Default / Sample Location              |
-| -------------------------- | -------------------------------------- |
-| UnityEngine.dll            | \<game>\\Subnautica_Data\\Managed      |
-| UnityEngine.CoreModule.dll | \<game>\\Subnautica_Data\\Managed      |
-| UnityEngine.UI.dll         | \<game>\\Subnautica_Data\\Managed      |
-| 0Harmony.dll               | \<game>\\ BepInEx\\Core                |
-| QModInstaller.dll          | \<game>\\BepInEx\\plugins\\QModManager |
-| SMLHelper.dll              | \<game>\\QMods\Modding Helper          |
+| Filename                                               | Default / Sample Location              |
+| ------------------------------------------------------ | -------------------------------------- |
+| UnityEngine.dll                                        | \<game>\\Subnautica_Data\\Managed      |
+| UnityEngine.CoreModule.dll                             | \<game>\\Subnautica_Data\\Managed      |
+| UnityEngine.UI.dll                                     | \<game>\\Subnautica_Data\\Managed      |
+| QModInstaller.dll ![](..\..\Subnautica\images\qmm.png) | \<game>\\BepInEx\\plugins\\QModManager |
+| SMLHelper.dll  ![](..\..\Subnautica\images\qmm.png)    | \<game>\\QMods\Modding Helper          |
+| BepInEx.dll  ![](..\..\Subnautica\images\bepinex.png)  | \<game>\\BepInEx\core                  |
+| 0Harmony.dll                                           | \<game>\\BepInEx\\core                 |
 
 If you've run Publicizer, as recommended, you should add these references:
 

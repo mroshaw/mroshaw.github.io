@@ -31,18 +31,25 @@ This prevents any issues when we try to use protected methods and fields that ha
 
 One more thing we can do here is to setup our project to automatically deploy our mod after each successful build. We do this via the `Build Events` options. In Post-build event command line, you can add something like this:
 
+![](..\images\qmm.png) 
+
 ```
 mkdir "C:\Games\Steam\steamapps\common\Subnautica\QMods\$(TargetName)"
 copy /Y "$(TargetPath)" "C:\Games\Steam\steamapps\common\Subnautica\QMods\$(TargetName)"
 copy /Y "$(ProjectDir)\mod.json" "C:\Games\Steam\steamapps\common\Subnautica\QMods\$(TargetName)\mod.json"
 ```
 
+![](..\images\bepinex.png) 
+
+```
+mkdir "C:\Games\Steam\steamapps\common\Subnautica\BepInEx\plugins\$(TargetName)"
+copy /Y "$(TargetPath)" "C:\Games\Steam\steamapps\common\Subnautica\BepInEx\plugins\$(TargetName)"
+```
+
 What this does is:
 
-1.  Creates a folder for our mod in the QMod folder, if one doesn't already exist
-
+1.  Creates a folder for our mod in the QMod folder, if one doesn't already exist.
 2.  Copies the compiled mod DLL into the folder
-
-3.  Copies the `mod.json` file into the folder
+3.  Copies the `mod.json` file into the folder. This is only relevant for QMM mods, don't forget!
 
 Right, I think we're about ready to write some code!

@@ -1,13 +1,17 @@
 ---
 layout: default
-title: Enhancing your mod
-nav_order: 7
+title: Enhancing your mod - QMM
+nav_order: 8
 parent: Your first Subnautica mod
 ---
 
 # Enhancing your mod
 
+![](..\images\qmm.png) 
+
 Now that you've got some code working away and changing game behaviour, you can start to add some features. Let's add a slider in the mod menu to allow the player to choose a multiplier for knife damage, rather than defaulting to double.
+
+Note that this functionality is provided by SML Helper, which in turn is dependent on QModManager. You cannot currently use SML Helper functionality outside of QMod Manager.
 
 SML Helper comes to the rescue once again, and we can use some great features of this library to add entries in to the "Mod" menu in the game.
 
@@ -25,7 +29,7 @@ using SMLHelper.V2.Json;
 using SMLHelper.V2.Options.Attributes;
 using SMLHelper.V2.Handlers;
 
-namespace KnifeDamageMod_SN
+namespace Mroshaw.KnifeDamageMod_SN
 {
     [QModCore]
     public static class QMod
@@ -38,7 +42,7 @@ namespace KnifeDamageMod_SN
         public static void Patch()
         {
             var assembly = Assembly.GetExecutingAssembly();
-            var modName = ($"<someuniquevalue>_{assembly.GetName().Name}");
+            var modName = ($"mroshawmods.{assembly.GetName().Name}");
             Logger.Log(Logger.Level.Info, $"Patching {modName}");
             Harmony harmony = new Harmony(modName);
             harmony.PatchAll(assembly);
@@ -57,8 +61,8 @@ namespace KnifeDamageMod_SN
         /// Slider element for float value of the modifiers. We'll allow 1.0 (unchanged) to 5.0 (death bringer).
         /// Default to 1.0;
         /// </summary>
-        [Slider("Knife modifier", Format = "{0:F2}", Min = 1.0F, Max = 5.0F, DefaultValue = 1.0F, Step = 0.1F)]
-        public float KnifeModifier = 1.0F;
+        [Slider("Knife modifier", Format = "{0:F2}", Min = 1.0f, Max = 5.0f, DefaultValue = 1.0f, Step = 0.1f)]
+        public float KnifeModifier = 1.0f;
     }
 }
 ```
@@ -71,16 +75,16 @@ So, the rest is even easier! Open up the `KnifeDamagerMod.cs` file and find the 
 using HarmonyLib;
 using Logger = QModManager.Utility.Logger;
 
-namespace KnifeDamageMod_SN
+namespace Mroshaw.KnifeDamageMod_SN
 {
-    class KnifeDamageMod
+    public static class KnifeDamageMod_SN
     {
         [HarmonyPatch(typeof(PlayerTool))]
-        [HarmonyPatch("Awake")]
-        internal class PatchPlayerToolAwake
+        public static class PlayerTool_Patch
         {
+            [HarmonyPatch(nameof(PlayerTool.Awake))]
             [HarmonyPostfix]
-            public static void Postfix(PlayerTool __instance)
+            public static void Awake_Postfix(PlayerTool __instance)
             {
                 // Check to see if this is the knife
                 if (__instance.GetType() == typeof(Knife))
@@ -91,10 +95,12 @@ namespace KnifeDamageMod_SN
                     // Get the damage modifier
                     float damageModifier = QMod.Config.KnifeModifier;
 
-                    // Multiply the damage by our modifier
+                    // Double the knife damage
                     float knifeDamage = knife.damage;
                     float newKnifeDamage = knifeDamage * damageModifier;
                     knife.damage = newKnifeDamage;
+
+                    // Write to the QMM log file
                     Logger.Log(Logger.Level.Debug, $"Knife damage was: {knifeDamage}," +
                         $" is now: {newKnifeDamage}");
                 }

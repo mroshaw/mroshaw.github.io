@@ -1,11 +1,13 @@
 ---
 layout: default
-title: Coding your mod
+title: Coding your mod - QMM
 nav_order: 5
 parent: Your first Subnautica mod
 ---
 
 # Coding your mod
+
+![](..\images\qmm.png) 
 
 In order to activate your mod, QModManager needs to know a bit about it. This is where the `mod.json` file comes in. Every mod has to have a `mod.json` file, so right click your project, select `Add new item...` and in the name, use `mod.json`. If Visual Studio has picked a template, don't worry, just select all and delete the content that it's added.
 
@@ -61,7 +63,7 @@ using HarmonyLib;
 using QModManager.API.ModLoading;
 using Logger = QModManager.Utility.Logger;
 
-namespace KnifeDamageMod_SN
+namespace Mroshaw.KnifeDamageMod_SN
 {
     [QModCore]
     public static class QMod
@@ -70,7 +72,7 @@ namespace KnifeDamageMod_SN
         public static void Patch()
         {
             var assembly = Assembly.GetExecutingAssembly();
-            var modName = ($"mroshawmods_{assembly.GetName().Name}");
+            var modName = ($"mroshawmods.{assembly.GetName().Name}");
             Logger.Log(Logger.Level.Info, $"Patching {modName}");
             Harmony harmony = new Harmony(modName);
             harmony.PatchAll(assembly);
@@ -83,7 +85,7 @@ namespace KnifeDamageMod_SN
 The `modName` generated above needs to be unique across mods -- this prevents mods interfering or otherwise messing with each other. The `<someuniquevalue>` should be replaced with something, well, unique. I tend to use my Discord / Github username, but it's entirely up to you:
 
 ```c#
-var modName = ($"mroshaw_{assembly.GetName().Name}");
+var modName = ($"mroshaw.{assembly.GetName().Name}");
 ```
 
 You may also note the use of the namespace. This, again, gives you an opportunity to ensure there is no ambiguity over which `QMod` class you're referring to in code. If you keep your namespace unique, clear and consistent, you reduce the risk of calling someone else's class methods in error.
@@ -98,7 +100,7 @@ using HarmonyLib;
 using QModManager.API.ModLoading;
 using Logger = QModManager.Utility.Logger;
 
-namespace KnifeDamageMod_SN
+namespace Mroshaw.KnifeDamageMod_SN
 {
     [QModCore]
     public static class QMod
@@ -130,34 +132,33 @@ using HarmonyLib;
 using Logger = QModManager.Utility.Logger;
 ```
 
-We're going to patch the "PlayerTool", remember, and because that's the class underpinning the `Knife` class that we want to patch. So, we'll tell Harmony to patch the `Awake` method of the `PlayerTool` class:
+We're going to patch the `PlayerTool`, remember, and because that's the class underpinning the `Knife` class that we want to patch. So, we'll tell Harmony to patch the `Awake` method of the `PlayerTool` class:
 
 ```c#
 using HarmonyLib;
 using Logger = QModManager.Utility.Logger;
 
-namespace KnifeDamageMod_SN
+namespace Mroshaw.KnifeDamageMod_SN
 {
-    class KnifeDamageMod
+    public static class KnifeDamageMod_SN
     {
         [HarmonyPatch(typeof(PlayerTool))]
-        [HarmonyPatch("Awake")]
-        internal class PatchPlayerToolAwake
+        public static class PlayerTool_Patch
         {
+            [HarmonyPatch(nameof(PlayerTool.Awake))]
             [HarmonyPostfix]
-            public static void Postfix(PlayerTool __instance)
+            public static void Awake_Postfix(PlayerTool __instance)
             {
-				// Our code goes here
+      			// Our code goes here
             }
         }
     }
 }
-
 ```
 
-The `Awake` method is a really useful class method. If implemented in a class, it's something we can use that's always run only once when it comes to instances of that class. So, if we want to tweak something when a knife instance is created, this is the place to do it. Something that you should be aware of is that the `Awake` method is executed for **every instance** of the class. This is important when your patching object instances that might be components in more than one parent. For example, `SeaTrackMotor` class instances are used in a number of game objects, including not only the "Cab", but also the Aquarium and Docking modules. So patching `Awake`on the `SeaTruckMotor`class will impact all of those instances, which may or may not be what you want.
+The `Start` and `Awake` methods are really useful `MonoBehavior` class methods. If implemented in a class, these are thungs that we can use that always run only once when an instance of that class is created. So, if we want to tweak something when a knife instance is created, this is the place to do it. Something that you should be aware of is that the `Start` and `Awake` methods are executed for **every instance** of the class. This is important when you're patching object instances that might be components in more than one parent. For example, `SeaTrackMotor` class instances are used in a number of game objects, including not only the "Cab", but also the Aquarium and Docking modules. So patching `Start` or `Awake` on the `SeaTruckMotor`class will impact all of those instances, which may or may not be what you want.
 
-**NOTE:** What you call your classes isn't important. It's the `annotations`that matter. You can find lots of information about these, and how Harmony works, in the [Harmony user guide](https://harmony.pardeike.net/articles/intro.html), but we'll talk a little about these below.
+**NOTE:** What you call your classes isn't important. It's the `annotations`that matter - those are the values you see in square brackets within the code. You can find lots of information about these, and how Harmony works, in the [Harmony user guide](https://harmony.pardeike.net/articles/intro.html), but we'll talk a little about these below. I would suggest a convention, such as the one in the examples. That is, a class named after the type of object that you're patching, and methods that reflect the patched method, with either a Prefix or Postfix part on the end.
 
 First of all, we want to see if the `PlayerTool` that has been woken up, so to speak, is actually the base class instance of our `Knife`:
 
@@ -165,22 +166,21 @@ First of all, we want to see if the `PlayerTool` that has been woken up, so to s
 using HarmonyLib;
 using Logger = QModManager.Utility.Logger;
 
-
-namespace KnifeDamageMod_SN
+namespace Mroshaw.KnifeDamageMod_SN
 {
-    class KnifeDamageMod
+    public static class KnifeDamageMod_SN
     {
         [HarmonyPatch(typeof(PlayerTool))]
-        [HarmonyPatch("Awake")]
-        internal class PatchPlayerToolAwake
+        public static class PlayerTool_Patch
         {
+            [HarmonyPatch(nameof(PlayerTool.Awake))]
             [HarmonyPostfix]
-            public static void Postfix(PlayerTool __instance)
+            public static void Awake_Postfix(PlayerTool __instance)
             {
                 // Check to see if this is the knife
                 if (__instance.GetType() == typeof(Knife))
                 {
-                    Knife knife = __instance as Knife;
+					// Our code goes here
                 }
             }
         }
@@ -198,25 +198,28 @@ We're going to manipulate the properties of the Knife, so if we refer back to ou
 using HarmonyLib;
 using Logger = QModManager.Utility.Logger;
 
-namespace KnifeDamageMod_SN
+namespace Mroshaw.KnifeDamageMod_SN
 {
-    class KnifeDamageMod
+    public static class KnifeDamageMod_SN
     {
         [HarmonyPatch(typeof(PlayerTool))]
-        [HarmonyPatch("Awake")]
-        internal class PatchPlayerToolAwake
+        public static class PlayerTool_Patch
         {
+            [HarmonyPatch(nameof(PlayerTool.Awake))]
             [HarmonyPostfix]
-            public static void Postfix(PlayerTool __instance)
+            public static void Awake_Postfix(PlayerTool __instance)
             {
                 // Check to see if this is the knife
                 if (__instance.GetType() == typeof(Knife))
                 {
-                    Knife knife = __instance as Knife;
+                    Knife knife = __instance as Knife;;
+
                     // Double the knife damage
                     float knifeDamage = knife.damage;
-                    float newKnifeDamage = knifeDamage * damageModifier;
+                    float newKnifeDamage = knifeDamage * 2.0f;
                     knife.damage = newKnifeDamage;
+
+                    // Write to the QMM log file
                     Logger.Log(Logger.Level.Debug, $"Knife damage was: {knifeDamage}," +
                         $" is now: {newKnifeDamage}");
                 }
@@ -264,41 +267,6 @@ public static bool KnifeMethodWithReturn(Knife __instance, int param1, int param
     {
         // Continue to call the patched method
         return true;
-    }
-}
-```
-
-Note that in a scenario where you are using a `HarmonyPrefix` patch, you can use a return type of `bool` to determine whether to continue to execute the game class method (return `true`) or whether to skip the game class method (return `false`). That way, you can choose to do something first, then allow the method to continue or completely override the method altogether, bypassing the game code.
-
-Things get quite involved at this point, as there are a number of rules and options that apply to your method definition, depending on what you want to do and what Harmony annotation you're using. The best place to find out more is in the [Harmony documentation](https://harmony.pardeike.net/articles/patching.html), which explains the concepts in detail.
-
-Anyway, enough of this theoretical nonsense! We should be ready now to compile and test your code! Why not take a moment to check your code, as it should look very much like this:
-
-```c#
-using HarmonyLib;
-using Logger = QModManager.Utility.Logger;
-
-namespace KnifeDamageMod_SN
-{
-    [HarmonyPatch(typeof(PlayerTool))]
-    [HarmonyPatch("Awake")]
-    internal class PatchPlayerToolAwake
-    {
-        [HarmonyPostfix]
-        public static void Postfix(PlayerTool __instance)
-        {
-            // Check to see if this is the knife
-            if (__instance.GetType() == typeof(Knife))
-            {
-                Knife knife = __instance as Knife;
-                // Double the knife damage
-                float knifeDamage = knife.damage;
-                float newKnifeDamage = knifeDamage * 2;
-                knife.damage = newKnifeDamage;
-                Logger.Log(Logger.Level.Debug, $"Knife damage was: {knifeDamage}," +
-                    $" is now: {newKnifeDamage}");
-            }
-        }
     }
 }
 ```
