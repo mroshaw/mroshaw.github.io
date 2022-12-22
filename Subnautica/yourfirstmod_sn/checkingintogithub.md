@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Checking into GitHub
 nav_order: 10
 parent: Your first Subnautica mod

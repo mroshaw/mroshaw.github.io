@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Enhancing your mod - QMM
 nav_order: 8
 parent: Your first Subnautica mod

@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Creating a Visual Studio project
 nav_order: 1
 parent: Your first Subnautica mod

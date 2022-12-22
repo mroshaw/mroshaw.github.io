@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Enhancing your mod - BepInEx
 nav_order: 9
 parent: Your first Subnautica mod

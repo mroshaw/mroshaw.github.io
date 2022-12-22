@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Configuring the Assembly
 nav_order: 3
 parent: Your first Subnautica mod

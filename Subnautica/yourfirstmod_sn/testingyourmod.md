@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Testing your mod
 nav_order: 7
 parent: Your first Subnautica mod

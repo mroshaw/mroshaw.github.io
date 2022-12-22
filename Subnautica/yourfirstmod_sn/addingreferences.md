@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Adding references
 nav_order: 2
 parent: Your first Subnautica mod

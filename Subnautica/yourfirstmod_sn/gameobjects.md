@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Exploring the game files
 nav_order: 4
 parent: Your first Subnautica mod
