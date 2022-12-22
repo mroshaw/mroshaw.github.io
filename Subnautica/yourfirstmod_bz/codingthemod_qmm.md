@@ -62,7 +62,7 @@ using HarmonyLib;
 using QModManager.API.ModLoading;
 using Logger = QModManager.Utility.Logger;
 
-namespace KnifeDamageMod_BZ
+namespace Mroshaw.KnifeDamageModBZ
 {
     [QModCore]
     public static class QMod
@@ -113,7 +113,7 @@ We're going to patch the "Knife", and make it do mega damage. So, we'll tell Har
 using HarmonyLib;
 using Logger = QModManager.Utility.Logger;
 
-namespace Mroshaw.KnifeDamageMod_BZ
+namespace Mroshaw.KnifeDamageModBZ
 {
     /// <summary>
     /// Class to mod the knife
@@ -144,7 +144,7 @@ We're going to manipulate the properties of the Knife, after it's been started. 
 using HarmonyLib;
 using Logger = QModManager.Utility.Logger;
 
-namespace Mroshaw.KnifeDamageMod_BZ
+namespace Mroshaw.KnifeDamageModBZ
 {
     /// <summary>
     /// Class to mod the knife

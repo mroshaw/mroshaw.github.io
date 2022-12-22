@@ -62,7 +62,7 @@ using HarmonyLib;
 using QModManager.API.ModLoading;
 using Logger = QModManager.Utility.Logger;
 
-namespace Mroshaw.KnifeDamageMod_SN
+namespace Mroshaw.KnifeDamageModSN
 {
     [QModCore]
     public static class QMod
@@ -99,7 +99,7 @@ using HarmonyLib;
 using QModManager.API.ModLoading;
 using Logger = QModManager.Utility.Logger;
 
-namespace Mroshaw.KnifeDamageMod_SN
+namespace Mroshaw.KnifeDamageModSN
 {
     [QModCore]
     public static class QMod
@@ -137,7 +137,7 @@ We're going to patch the `PlayerTool`, remember, and because that's the class un
 using HarmonyLib;
 using Logger = QModManager.Utility.Logger;
 
-namespace Mroshaw.KnifeDamageMod_SN
+namespace Mroshaw.KnifeDamageModSN
 {
     public static class KnifeDamageMod_SN
     {
@@ -165,7 +165,7 @@ First of all, we want to see if the `PlayerTool` that has been woken up, so to s
 using HarmonyLib;
 using Logger = QModManager.Utility.Logger;
 
-namespace Mroshaw.KnifeDamageMod_SN
+namespace Mroshaw.KnifeDamageModSN
 {
     public static class KnifeDamageMod_SN
     {
@@ -197,7 +197,7 @@ We're going to manipulate the properties of the Knife, so if we refer back to ou
 using HarmonyLib;
 using Logger = QModManager.Utility.Logger;
 
-namespace Mroshaw.KnifeDamageMod_SN
+namespace Mroshaw.KnifeDamageModSN
 {
     public static class KnifeDamageMod_SN
     {

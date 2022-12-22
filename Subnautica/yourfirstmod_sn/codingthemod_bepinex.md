@@ -51,6 +51,7 @@ namespace Mroshaw.KnifeDamageModSN
         {
             harmony.PatchAll();
             Logger.LogInfo(pluginName + " " + versionString + " " + "loaded.");
+            logger = Logger;
         }
     }
 }
@@ -112,7 +113,7 @@ First of all, we want to see if the `PlayerTool` that has been woken up, so to s
 using HarmonyLib;
 using Logger = QModManager.Utility.Logger;
 
-namespace Mroshaw.KnifeDamageMod_SN
+namespace Mroshaw.KnifeDamageModSN
 {
     public static class KnifeDamageMod_SN
     {
