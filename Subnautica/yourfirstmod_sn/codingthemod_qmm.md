@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Coding your mod - QMM
 nav_order: 5
 parent: Your first Subnautica mod
@@ -123,7 +122,7 @@ Okay, so we probably want to do something with the game code! Again, personal pr
 
 At this stage, your Visual Studio project should look a bit like this:
 
-![](.\media\firstmodclassproject.png)
+![](.\media\firstmodclassproject_qmm.png)
 
 Open up new class file and add these using statements. This gives us the basics of what we need to tell Harmony what we're up to, and for us to reference game objects within our mod code. We'll also re-use our `Logger` object, to write some useful feedback into the log file:
 

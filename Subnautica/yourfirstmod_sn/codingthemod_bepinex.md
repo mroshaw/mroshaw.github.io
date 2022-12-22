@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Coding your mod - BepInEx
 nav_order: 6
 parent: Your first Subnautica mod
@@ -68,7 +67,7 @@ So, we probably want to do something with the game code. Again, personal prefere
 
 At this stage, your Visual Studio project should look a bit like this:
 
-![](.\media\firstmodclassproject.png)
+![](.\media\firstmodclassproject_bepinex.png)
 
 Open up new class file and add these using statements. This gives us the basics of what we need to tell Harmony what we're up to, and for us to reference game objects within our mod code:
 

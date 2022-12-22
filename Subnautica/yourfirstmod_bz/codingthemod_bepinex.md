@@ -26,7 +26,7 @@ using BepInEx.Logging;
 using HarmonyLib;
 ```
 
-We'll need to tell Harmony to patch our code, so add this into a `Start()` method with the appropriate annotations in place:
+We'll need to tell Harmony to patch our code, so add this into an `Awake()` method with the appropriate annotations in place:
 
 ```c#
 using BepInEx;
@@ -66,7 +66,7 @@ So, we probably want to do something with the game code. Again, personal prefere
 
 At this stage, your Visual Studio project should look a bit like this:
 
-![](.\media\firstmodclassproject.png)
+![](.\media\firstmodclassproject_bepinex.png)
 
 Open up new class file and add these using statements. This gives us the basics of what we need to tell Harmony what we're up to, and for us to reference game objects within our mod code:
 
