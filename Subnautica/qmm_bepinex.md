@@ -1,7 +1,7 @@
 ---
 layout: default
-title: IMPORTANT: QMod Manager or BepInEx
-nav_order: 3
+title: IMPORTANT - QMod Manager or BepInEx
+nav_order: 4
 ---
 
 ## IMPORTANT: QMod Manager or BepInEx
