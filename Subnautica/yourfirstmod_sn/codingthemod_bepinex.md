@@ -2,7 +2,7 @@
 layout: default
 title: Coding your mod - BepInEx
 nav_order: 6
-parent: Your first Below Zero mod
+parent: Your first Subnautica mod
 
 ---
 
