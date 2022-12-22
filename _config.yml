@@ -1,9 +1,10 @@
 title: Subnautica Modding Guide
 description: A beginners guide to modding Subnautica and Subnautica Below Zero!
-remote_theme: just-the-docs
+theme: just-the-docs
 color_scheme: dark
-url: ""
-
+url: https://mroshaw.github.io/Subnautica
+plugins:
+  - jekyll-default-layout
 aux_links:
   Subnautica Modding Discord: https://discord.gg/UpWuWwq
 
