@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Before you begin
-nav_order: 3
+nav_order: 6
 ---
 
 # Before you begin
