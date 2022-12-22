@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Advanced modding
-nav_order: 10
+nav_order: 9
 has_children: true
 ---
 
