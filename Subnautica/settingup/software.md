@@ -8,7 +8,7 @@ parent: Setting up for development
 
 You'll want to setup your development machine with the following tools:
 
--   **Visual Studio** - this is where we'll write our mod code. Nab the latest Community Edition for free download.
+-   **Visual Studio** - this is where we'll write our mod code. Note that you'll need the full fat "Visual Studio Community Edition" or equivalent. Do not use "Visual Studio Code".
 
 -   **dnSpy** - this essential tool helps you to explore the code in the game and find useful methods and fields to target and modify.
 
