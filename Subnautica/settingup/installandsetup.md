@@ -17,9 +17,17 @@ Run the Visual Studio installer and pick the ".NET desktop development" Workload
 
 Simple download dnSpy and unzip it to a folder location. Simple as that!
 
-## QModManager
+## QModManager ![](..\images\qmm.png)
 
-Make sure you download and install the correct version from Nexusmods. Once you've done so, simply run the installer and let it do it's thing. You'll need to have the Subnautica game installed at this point, obviously, though I think it's same to assume this one since you're reading this guide!
+Make sure you download and install the correct version from Nexusmods. Once you've done so, simply run the installer and let it do it's thing. You'll need to have the Subnautica game installed at this point, obviously, though I think it's same to assume this one since you're reading this guide! Installing QMM will result in a folder called "QMods" in your game folder location. This is where your mods will go.
+
+Remember that QModManager is being deprecated!
+
+## BepInEx ![](..\images\bepinex.png)
+
+**BepInEx**
+
+Download the latest version from Nexus. Unzip the file to your game folder, and everything you need will be in the right place. You'll find a folder called "plugins" where you'll put your mod DLLs.
 
 ## Vortex
 

@@ -24,5 +24,14 @@ Thanks to, but not limited to:
 
 -   MrPurple6411
 
-And to everyone else on the [Subnautica modding Discord](https://discord.gg/7vHbnmPWZe).
+-   tobey
+
+-   Essence
+
+-   EldritchCarMaker
+
+-   Ramune
+
+
+And to everyone else on the [Subnautica modding Discord](https://discord.com/invite/UpWuWwq).
 

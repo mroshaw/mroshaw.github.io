@@ -29,3 +29,4 @@ Finally, a few more pointers before we start:
 3. You can find the full source code for the sample mods in [this repository on GitHub](https://github.com/mroshaw/BeginnersGuideModSubnautica).
 
 So, choose your path, is it going to be the original Subnautica or Below Zero? Take your pick, and let's code us a mod!
+
