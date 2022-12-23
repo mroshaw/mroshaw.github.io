@@ -19,11 +19,11 @@ If the answer is “no”, or “don’t know”, or “not sure”, then you ma
 
 If the answer to that is “yes”, then you can go down the route of using QMod Manager and SML Helper to build your mod. Your mod won't, however, work with the latest "Living Large" version of the game. If the answer is "no", then you should definitely look to use BepInEx for your mod.
 
-![](.\images\qmmorbepinex.png)
+![](.\media\qmmorbepinex.png)
 
 
 
 ## But don't worry, we've got you!
 
-Whichever route you take, we've got you covered! The examples in this guide cover both scenarios, across Subnautica and Subnautica: Below Zero. To make it as simple as possible, throughout the guide you’ll come across sections marked either ![](.\images\qmm.png) or ![](.\images\bepinex.png). Follow one or the other, but not both! The situation is fluid, and there are lots of cool things bubbling along in the background, so do come back to this guide, as you'll find the latest information that's to hand.
+Whichever route you take, we've got you covered! The examples in this guide cover both scenarios, across Subnautica and Subnautica: Below Zero. To make it as simple as possible, throughout the guide you’ll come across sections marked either ![](.\media\qmm.png) or ![](.\media\bepinex.png). Follow one or the other, but not both! The situation is fluid, and there are lots of cool things bubbling along in the background, so do come back to this guide, as you'll find the latest information that's to hand.
 
