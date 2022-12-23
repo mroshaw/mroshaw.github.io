@@ -6,7 +6,7 @@ parent: Your first Subnautica mod
 
 # Enhancing your mod
 
-![](..\images\qmm.png) 
+![](..\media\qmm.png) 
 
 Now that you've got some code working away and changing game behaviour, you can start to add some features. Let's add a slider in the mod menu to allow the player to choose a multiplier for knife damage, rather than defaulting to double.
 

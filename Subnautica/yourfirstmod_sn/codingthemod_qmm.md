@@ -6,7 +6,7 @@ parent: Your first Subnautica mod
 
 # Coding your mod
 
-![](..\images\qmm.png) 
+![](..\media\qmm.png) 
 
 In order to activate your mod, QModManager needs to know a bit about it. This is where the `mod.json` file comes in. Every mod has to have a `mod.json` file, so right click your project, select `Add new item...` and in the name, use `mod.json`. If Visual Studio has picked a template, don't worry, just select all and delete the content that it's added.
 

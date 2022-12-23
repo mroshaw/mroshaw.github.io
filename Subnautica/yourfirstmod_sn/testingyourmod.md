@@ -10,7 +10,7 @@ You should now be able to fire up the game and do some testing.
 
 Testing steps will be different, depending on the solution you've built.
 
-## QMod Manager Log ![](D:/Dev/Subnautica Modding Tutorial/mroshaw.github.io/Subnautica/images/qmm.png)
+## QMod Manager Log ![](../media/qmm.png)
 
  Once you've launched Subnautica, go into Options \> Mods and check "Enable debug logs":
 
@@ -28,7 +28,7 @@ PumpCoroutine force syncing skippable request (UWE.SkippableLoadingPrefabRequest
 [KnifeDamageMod_SN:DEBUG] Knife damage was: 20, is now: 40
 ```
 
-## BepInEx Log ![](..\images\bepinex.png)
+## BepInEx Log ![](..\media\bepinex.png)
 
 Once you've launched the game, BepInEx will have created a log file. You can find this in <game>\BepInEx and it's called`LogOutput.log`:
 

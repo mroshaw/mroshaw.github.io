@@ -6,7 +6,7 @@ parent: Your first Below Zero mod
 
 # Coding your mod
 
-![](..\images\bepinex.png) 
+![](..\media\bepinex.png) 
 
 Unlike QmodManager, BepInEx doesn't need or use a `mod.json` file. Details of the mod are provided in the patch code.
 
