@@ -73,10 +73,7 @@ Open up new class file and add these using statements. This gives us the basics 
 
 ```c#
 using HarmonyLib;
-using Logger = QModManager.Utility.Logger;
 ```
-
-You'll see the `Logger` in there again, giving us immediate access to that fantastic static QModManager goodness.
 
 We're going to patch the "Knife", and make it do mega damage. So, we'll tell Harmony to patch the `Start` method of the `Knife` class:
 
