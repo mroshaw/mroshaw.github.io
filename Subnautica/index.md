@@ -14,4 +14,10 @@ Some useful links, if you want to contribute or find out more:
 - And you can find all source code for my mods in my modding [GitHub repository](https://github.com/mroshaw/SubnauticaMods).
 - You can join the [Subnautica Modding Discord](https://discord.gg/UpWuWwq) to talk more, ask questions, and learn!
 
+Once you've completed this guide and have gained the confidence to create your own mods, consider taking a look at my [Visual Studio templates for Unity Mods](https://github.com/mroshaw/UnityModVSTemplate). These templates give you a structure and boiler plate code to very quickly create a basic BepInEx mod for either Subnautica, Below Zero, or indeed any Unity game. The templates come with a fully narrated video tutorial that covers downloading, installing, and using the templates.
+
+[Download the Visual Studio Unity Mod Templates.](https://github.com/mroshaw/UnityModVSTemplate)
+
+[Watch the video guide.](https://youtu.be/KopYonyplXs)
+
 Thanks for reading and enjoy modding these great games!
