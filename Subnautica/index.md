@@ -9,6 +9,7 @@ This guide is intended to give complete beginners a taste of how to go about cre
 
 Some useful links, if you want to contribute or find out more:
 
+- I've made a video guide version of this tutorial, available on [my YouTube channel](https://youtu.be/hMBuNrSmH_Y).
 - You can find and contribute to this guide via my [GitHub Pages repository](https://github.com/mroshaw/mroshaw.github.io).
 - You can find my published mods on my [Nexus Mods](https://www.nexusmods.com/users/74894083?tab=user+files) page.
 - And you can find all source code for my mods in my modding [GitHub repository](https://github.com/mroshaw/SubnauticaMods).
