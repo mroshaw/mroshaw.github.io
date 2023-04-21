@@ -12,17 +12,19 @@ You'll want to setup your development machine with the following tools:
 
 -   **dnSpy** - this essential tool helps you to explore the code in the game and find useful methods and fields to target and modify.
 
--   **QMod Manager** - this will help integrate your mod into the game, as well as provide useful functions to simplify your code.
+-   **QMod Manager**** - this will help integrate your mod into the game, as well as provide useful functions to simplify your code. This is being deprecated, so you'll only need this for developing legacy mods.
 
--   **SML Helper** - not mandatory, but this mod provides loads of useful functions so that you don't have to "reinvent the wheel" when it comes to working with the lower level tools and functions involved in modding the game. For example, SML Helper takes away a lot of work when it comes to hooking methods with Harmony, and presenting menus with QMod Manager.
+-   **SML Helper**** - not mandatory, but this mod provides loads of useful functions so that you don't have to "reinvent the wheel" when it comes to working with the lower level tools and functions involved in modding the game. For example, SML Helper takes away a lot of work when it comes to hooking methods with Harmony, and presenting menus with QMod Manager.
 
 -   **BepInEx** - this is a patcher/plug-in framework for Unity games. It does the hard lifting when it comes to hooking your mods into the Subnautica games. QMM is effectively a BepInEx plugin, and over time the community is looking to phase QMM out in favour of simply using BepInEx. More on that below.
 
 -   **BepInExPublicizer** - not mandatory, but this plugin "unlocks" protected methods and fields in game objects that makes modding much more powerful.
 
+-   **BepInExConfigurationManager** - not mandatory, but this plugin exposes configuration options of your mods in a user interface. This provides a great way to improve the usability of your mod.
+
 -   **Unity Explorer** - again, not mandatory, but incredibly useful for exploring runtime games objects and components directly within the Subnautica games.
 
--   **Vortex** - not mandatory, but useful for installing and updated base mods in your games.
+-   **Vortex** - not mandatory, but useful for installing and updating base mods in your games.
 
 -   **GitHub Desktop** - not mandatory, but good to manage your source code in a Git repository, which will allow you to share and collaborate with others.
 
@@ -32,20 +34,21 @@ You'll want to setup your development machine with the following tools:
 
 Here's a simple checklist of the tools that I've used in this tutorial and where to get them:
 
-| Tool Name                  | Where to download                                            |
-| -------------------------- | ------------------------------------------------------------ |
-| Visual Studio              | [Microsoft.com](https://visualstudio.microsoft.com/vs/community/) |
-| dnSpy                      | [Github.com](https://github.com/dnSpy/dnSpy/releases/latest) |
-| QModManager**              | [Nexusmods.com](https://www.nexusmods.com/subnautica/mods/201?tab=files) |
-| SML Helper**               | [Nexusmods.com](https://www.nexusmods.com/subnautica/mods/113?tab=files) |
-| QModManager (Below Zero)** | [Nexusmods.com](https://www.nexusmods.com/subnauticabelowzero/mods/1?tab=files) / [Thunderstore.io](https://belowzero.thunderstore.io/package/Subnautica_Modding/QModManager_BZ/) |
-| SML Helper (Below Zero)**  | [Nexusmods.com](https://www.nexusmods.com/subnauticabelowzero/mods/34?tab=files) / [Thunderstore.io](https://belowzero.thunderstore.io/package/Subnautica_Modding/SMLHelper_BZ/) |
-| BepInEx**                  | [Nexusmods.com](https://www.nexusmods.com/subnautica/mods/1108) |
-| BepInEx-Publicizer         | [Github.com](https://github.com/MrPurple6411/Bepinex-Tools/releases/latest) |
-| Unity Explorer             | [Github.com](https://github.com/sinai-dev/UnityExplorer)     |
-| Vortex                     | [Nexusmods.com](https://www.nexusmods.com/site/mods/1?tab=files) |
-| GitHub Desktop             | [Github.com](https://desktop.github.com/)                    |
-| Version Checker            | [NexusMods.com](https://www.nexusmods.com/subnautica/mods/467) |
+| Tool Name                     | Where to download                                            |
+| ----------------------------- | ------------------------------------------------------------ |
+| Visual Studio                 | [Microsoft.com](https://visualstudio.microsoft.com/vs/community/) |
+| dnSpy                         | [Github.com](https://github.com/dnSpy/dnSpy/releases/latest) |
+| QModManager**                 | [Nexusmods.com](https://www.nexusmods.com/subnautica/mods/201?tab=files) |
+| SML Helper**                  | [Nexusmods.com](https://www.nexusmods.com/subnautica/mods/113?tab=files) |
+| QModManager (Below Zero)**    | [Nexusmods.com](https://www.nexusmods.com/subnauticabelowzero/mods/1?tab=files) / [Thunderstore.io](https://belowzero.thunderstore.io/package/Subnautica_Modding/QModManager_BZ/) |
+| SML Helper (Below Zero)**     | [Nexusmods.com](https://www.nexusmods.com/subnauticabelowzero/mods/34?tab=files) / [Thunderstore.io](https://belowzero.thunderstore.io/package/Subnautica_Modding/SMLHelper_BZ/) |
+| BepInEx**                     | [Nexusmods.com](https://www.nexusmods.com/subnautica/mods/1108) |
+| BepInEx-Publicizer            | [Github.com](https://github.com/MrPurple6411/Bepinex-Tools/releases/latest) |
+| BepInEx-Configuration Manager | [Github.com](https://github.com/BepInEx/BepInEx.ConfigurationManager/releases/) |
+| Unity Explorer                | [Github.com](https://github.com/sinai-dev/UnityExplorer/releases) |
+| Vortex                        | [Nexusmods.com](https://www.nexusmods.com/site/mods/1?tab=files) |
+| GitHub Desktop                | [Github.com](https://desktop.github.com/)                    |
+| Version Checker               | [NexusMods.com](https://www.nexusmods.com/subnautica/mods/467) |
 
 ** Please go back and read the page on [QMod Manager and BepInEx](), as it's really important information!
 
