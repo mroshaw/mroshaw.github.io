@@ -10,45 +10,57 @@ When I set up a Dev environment, I like to keep everything together. I have a de
 
 ## Visual Studio
 
-Run the Visual Studio installer and pick the ".NET desktop development" Workload. You'll also want to ensure you pick the ".NET 4.7.2 SDK". That's it, really, the setup process is pretty straightforward these days, and VS installs a much smaller footprint than it used to.
+Run the Visual Studio installer and pick the ".NET desktop development" Workload:
+
+![](.\media\vsworkloadinstall.png)
+
+You'll also need to ensure you pick the ".NET 4.7.2 targeting pack" from the "Individual components" tab:
+
+![](.\media\vsframeworkinstall.png)
+
+That's it, really, the setup process is pretty straightforward these days, and VS installs a much smaller footprint than it used to.
+
+Note that it's really important that you install the ".NET 4.7.2 targeting pack". If you don't, you'll be unable to select the correct framework when creating your mod project.
 
 ## dnSpy
 
 Simple download dnSpy and unzip it to a folder location. Simple as that!
 
-## QModManager ![](..\images\qmm.png)
+## BepInEx Pack
 
-Make sure you download and install the correct version from Nexusmods. Once you've done so, simply run the installer and let it do it's thing. You'll need to have the Subnautica game installed at this point, obviously, though I think it's same to assume this one since you're reading this guide! Installing QMM will result in a folder called "QMods" in your game folder location. This is where your mods will go.
+Download the latest version from Nexus or Submodica. Unzip the file to your game folder, and everything you need will be in the right place. You'll find a folder called "plugins" where you'll put your mod DLLs. After installation, your game folder should look something like this:
 
-Remember that QModManager is being deprecated!
-
-## BepInEx ![](..\images\bepinex.png)
-
-**BepInEx**
-
-Download the latest version from Nexus. Unzip the file to your game folder, and everything you need will be in the right place. You'll find a folder called "plugins" where you'll put your mod DLLs.
+![](.\media\bepinexpackinstall.png)
 
 ## Vortex
 
 This is entirely optional for mod development, but I recommend it anyway for playing with mods and supporting the Nexusmods community. Simply download this from Nexusmods and run the installer. Within Vortex, get yourself logged in and add Subnautica and / or Below Zero to your managed games. This will set everything up to download mods direct from the Nexusmods site.
 
-## SML Helper
+## Nautilus
 
-Optional but highly recommended! If you've installed Vortex, simply go to the Nexusmods page for SML Helper and click "MOD Manager Download". Within Vortex, find the mod and change the status to "Enabled". If you skipped Vortex, download the mod manually and unzip to the QMods folder in your game installation location.
+Optional but highly recommended! If you've installed Vortex, you can install Nautilus by visiting it's mod page on Nexus, and click "Mod Manager Download". Alternatively, down the ZIP file from either Nexus or Submodica and extract the contents into the BepInEx folder in your game folder: \<game>\\BepInEx\\plugins. You should see something like this:
 
-## BepExIn-Publicizer
+![](.\media\nautilusinstall.png)
+
+## BepExIn Publicizer
 
 I really recommend downloading this tool and going through the process documented below. It will enhance your modding experience no-end and unlock a whole load of potential that you'd have to do without.
 
 Unzip the file that you download into \<game>\\BepInEx\\plugins\\Bepinex-Publicizer. You should have folder that looks like this:
 
-![](.\media\bepinexinstall.png)
+![](.\media\publicizerinstall.png)
 
 Run the game then exit. Return to Windows Explorer and go to this folder:
 
 `<game>\SubnauticaZero_Data\Managed\publicized_assemblies`
 
-You'll see some new files that we'll include in our project.
+You'll see some new files that we'll include in our project. At this point, you can delete the Publicizer plugin files (don't delete the publicized DLL files!) or leave them where they are.
+
+## Subnautica Runtime Editor
+
+Another BepInEx plugin that I really, really recommend. Installation follows the same pattern as the other BepInEx plugins, which is to download the plugin ZIP file and extract to \<game>\\BepInEx\\plugins\\. If done correctly, you should see something like this:
+
+![](.\media\runtimeeditorinstall.png)
 
 ## GitHub Desktop
 

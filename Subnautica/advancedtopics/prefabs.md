@@ -1,6 +1,6 @@
 ---
 title: Prefabs
-nav_order: 5
+nav_order: 6
 parent: Advanced modding
 ---
 
@@ -22,33 +22,6 @@ You can get hold and reuse a number of pre-created prefabs included in both of t
 
 Either way, follow these steps and you'll be able to spawn and use your own object instances within you mod, and here's how it's done.
 
-### Subnautica
-
-The code to create a new instance from a prefab is really straight forward and only requires that you know the `TechType` of the object you want to create. `TechType` is simply a C# enumerator that contains references to a load of prefabs that you can spawn. This simple static method is all you need:
-
-```c#
-private static GameObject SetupNewGameObject(TechType objectTechType)
-{
-	GameObject gameObjectPrefab = CraftData.GetPrefabForTechType(objectTechType);
-	GameObject gameObject = Object.Instantiate(gameObjectPrefab);
-	return gameObject;
-}
-```
-
-You can then simply invoke this when you want to create a new prefab instance:
-
-```c#
-GameObject snowStalkerBaby = SetupNewGameObject(TechType.SnowStalkerBaby)
-```
-
-In Visual Studio, typing `TechType.` will automatically present you with a list of accepted `TechType` values that you can use when invoking this method.
-
-Note that this is a synchronous call, so your code will wait for the instantiation to complete before progressing.
-
-### Below Zero
-
-The code for BZ is a little more complex, and due to the asynchronous nature, requires some additional steps.
-
 First up, create the following static class method:
 
 ```c#
@@ -61,7 +34,7 @@ private static IEnumerator SetupNewGameObject(Vector3 spawnPosition, Quaternion 
 }
 ```
 
-This sets up what's called a `Coroutine` in Unity parlance. This is an syncronous mechanism that allows us to say to Unity: instantiate this please, but continue processing frames while we wait.
+This sets up what's called a `Coroutine` in Unity parlance. This is an asyncronous mechanism that allows us to say to Unity: instantiate this please, but continue processing frames while we wait.
 
 This can then be invoked as follows:
 

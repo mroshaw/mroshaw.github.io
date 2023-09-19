@@ -10,54 +10,47 @@ You'll want to setup your development machine with the following tools:
 
 ## Essential
 
--   **Visual Studio** - this is where we'll write our mod code. Note that you'll need the full fat "Visual Studio Community Edition" or equivalent. Do not use "Visual Studio Code".
+-   **Visual Studio** - this is where we'll write our mod code. Note that you'll need the full fat "Visual Studio Community Edition" or equivalent, if you want to follow this tutorial. Do not use "Visual Studio Code".
 
 -   **dnSpy** - this essential tool helps you to explore the code in the game and find useful methods and fields to target and modify.
 
--   **BepInEx** - this is a patcher/plug-in framework for Unity games. It does the hard lifting when it comes to hooking your mods into the Subnautica games. QMM is effectively a BepInEx plugin, and over time the community is looking to phase QMM out in favour of simply using BepInEx. More on that below.
+-   **BepInEx** - this is a patcher/plug-in framework for Unity games. It does the hard lifting when it comes to hooking your mods into the Subnautica games. Installing BepInEx will also get you the Harmony software that we talked about earlier.
 
 -   **Subnautica / Below Zero** - you'll need to have games themselves installed, of course!
 
 ## Recommended
 
+-   **Nautilus** - not mandatory, but highly recommended! Nautilus is a modding library, designed, built and maintained by the Subnautica modding community, that provides loads of features and functions to make modding the games easier.
+
 -   **BepInExPublicizer** - not mandatory, but this plugin "unlocks" protected methods and fields in game objects that makes modding much more powerful.
 
--   **BepInExConfigurationManager** - not mandatory, but this plugin exposes configuration options of your mods in a user interface. This provides a great way to improve the usability of your mod.
+-   **Subnautica Runtime Editor** - again, not mandatory, but incredibly useful for exploring runtime games objects and components directly within the Subnautica games.
 
--   **Unity Explorer** - again, not mandatory, but incredibly useful for exploring runtime games objects and components directly within the Subnautica games.
-
--   **Visual Studio Unity Mod Templates** - useful boilerplate code that gives you everything you need to create a Subnautica or Below Zero mod project.
+-   **Subnautica NuGet packages** - community built packages of code and libraries to make setting up new modding projects simple. Not mandatory, but highly recommended.
 
 ## Optional
 
--   **QMod Manager**** - this will help integrate your mod into the game, as well as provide useful functions to simplify your code. This is being deprecated, so you'll only need this for developing legacy mods.
--   **SML Helper**** - not mandatory, but this mod provides loads of useful functions so that you don't have to "reinvent the wheel" when it comes to working with the lower level tools and functions involved in modding the game. For example, SML Helper takes away a lot of work when it comes to hooking methods with Harmony, and presenting menus with QMod Manager.
--   **Vortex** - not mandatory, but useful for installing and updating base mods in your games from the Nexus Mods site.
 -   **GitHub Desktop** - not mandatory, but good to manage your source code in a Git repository, which will allow you to share and collaborate with others.
--   **Version Checker** - not mandatory, but a handy pluging that allows mod developers to alert users to new versions of their mods.
 
 ## Downloads
 
 Here's a simple checklist of the tools that I've used in this tutorial and where to get them:
 
-| Category    | Tool Name                     | Where to download                                            |
-| ----------- | ----------------------------- | ------------------------------------------------------------ |
-| Essential   | Visual Studio                 | [Microsoft.com](https://visualstudio.microsoft.com/vs/community/) |
-| Essential   | dnSpy                         | [Github.com](https://github.com/dnSpy/dnSpy/releases/latest) |
-| Essential   | BepInEx**                     | [Nexusmods.com](https://www.nexusmods.com/subnautica/mods/1108) |
-| Recommended | BepInEx-Publicizer            | [Github.com](https://github.com/MrPurple6411/Bepinex-Tools/releases/latest) |
-| Recommended | BepInEx-Configuration Manager | [Github.com](https://github.com/BepInEx/BepInEx.ConfigurationManager/releases/) |
-| Recommended | Unity Explorer                | [Github.com](https://github.com/sinai-dev/UnityExplorer/releases) |
-| Recommended | Visual Studio Mod Templates   | [Github.com](https://github.com/mroshaw/UnityModVSTemplate/releases/) |
-| Optional    | QModManager**                 | [Nexusmods.com](https://www.nexusmods.com/subnautica/mods/201?tab=files) |
-| Optional    | SML Helper**                  | [Nexusmods.com](https://www.nexusmods.com/subnautica/mods/113?tab=files) |
-| Optional    | QModManager (Below Zero)**    | [Nexusmods.com](https://www.nexusmods.com/subnauticabelowzero/mods/1?tab=files) / [Thunderstore.io](https://belowzero.thunderstore.io/package/Subnautica_Modding/QModManager_BZ/) |
-| Optional    | SML Helper (Below Zero)**     | [Nexusmods.com](https://www.nexusmods.com/subnauticabelowzero/mods/34?tab=files) / [Thunderstore.io](https://belowzero.thunderstore.io/package/Subnautica_Modding/SMLHelper_BZ/) |
-| Optional    | Vortex                        | [Nexusmods.com](https://www.nexusmods.com/site/mods/1?tab=files) |
-| Optional    | GitHub Desktop                | [Github.com](https://desktop.github.com/)                    |
-| Optional    | Version Checker               | [NexusMods.com](https://www.nexusmods.com/subnautica/mods/467) |
-
-** Please go back and read the page on [QMod Manager and BepInEx](), as it's really important information!
+| Category    | Tool Name                           | Where to download                                            | Mirror                                                       |
+| ----------- | ----------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Essential   | Visual Studio Community Edition     | [Microsoft.com](https://visualstudio.microsoft.com/vs/community/) |                                                              |
+| Essential   | dnSpy                               | [Github.com](https://github.com/dnSpy/dnSpy/releases/latest) |                                                              |
+| Essential   | BepInEx Pack for Subnautica         | [Submodica.net](https://www.submodica.net/mods/sn1/141)      | [Nexusmods.com](https://www.nexusmods.com/subnautica/mods/1108) |
+| Essential   | BepInEx Pack for Below Zero         | [Nexusmods.com](https://www.nexusmods.com/subnauticabelowzero/mods/344) |                                                              |
+| Recommended | Nautilus                            | [Submodica.net](https://www.submodica.net/mods/sn1/250)      | [Nexusmods.com](https://www.nexusmods.com/subnautica/mods/1262) |
+| Recommended | Nautilus BZ                         | [Submodica.net](https://www.submodica.net/mods/sbz/251)      | [Nexusmods.com](https://www.nexusmods.com/subnauticabelowzero/mods/373) |
+| Recommended | BepInEx-Publicizer                  | [Github.com](https://github.com/MrPurple6411/Bepinex-Tools/releases/latest) |                                                              |
+| Recommended | Subnautica Runtime Editor           | [Submodica.net](https://www.submodica.net/mods/sn1/109)      |                                                              |
+| Recommended | Subnautica Modding NuGet package    | [Nuget.org](https://www.nuget.org/packages/Subnautica.Nautilus) |                                                              |
+| Recommended | Below Zero Modding NuGet package    | [Nuget.org](https://www.nuget.org/packages/SubnauticaZero.Nautilus/) |                                                              |
+| Recommended | Subnautica Modding Templates for VS | [Nuget.org](https://www.nuget.org/packages/Subnautica.Templates) |                                                              |
+| Optional    | Vortex                              | [Nexusmods.com](https://www.nexusmods.com/site/mods/1?tab=files) |                                                              |
+| Optional    | GitHub Desktop                      | [Github.com](https://desktop.github.com/)                    |                                                              |
 
 Now, there are loads of other tools and applications out there that can be used in modding games. The ones I’ve listed above have given me everything I need to make the simple mods I’ve been building, but you may find you need something more, or something different. There’s no right answer to what tools and software to use: have a look around, and find the right thing for you and for what you want to do.
 
@@ -65,9 +58,8 @@ Something to be very aware of is that development of these tools is pretty activ
 
 On that note, it's worth bookmarking these pages, where you'll always find the latest and greatest versions and details of these tools:
 
-- [QModManager wiki](https://github.com/SubnauticaModding/QModManager/wiki)
-- [SMLHelper wiki](https://github.com/SubnauticaModding/SMLHelper/wiki)
-- [VersionChecker wiki](https://github.com/tobeyStraitjacket/VersionChecker/wiki)
+- [Nautilus GitHub pages](https://github.com/SubnauticaModding/Nautilus)
+- [Subnautica modding NuGet gallery](https://www.nuget.org/profiles/SubnauticaModding)
 
 Don't forget to endorse the mods that you download and use from Nexusmods.
 
