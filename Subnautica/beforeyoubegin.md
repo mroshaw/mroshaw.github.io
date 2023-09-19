@@ -15,19 +15,29 @@ Therefore, I would suggest you do two things before you begin:
 
 Finally, a few more pointers before we start:
 
-1. You may have read about "Legacy" and "V2.0" versions of Subnautica. It is indeed the case that there are different versions of the game, and those versions require different approaches to modding. For the purposes of this tutorial, I am assuming we're modding the latest, "V2.0" version of the game. To reiterate: **this tutorial does NOT cover modding the "Legacy" branch of the games!**
+## Subnautica game versions
 
-2. One of the benefits of the "new" versions is that the game code for Subnautica and Below Zero are far more closely aligned than before. For this reason, the tutorial will cover the "Subnautica" game only. The principles and most of the code used can be directly applied to "Below Zero".
+You may have read about "Legacy" and "V2.0" versions of Subnautica. It is indeed the case that there are different versions of the game, and those versions require different approaches to modding. For the purposes of this tutorial, I am assuming we're modding the latest,"V2.0" version of the game. To reiterate: **this tutorial does NOT cover modding the "Legacy" branch of the games!**
 
-3. Where I refer to \<game>, this is the folder in which your Subnautica game is installed. For example, for me, it's: 
+## Subnautica and Below Zero
 
-   `C:\Games\Steam\steamapps\common\SubnauticaZero`
+One of the benefits of the "new" versions is that the game code for Subnautica and Below Zero are far more closely aligned than before. For this reason, the tutorial will cover the "Subnautica" game only. The principles and most of the code used can be directly applied to "Below Zero".
 
-   and
+## Game installation folders
 
-   `C:\Games\Steam\steamapps\common\Subnautica`
+Where I refer to \<game>, this is the folder in which your Subnautica game is installed. For example, for me, it's: 
 
-4. You can find the full source code for the sample mods in [this repository on GitHub](https://github.com/mroshaw/BeginnersGuideModSubnautica).
+`E:\Games\Steam\steamapps\common\SubnauticaZero`
+
+and
+
+`E:\Games\Steam\steamapps\common\Subnautica`
+
+## Tutorial mod source code
+
+You can find the full source code for the sample mods in [this repository on GitHub](https://github.com/mroshaw/BeginnersGuideModSubnautica).
+
+## Let's go!
 
 So, choose your path, is it going to be the original Subnautica or Below Zero? Take your pick, and let's code us a mod!
 
