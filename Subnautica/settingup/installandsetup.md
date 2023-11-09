@@ -67,3 +67,4 @@ Another BepInEx plugin that I really, really recommend. Installation follows the
 ## GitHub Desktop
 
 Again, totally optional. In fact, Visual Studio will give you everything you need to manage your code. I just find the desktop tool gives me a warm fuzzy feeling that my code is safe, and nothing is ever lost! [Download](software.md#downloads) and install using the installer, following the prompts. Simples!
+

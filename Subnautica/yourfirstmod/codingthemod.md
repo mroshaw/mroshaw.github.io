@@ -22,7 +22,9 @@ using BepInEx.Logging;
 using HarmonyLib;
 ```
 
-We'll need to tell BepInEx a bit about our mod, so add this annotation and information at the beginning of the class. We'll also tell Harmony to patch our code, and we'll set up a static "Logger" so we can write debug information from code within our plugin. Let's also set the namespace in line with our assembly definition:
+We'll need to tell BepInEx a bit about our mod, so add this annotation and information at the beginning of the class. We'll assume that we're using Nautilus at some point, so we'll add the necessary attributes to our code to let the plugin framework know.
+
+Finally, we'll tell Harmony to patch our code, and we'll set up a static "Logger" so we can write debug information from code within our plugin. Let's also set the namespace in line with our assembly definition:
 
 ```c#
 using BepInEx;
@@ -32,6 +34,7 @@ using HarmonyLib;
 namespace DaftAppleGames.KnifeDamageMod
 {
     [BepInPlugin(MyGuid, PluginName, VersionString)]
+    [BepInDependency("com.snmodding.nautilus")] // marks Nautilus as a dependency for this mod
     public class KnifeDamagePlugin : BaseUnityPlugin
     {
         private const string MyGuid = "com.daftapplegames.knifedamagemod";
