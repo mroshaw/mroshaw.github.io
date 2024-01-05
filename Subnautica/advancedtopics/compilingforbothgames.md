@@ -61,7 +61,7 @@ So, when we set the configuration to `Subnautica`, the project will look for ref
 
 and
 
-`E:\Games\Steam\steamapps\common\Subnautica_Data\`
+`E:\Games\Steam\steamapps\common\Subnautica\Subnautica_Data\`
 
 ## Writing game specific code
 
