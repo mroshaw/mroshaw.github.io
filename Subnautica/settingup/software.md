@@ -12,7 +12,7 @@ You'll want to setup your development machine with the following tools:
 
 -   **Visual Studio** - this is where we'll write our mod code. Note that you'll need the full fat "Visual Studio Community Edition" or equivalent, if you want to follow this tutorial. Do not use "Visual Studio Code".
 
--   **dnSpy** - this essential tool helps you to explore the code in the game and find useful methods and fields to target and modify.
+-   **ILSpy** - this essential tool helps you to explore the code in the game and find useful methods and fields to target and modify.
 
 -   **BepInEx** - this is a patcher/plug-in framework for Unity games. It does the hard lifting when it comes to hooking your mods into the Subnautica games. Installing BepInEx will also get you the Harmony software that we talked about earlier.
 
@@ -39,7 +39,7 @@ Here's a simple checklist of the tools that I've used in this tutorial and where
 | Category    | Tool Name                           | Where to download                                            | Mirror                                                       |
 | ----------- | ----------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Essential   | Visual Studio Community Edition     | [Microsoft.com](https://visualstudio.microsoft.com/vs/community/) |                                                              |
-| Essential   | dnSpy                               | [Github.com](https://github.com/dnSpy/dnSpy/releases/latest) |                                                              |
+| Essential   | ILSpy                               | [Github.com](https://github.com/icsharpcode/ILSpy/releases/latest) |                                                              |
 | Essential   | BepInEx Pack for Subnautica         | [Submodica.net](https://www.submodica.net/mods/sn1/141)      | [Nexusmods.com](https://www.nexusmods.com/subnautica/mods/1108) |
 | Essential   | BepInEx Pack for Below Zero         | [Nexusmods.com](https://www.nexusmods.com/subnauticabelowzero/mods/344) |                                                              |
 | Recommended | Nautilus                            | [Submodica.net](https://www.submodica.net/mods/sn1/250)      | [Nexusmods.com](https://www.nexusmods.com/subnautica/mods/1262) |
