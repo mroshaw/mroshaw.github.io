@@ -26,7 +26,7 @@ namespace DaftAppleGames.KnifeDamageMod
     /// Class to define options for our knife mode
     /// </summary>
     [Menu("Knife Damage Mod")]
-    internal class ModOptions : ConfigFile
+    public class ModOptions : ConfigFile
     {
     }
 }
