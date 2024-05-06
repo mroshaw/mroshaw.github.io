@@ -101,14 +101,13 @@ I like to keep order in my code, and I follow the class and method naming conven
 
 When you patch a class with Harmony, you can always get access to the class "instance" using the `__instance` parameter. What this gives us is a handle to the actual instantiated component instance that's executing the method that we've intercepted. This means we can directly manipulate the component, ready it's contents, and modify it's properties.
 
-Before we can do that, we have an instance of `PlayerTool` but what we actually need is an instance of a `Knife`. That's fine, we can do this in C# as follows:
+Before we can do that, we have an instance of `PlayerTool` but what we actually need is an instance of a `Knife`, which is a class that inherits from `PlayerTool`. That's fine, we can do this in C# as follows:
 
 ```c#
 // Check to see if this is the knife
-if (__instance.GetType() == typeof(Knife))
+if (__instance is Knife knife)
 {
-    // Convert our instance to a Knife instance
-    Knife knife = __instance as Knife;
+    // We can now safely refer to "knife" via Knife class methods and properties
 }
 ```
 
@@ -127,11 +126,8 @@ namespace DaftAppleGames.KnifeDamageMod
         public static void Awake_Postfix(PlayerTool __instance)
         {
             // Check to see if this is the knife
-            if (__instance.GetType() == typeof(Knife))
+            if (__instance is Knife knife)
             {
-                // Convert our instance to a Knife instance
-                Knife knife = __instance as Knife;
-
                 // Write a line to our debug log
                 KnifeDamagePlugin.Logger.LogDebug($"Knife damage is {knife.damage}");
 
@@ -169,7 +165,7 @@ and this one:
 
 `[HarmonyPostfix]`
 
-These are what are called "annotations" and these form the basis of how Harmony hooks your code into the game. You can find out more about Harmony annotations on the [Harmony website](https://harmony.pardeike.net/articles/annotations.html).
+These are what are called "annotations" or "attributes" and these form the basis of how Harmony hooks your code into the game. You can find out more about Harmony annotations on the [Harmony website](https://harmony.pardeike.net/articles/annotations.html).
 
 Something else to look at here is the method definition:
 

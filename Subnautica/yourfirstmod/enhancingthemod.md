@@ -107,11 +107,8 @@ namespace DaftAppleGames.KnifeDamageMod
         public static void Awake_Postfix(PlayerTool __instance)
         {
             // Check to see if this is the knife
-            if (__instance.GetType() == typeof(Knife))
+            if (__instance is Knife knife)
             {
-                // Convert our instance to a Knife instance
-                Knife knife = __instance as Knife;
-
                 // Write a line to our debug log
                 KnifeDamagePlugin.Log.LogDebug($"Knife damage is {knife.damage}");
 
