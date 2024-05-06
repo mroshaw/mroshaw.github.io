@@ -59,37 +59,24 @@ Things change all the time, and there are often many ways to "skin a cat" in the
 
 There is another way to add references to your project, and that is to use the community managed "NuGet" packages.
 
-There is some setup involved in doing this:
+You'll have to run a PowerShell script in order to do this:
 
-1. In your solution folder, create an empty file called `nuget.config` and paste in the following XML:
+1. Go to the start menu and start typing PowerShell. Click the "Windows PowerShell" icon.![](.\media\findpowershell.png)
 
-2. ```xml
-   <?xml version="1.0" encoding="utf-8"?>
-   <configuration>
-   	<packageSources>
-   		<add key="BepInEx" value="https://nuget.bepinex.dev/v3/index.json" />
-   	</packageSources>
-   </configuration>
+2. Run the following command:
+
+   ```
+   dotnet new install Subnautica.Templates::1.0.0
    ```
 
-3. Restart Visual Studio.
+3. The templates should now be installed:![](.\media\templatesinstalled.png)
 
-4. Open your solution, with your mod plugin project.
+4. When you next start a new mod project, you can select one of the new templates which should be listed under "Recent project templates":![](.\media\newprojecttemplates.png)
 
-5. Select Tools > NuGet Package Manager > Manage NuGet Packages for Solution...
+5. If you ever want to uninstall the templates, simply run this PowerShell command: 
 
-6. Click "Browse"
+   ```
+   dotnet new uninstall Subnautica.Templates
+   ```
 
-7. Set "Package Source" to "All"
-
-8. Tick "Include prerelease"
-
-9. Search for "Subnautica"
-
-10. Select either the "Subnautica" or "SubnauticaZero" package.
-
-11. Select the project or projects to apply the package to.![](.\media\nugetreferences.png)
-
-12. Click Install.
-
-The appropriate references will now be automatically associated to your project.
+   
