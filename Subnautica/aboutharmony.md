@@ -22,6 +22,17 @@ You will typically apply one of four types of patch
 
 We'll talk about `Prefix` and `Postfix` in the tutorial. The other two are more complex and beyond the scope of this beginners guide.
 
+A really simple example of how this all works to help us implement a mod is the example mod that we'll build in this tutorial: an increased knife damage mod. What we'll see in the pages to come is something like this:
+
+1. The game defines an "thing" (a class) called "Knife".
+2. That "thing" has a "property", a number, that determines how much damage to apply when the knife hits a target.
+3. This property and how it's applied to a target, is all wrapped up in the game code.
+4. When the game "spawns" or instantiates a knife, Harmony allows us to intercept that event using one of the patches described above.
+5. By intercepting that code, we can modify the damage property to be much higher than the developer originally intended.
+6. We'll then allow the code to carry on as if nothing has happened, safe in the knowledge that we've tweaked some stuff behind the scenes.
+
+Follow the guide and you'll see these concepts brought to life in the example.
+
 Note also that BepInEx "abstracts" many features of Harmony, making direct use of it unnecessary. There may be situations where you want to use Harmony directly, or even situations where you don't need Harmony, BepInEx, or Nautilus at all. There may be situations where other tools that abstract Harmony (or don't!) become relevant. It all depends on your approach and needs, so you should always keep an open mind as to how you might achieve the goal of your mod.
 
 I really recommend you go through the docs linked at the top of the page and familiarise yourself with these tools.

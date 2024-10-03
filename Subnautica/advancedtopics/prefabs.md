@@ -12,9 +12,11 @@ Unity, and therefore the Subnautica games, have a concept of `prefabs`, knowledg
 
 Think of a prefab as a template or blueprint, if you like, that describes an object in your game that be used to create many instances of that object, without having to reconfigure each and every instance.
 
-So, we may have a `Snowstalker` prefab, that contains all of the components and definitions that make a working, moving, murderising Snowstalker. To create a gang of murderous beasts, you need simply use the prefab to generate 20 new `SnowStalker` instances from that prefab, and place them around the map using their `Transform`. If we subsequently amend the prefab, all 20 instances inherit this change. This makes life really easy for a developer or modder who wants to create new object instances and tweak them.
+So, we may have a `Snowstalker` prefab, that contains all of the components and definitions that make a working, moving, murderising Snowstalker.  That includes the component code to make it move, react to danger, perform actions, as well as the models, textures and animations that the players see on screen. To create a gang of murderous beasts, you need simply use the prefab to generate 20 new `SnowStalker` instances from that prefab, and place them around the map using their `Transform`.  We do not have to create an empty game object from scratch and configure dozens of components.
 
-Once you've used a prefab to create a new instance, you're free to mess around without impacting other instances. So, you can increase the aggressiveness of your new Snowstalker, or even add new behaviours and components to change the way it behaves.
+A cool feature of prefabs is that if we subsequently amend the prefab definition, all 20 instances inherit this change straight away. This makes life really easy for a developer or modder who wants to create new object instances and tweak them. So to change all of your spawned Snowstalker's blue, just change the prefab definition and voila, a heard of blue beasties!
+
+Conversely, once you've used a prefab to create a new instance, you're free to mess around with that instance without impacting other instances or the prefab itself. So, you can increase the aggressiveness of just one of your new Snowstalkers, or even add new behaviours and components to change the way it behaves, without effecting any of the other instances that you've spawned.
 
 ## How to use prefabs
 
@@ -34,7 +36,7 @@ private static IEnumerator SetupNewGameObject(Vector3 spawnPosition, Quaternion 
 }
 ```
 
-This sets up what's called a `Coroutine` in Unity parlance. This is an asyncronous mechanism that allows us to say to Unity: instantiate this please, but continue processing frames while we wait.
+This sets up what's called a `Coroutine` in Unity parlance. This is an asynchronous mechanism that allows us to say to Unity: instantiate this please, but continue processing frames while we wait.
 
 This can then be invoked as follows:
 
@@ -103,3 +105,8 @@ gameOPbject.transform.rotation = spawnRotation;
 ```
 
 Prefabs are great and give you immediate access to fully configured bundles of components that bring creatures, pickupables and vehicles into the game with a few lines of code. You can even create your own prefabs as Asset Bundles, and we'll look at those later on in the tutorial.
+
+## Pro Tip - Nautilus makes working with prefabs easy!
+
+The fantastic Nautilus framework, developed and supported by the Subnautica modding community, makes dealing with prefabs really easy. Head over to the [Nautilus documentation pages](https://subnauticamodding.github.io/Nautilus/tutorials/prefabs-overview.html) for more info.
+

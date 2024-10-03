@@ -9,7 +9,7 @@ parent: Your first mod
 To build our mod, we first need to find out some some useful pieces of information. The goal is to modify the damage inflicted by the knife. Some key questions to answer, then:
 
 1. How do we get hold of the knife "object"?
-2. What do we change to effect the damage dealt?
+2. How does the game determine how much damage to apply when the knife strikes a target?
 
 This is where dnSpy comes in.
 
@@ -23,8 +23,8 @@ dnSpy has some brilliant search functionality, so in the search box at the botto
 
 A couple of things jump out:
 
-1. There's a `damage` field of type float. It's like Christmas has come early, as this is just what we're looking to change!
-1. There is no obvious method, highlighted in orange, for us to "hook" into to alter this value.
+1. There's a `damage` field of type float. It's like Christmas has come early, as this looks very much like a value that is used to determine how much damage to inflict on a target!
+1. However, remember that we need to "inject" somewhere early in the lifecycle of this object. There is no obvious method, highlighted in orange, for us to "hook" into to alter this value.
 
 At this point it's worth touching on Unity event functions. To keep things simple, you can think of Unity event functions as steps executed in order when an object is created in the Unity game engine. You can find out more in the [Unity documentation](https://docs.unity3d.com/Manual/ExecutionOrder.html).
 
@@ -42,11 +42,11 @@ Not quite. Click on the arrow to the left of "Base Type and Interfaces", under t
 
 ![](.\media\playertoolresult.png)
 
-Now we're talking! We have an `Awake` method, which is something we can intercept in order to change the behaviour of our component. As Knife inherits from PlayerTool, and has a "damage" property for us to tweak, we now have what we need!
+Now we're talking! We have an `Awake` method, which is something we can intercept in order to change the behaviour of our component right at the point it "comes to life", so to speak. As Knife inherits from PlayerTool, and has a "damage" property for us to tweak, we now have what we need!
 
-So back to our two questions, we now have answers:
+Back to our two questions:
 
-1. How do we get hold of the knife "object"? We intercept the "Awake" method on the parent "PlayerTool" class.
-2. What do we change to effect the damage dealt? We modify the "damage" value once the component has woken.
+1. How do we get hold of the knife "object"? We intercept the "Awake" method on the parent "PlayerTool" class and use that to get a handle on the knife.
+2. How does the game determine how much damage to apply when the knife strikes a target? The "damage" property looks very much like it is used in that calculation, and increasing that value will likely do what we want.
 
 Finally, let's write some code!

@@ -10,4 +10,5 @@ This is where it starts to get fun! Let create a mod that will double the damage
 
 If you're stuck, or just need a bit of a nudge in the right direction, you can always refer to the working source code in my GitHub repository:
 
-https://github.com/mroshaw/BeginnersGuideModSubnautica
+[https://github.com/mroshaw/BeginnersGuideModSubnautica](https://github.com/mroshaw/BeginnersGuideModSubnautica)
+

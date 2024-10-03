@@ -40,9 +40,9 @@ A lot of Unity, and therefore Subnautica, is about `GameObjects` and `Components
 
 Using tools like Unity Explorer, we can see exactly what components are attached to a given `GameObject`, as well as see the `GameObject` hierarchy, in any Unity game. Instead of trawling through hierarchies of inheritance, we can see at a glance what classes we can start to explore and exploit. For example, here I've run a simple search for the `Player` game object instance in Below Zero:
 
-![](.\media\playerunityexplorer.png)
+![](.\media\runtimeeditorplayer.png)
 
-So, instead of having to travel up and down a class hierarchy, you can simply see here what components go to make up the player on the right, as well as the `GameObject` hierarchy that we can access there on the left. And since each component is a class, you can start delving into dnSpy to look for methods to hook into and parameters to tweak.
+So, instead of having to travel up and down a class hierarchy, you can simply see here what components go to make up the player on the right, as well as the `GameObject` hierarchy that we can access there on the left. You can see that the Player has components such as `OxygenManager`, `PlayerController`, a `RigidBody` - you can start to understand exactly what components make up the player and what part they play. And since each component is a class, you can start delving into dnSpy to look for methods to hook into and parameters to tweak.
 
 ### Unity makes it really easy to get hold of components
 

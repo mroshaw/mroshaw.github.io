@@ -37,25 +37,28 @@ So, what you have now are
 
 Try and remember these terms as we go through the tutorial.
 
-## Pro Tip - using the NuGet template package
+## Pro Tip - using the Subnautica community templates
 
-There is another way to set up a new project, which is to use the community maintained project templates.
+Just like the "Class Library" template gave you some "boiler plate" code and structure to start your mod, there are some community managed templates created specifically for building Subnautica plugins. These templates not only give you a nice, solid code base on which to begin modding, they also handle some of the tricky work around adding the right references and DLLs into your project.
 
-To install and use the templates, you can follow these steps:
+You'll have to run a PowerShell script in order to get hold of these templates, but once done won't have to do it again. Just follow these steps to install the templates:
 
-1. In Visual Studio, create a new solution or open an existing solution.
-2. Select Tools > NuGet Package Manager > Manage NuGet Packages for Solution...
-3. Click "Browse"
+1. Go to the start menu and start typing PowerShell. Click the "Windows PowerShell" icon.![](E:/Dev/DAG/Subnautica Modding Guide/Subnautica Modding Tutorial/mroshaw.github.io/Subnautica/yourfirstmod/media/findpowershell.png)
 
-4. Set "Package Source" to "All"
+2. Run the following command:
 
-5. Tick "Include prerelease"
+   ```
+   dotnet new install Subnautica.Templates::1.0.0
+   ```
 
-6. Search for "Subnautica"
-7. Select "Subnautica.Templates"
-8. On the right, click "Install"
-9. Click "Apply"
+3. The templates should now be installed:![](E:/Dev/DAG/Subnautica Modding Guide/Subnautica Modding Tutorial/mroshaw.github.io/Subnautica/yourfirstmod/media/templatesinstalled.png)
 
-When you now go to create a new project, you'll see a number of new project templates that you can choose from:
+4. When you next start a new mod project, you can select one of the new templates which should be listed under "Recent project templates":![](E:/Dev/DAG/Subnautica Modding Guide/Subnautica Modding Tutorial/mroshaw.github.io/Subnautica/yourfirstmod/media/newprojecttemplates.png)
 
-![](.\media\subnauticanugettemplateprojects.png)
+5. If you ever want to uninstall the templates, simply run this PowerShell command: 
+
+   ```
+   dotnet new uninstall Subnautica.Templates
+   ```
+
+   

@@ -31,6 +31,7 @@ You'll want to setup your development machine with the following tools:
 ## Optional
 
 -   **GitHub Desktop** - not mandatory, but good to manage your source code in a Git repository, which will allow you to share and collaborate with others.
+-   **Vortex** - a plugin manager from Nexusmods. Not essential, but handy for installing and managing mods in the games.
 
 ## Downloads
 

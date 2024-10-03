@@ -55,28 +55,7 @@ With regards to references: you're not going to need all of these, all of the ti
 
 Things change all the time, and there are often many ways to "skin a cat" in the coding world. These references give me what I need to make my simple mods.
 
-## Pro Tip - using the Subnautica NuGet packages
+## Pro Tip - using the Subnautica community templates
 
-There is another way to add references to your project, and that is to use the community managed "NuGet" packages.
+Just a reminder here, that if you following the [earlier steps](creatingaproject.md#Pro-Tip---using-the-Subnautica-community-templates) to install the Subnautica community template packages, you won't have to mess around with references. Everything will be handled nicely for you by the templates.
 
-You'll have to run a PowerShell script in order to do this:
-
-1. Go to the start menu and start typing PowerShell. Click the "Windows PowerShell" icon.![](.\media\findpowershell.png)
-
-2. Run the following command:
-
-   ```
-   dotnet new install Subnautica.Templates::1.0.0
-   ```
-
-3. The templates should now be installed:![](.\media\templatesinstalled.png)
-
-4. When you next start a new mod project, you can select one of the new templates which should be listed under "Recent project templates":![](.\media\newprojecttemplates.png)
-
-5. If you ever want to uninstall the templates, simply run this PowerShell command: 
-
-   ```
-   dotnet new uninstall Subnautica.Templates
-   ```
-
-   
