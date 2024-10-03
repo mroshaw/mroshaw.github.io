@@ -32,11 +32,11 @@ Composition takes a different approach to inheritance. Instead of `Player` *is a
 
 There are a number of ways composition helps us in modding Unity games such as Subnautica. Let's have a look at some of the main ones.
 
-#### Unity deals in Game Objects and Components
+### Unity deals in Game Objects and Components
 
 A lot of Unity, and therefore Subnautica, is about `GameObjects` and `Components`. You can think of a `GameObject` as a container for one or more `Components`, organised in a hierarchy. Lots of things that we want to change and tweak in mods is tied to `GameObjects` and `Components`, and we have lots of tools and tricks up our sleeve to get at them.
 
-#### We can easily find out what components make up a game object
+### We can easily find out what components make up a game object
 
 Using tools like Unity Explorer, we can see exactly what components are attached to a given `GameObject`, as well as see the `GameObject` hierarchy, in any Unity game. Instead of trawling through hierarchies of inheritance, we can see at a glance what classes we can start to explore and exploit. For example, here I've run a simple search for the `Player` game object instance in Below Zero:
 
