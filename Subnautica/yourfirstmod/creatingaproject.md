@@ -6,17 +6,17 @@ parent: Your first mod
 
 # Creating a Visual Studio C# project
 
-Hop into Visual Studio and create a new project. You must use the "Class Library (.NET Framework)" template for this:
+Hop into Visual Studio and create a new project. You must use the "Class Library" template for this:
 
 ![](.\media\classlibrarytemplate.png)
 
-Note that the "Class Library" template is not the one you want as it targets .NET Standard or .NET Core. You specifically want to select the template for .NET Framework.
+Note that the "Class Library (.NET Framework)" template is not the one you want as it targets .NET Framework. This is out of date, and doesn't support all the features of .NET.
 
-Let's call the project `KnifeDamageMod`, set a location and select `.NET Framework 4.7.2`. Click the Create button, and you're done! Who said this was difficult, right?!
+Let's call the project `KnifeDamageMod`, set a location and select `.NET Standard 2.1`. Click the Create button, and you're done! Who said this was difficult, right?!
 
 ![](.\media\vsprojectconfiguration.png)
 
-Just to reiterate: you **must** select `.NET Framework 4.7.2`. If you don't see it, go back to the Visual Studio installer and select it. Alternatively, you can download it manually from [Microsoft.com](https://dotnet.microsoft.com/download/visual-studio-sdks)
+Just to reiterate: you **must** select either `.NET Standard 2.1` `.NET Framework 4.8`, `.NET Framework 4.7.2`, or `.NET Standard 2.0` . If you don't see it, go back to the Visual Studio installer and select it. Alternatively, you can download it manually from [Microsoft.com](https://dotnet.microsoft.com/download/visual-studio-sdks)
 
 Okay, there's more to it than that before we start.
 
