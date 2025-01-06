@@ -129,13 +129,13 @@ namespace DaftAppleGames.KnifeDamageMod
             if (__instance is Knife knife)
             {
                 // Write a line to our debug log
-                KnifeDamagePlugin.Log.LogDebug($"Knife damage is {knife.damage}");
+                KnifeDamagePlugin.Log.LogInfo($"Knife damage is {knife.damage}");
 
                 // Make the knife do 5 times more damage
                 knife.damage *= 5.0f;
 
                 // Write a line to our debug log
-                KnifeDamagePlugin.Log.LogDebug($"Knife damage increased to {knife.damage}");
+                KnifeDamagePlugin.Log.LogInfo($"Knife damage increased to {knife.damage}");
             }
         }
     }
