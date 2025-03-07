@@ -10,7 +10,7 @@ One of the biggest challenges when you begin modding is finding out, well, where
 
 A fantastic way to help you with this is by using one of the many awesome "Runtime Editor" tools that are out there today. Whereas dnSpy allows you to peruse the de-compiled code for logic, methods names and parameter definitions, these tools allow you to explore "real time" instances of game objects within the game, so you can directly observe the configuration and components in use, their behaviour and the changes your code is making to the game.
 
-I've been using  "Subnautica Runtime Editor", which is a branch of a great open source tool called "Unity Runtime Editor". You can download this great tool from [Submodica](https://submodica.xyz/mods/sn1/109), or you can download and install the "Unity" version from the [authors GitHub](https://github.com/ManlyMarco/RuntimeUnityEditor).
+I've been using  "Subnautica Runtime Editor", which is a branch of a great open source tool called "Unity Runtime Editor". You can download this great tool from [Nexusmods](https://www.nexusmods.com/subnautica/mods/1561), or you can download and install the "Unity" version from the [authors GitHub](https://github.com/ManlyMarco/RuntimeUnityEditor).
 
 There are a number of such tools available for download, and you're encouraged to search them out, give them a try, and find out what works best for you.
 

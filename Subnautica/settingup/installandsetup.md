@@ -28,7 +28,7 @@ Simply [download](software.md#downloads) dnSpy and unzip it to a folder location
 
 ## BepInEx Pack
 
-[Download](software.md#downloads) the latest version from Nexus or Submodica. Unzip the file to your game folder, and everything you need will be in the right place. You'll find a folder called "plugins" where you'll put your mod DLLs. After installation, your game folder should look something like this:
+[Download](software.md#downloads) the latest version from Nexus. Unzip the file to your game folder, and everything you need will be in the right place. You'll find a folder called "plugins" where you'll put your mod DLLs. After installation, your game folder should look something like this:
 
 ![](.\media\bepinexpackinstall.png)
 
@@ -40,7 +40,7 @@ Simply [download](software.md#downloads) this from Nexusmods and run the install
 
 ## Nautilus
 
-Optional but highly recommended! If you've installed Vortex, you can install Nautilus by visiting it's mod [download](software.md#downloads) page on Nexus, and click "Mod Manager Download". Alternatively, download the ZIP file from either Nexus or Submodica and extract the contents into the BepInEx folder in your game folder: \<game>\\BepInEx\\plugins. You should see something like this:
+Optional but highly recommended! If you've installed Vortex, you can install Nautilus by visiting it's mod [download](software.md#downloads) page on Nexus, and click "Mod Manager Download". Alternatively, download the ZIP file from Nexus and extract the contents into the BepInEx folder in your game folder: \<game>\\BepInEx\\plugins. You should see something like this:
 
 ![](.\media\nautilusinstall.png)
 

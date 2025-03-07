@@ -41,12 +41,12 @@ Here's a simple checklist of the tools that I've used in this tutorial and where
 | ----------- | ----------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Essential   | Visual Studio Community Edition     | [Microsoft.com](https://visualstudio.microsoft.com/vs/community/) |                                                              |
 | Essential   | dnSpy                               | [Github.com](https://github.com/dnSpy/dnSpy/releases/latest) |                                                              |
-| Essential   | BepInEx Pack for Subnautica         | [Submodica.net](https://www.submodica.net/mods/sn1/141)      | [Nexusmods.com](https://www.nexusmods.com/subnautica/mods/1108) |
+| Essential   | BepInEx Pack for Subnautica         | [Nexusmods.com](https://www.nexusmods.com/subnautica/mods/1108) |                                                              |
 | Essential   | BepInEx Pack for Below Zero         | [Nexusmods.com](https://www.nexusmods.com/subnauticabelowzero/mods/344) |                                                              |
-| Recommended | Nautilus                            | [Submodica.net](https://www.submodica.net/mods/sn1/250)      | [Nexusmods.com](https://www.nexusmods.com/subnautica/mods/1262) |
-| Recommended | Nautilus BZ                         | [Submodica.net](https://www.submodica.net/mods/sbz/251)      | [Nexusmods.com](https://www.nexusmods.com/subnauticabelowzero/mods/373) |
+| Recommended | Nautilus                            | [Nexusmods.com](https://www.nexusmods.com/subnautica/mods/1262) |                                                              |
+| Recommended | Nautilus BZ                         | [Nexusmods.com](https://www.nexusmods.com/subnauticabelowzero/mods/373) |                                                              |
 | Recommended | BepInEx-Publicizer                  | [Github.com](https://github.com/MrPurple6411/Bepinex-Tools/releases/latest) |                                                              |
-| Recommended | Subnautica Runtime Editor           | [Submodica.net](https://www.submodica.net/mods/sn1/109)      |                                                              |
+| Recommended | Subnautica Runtime Editor           | [Nexusmods.com](https://www.nexusmods.com/subnautica/mods/1561) |                                                              |
 | Recommended | Subnautica Modding NuGet package    | [Nuget.org](https://www.nuget.org/packages/Subnautica.Nautilus) |                                                              |
 | Recommended | Below Zero Modding NuGet package    | [Nuget.org](https://www.nuget.org/packages/SubnauticaZero.Nautilus/) |                                                              |
 | Recommended | Subnautica Modding Templates for VS | [Nuget.org](https://www.nuget.org/packages/Subnautica.Templates) |                                                              |
