@@ -58,4 +58,3 @@ Things change all the time, and there are often many ways to "skin a cat" in the
 ## Pro Tip - using the Subnautica community templates
 
 Just a reminder here, that if you following the [earlier steps](creatingaproject.md#Pro-Tip---using-the-Subnautica-community-templates) to install the Subnautica community template packages, you won't have to mess around with references. Everything will be handled nicely for you by the templates.
-
