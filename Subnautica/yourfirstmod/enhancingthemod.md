@@ -53,7 +53,9 @@ namespace DaftAppleGames.KnifeDamageMod
 }
 ```
 
-Now we need to amend our plugin class to initialise our new ModOptions before we patch in the code. So, back in our "KnifeDamagePlugin.cs" file:
+Your new `ModOptions` class *inherits* from the Nautilus `ConfigFile` class, so when you want to refer to the settings in your main mod code, you need to refer to that new `ModOptions` class, *not* the `ConfigFile` class.
+
+So, we now need to amend our plugin class to initialise our new `ModOptions` before we patch in the code. So, back in our "KnifeDamagePlugin.cs" file:
 
 ```c#
 using BepInEx;
@@ -91,6 +93,8 @@ namespace DaftAppleGames.KnifeDamageMod
     }
 }
 ```
+
+This allows us to access the properties of that class from anywhere within our plugin. For example, to access the damage modifier we can simply write: `KnifeDamagePlugin.ModOptions.DamageMultiplier`. You can learn more about `static` classes in the [Microsoft C# programming guide](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members).
 
 Now all we have to do is reference the multiplier in our patch code. Back in "PlayerToolPatches.cs":
 
