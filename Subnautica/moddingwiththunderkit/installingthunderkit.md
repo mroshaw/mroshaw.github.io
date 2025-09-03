@@ -6,42 +6,45 @@ parent: Modding with ThunderKit
 
 # Installation and Set-up
 
-There's quite a bit to do here, so I advice taking your time and going through each step slowly.
+There's quite a bit to do here, so I advise taking your time and going through each step slowly.
 
 ## Install Unity Editor 2019.4.36f1
 
-It's important the the version of Unity EXACTLY matches the version used to build the game. For us, that is Unity 2019.4.36f1, and that applies to both Subnautica and Below Zero. Luckily, you can still download this rather ancient version of the editor direct from Unity.
+It's important that the version of Unity EXACTLY matches the version used to build the game. For us, that is Unity 2019.4.36f1, and that applies to both Subnautica and Below Zero. Luckily, you can still download this rather ancient version of the editor direct from Unity.
 
-From this link, [download and install Unity Hub](https://unity.com/unity-hub). This is where you'll manage Unity Editor installs and create and manage your projects.
+1. From this link, [download and install Unity Hub](https://unity.com/unity-hub). This is where you'll manage Unity Editor installs and create and manage your projects.
 
-1. Once Unity Hub is installed, click this link to get to the [Unity download archives](https://unity.com/releases/editor/archive).
-2. Click the "2019" filter and find the entry for 2019.4.36f1.
-3. Click the "Install" button next to that entry.
-4. If prompted, allow Unity Hub to open the link.
-5. Follow the prompts to install the Unity Editor.
+2. Once Unity Hub is installed, click this link to get to the [Unity download archives](https://unity.com/releases/editor/archive).
+3. Click the "2019" filter and find the entry for 2019.4.36f1.
+4. Click the "Install" button next to that entry.
+5. If prompted, allow Unity Hub to open the link.
+6. Follow the prompts to install the Unity Editor.
+
+You'll now have Unity 2019.4.36f1 installed and ready on your machine.
 
 ## Create a new ThunderKit Project
 
-1. Once the Unity Editor is installed, you can create a new project.
-2. In Unity Hub, click the "New Project" button.
-3. In the "Editor Version" drop down, select "2019.4.36f1 LTS".
-4. Now click "Core" and select the "3D (Built-In Render Pipeline)" template.
-5. Give your project a name, pick the location for where it will be saved, then click "Create project":![](.\media\createthunderkitproject.png)
+Once the Unity Editor is installed, you can create a new project. This project can be the basis for all of your mods for this particular game, so you don't need to do this for every new mod you create. What you should do is have separate projects for Subnautica and for Below Zero, if you plan on making mods for both games.
 
-6. You can now open your new project direct from Unity Hub by clicking it in the list:![](.\media\unityhubprojects.png)
+1. In Unity Hub, click the "New Project" button.
+2. In the "Editor Version" drop down, select "2019.4.36f1 LTS".
+3. Now click "Core" and select the "3D (Built-In Render Pipeline)" template.
+4. Give your project a name, for example "My Subnautica ThunderKit Mods", pick the location for where it will be saved, then click "Create project":![](.\media\createthunderkitproject.png)
+
+5. You can now open your new project direct from Unity Hub by clicking it in the list:![](.\media\unityhubprojects.png)
 
 ## Install ThunderKit
 
-Unity will open your new project once created, or you can open in through Unity Hub. Having opening your new project, you should be in the Unity Editor.
+Unity will open your new project once created, or you can open it through Unity Hub. Having opening your new project, you should be in the Unity Editor.
 
-1. Click Window > Package manager to open package manager.
+1. Select the "Window > Package manager" menu item to open package manager.
 2. In the top left of this window is a little "+" icon with a drop down. Select that and pick "Add package from git URL"
 3. Paste in this URL and hit return: `https://github.com/PassivePicasso/ThunderKit.git#9.1.3`
 4. Unity will install the ThunderKit package, and this will likely generate a bunch of errors and warnings in the console. You can ignore these, and clear the console once installation is done. If all is well, the ThunkerKit "Settings" window should be displayed.
 
 > [!TIP]
 >
-> Check for the latest release in the ThunderKit GitHub repository, and use that reference version when installing the package. 9.1.3 is the latest release at the time of writing this guide.
+> Check for the latest release in the ThunderKit GitHub repository, and use that reference version when installing the package - simply replace the number after the # character in the URL. As it happens, 9.1.3 was the latest release at the time of writing this guide.
 
 ## Import the Subnautica game files
 
@@ -60,9 +63,9 @@ We'll need some additional files and bits and pieces for our mods.
 1. Click the "Tools > ThunderKit > Packages" menu to open the ThunderKit package manager.
 2. Expand the "Extensions" drop down on the left, and select the "Bep In Ex Pack" entry.
 3. Click the little "Install" button in the top right.
-4. That will install the BepInEx DLLs necessary to patch our game.
+4. This will install the BepInEx DLLs necessary to patch our game.
 
-There's a conflict between two Harmony DLLs installed by this pack, that will prevent our mod from compiling. We can get around that by:
+There's a conflict between two Harmony DLLs installed by this pack, that will prevent our mod from compiling. We can get around that by following these steps:
 
 1. In Unity, in the "Project" window, expand "Packages > BepInExPack > BepInEx > core".
 2. Right click any file and select the "Show in Explorer" menu item.
@@ -90,3 +93,4 @@ Nautilus is a great tool that provides loads of useful components and classes fo
 
    ![](.\media\apiupdatedialogue.png)
 
+You've now got everything that we need to start creating a new mod in the ThunderKit framework.
