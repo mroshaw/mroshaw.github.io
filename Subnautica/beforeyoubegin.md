@@ -1,6 +1,7 @@
 ---
 title: Before you begin
 nav_order: 3
+parent: Beginners Guide to Modding Subnautica
 ---
 
 # Before you begin

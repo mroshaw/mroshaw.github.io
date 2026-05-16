@@ -2,6 +2,7 @@
 title: References
 nav_order: 13
 has_children: true
+parent: Beginners Guide to Modding Subnautica
 ---
 
 # References

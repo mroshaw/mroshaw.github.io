@@ -1,6 +1,7 @@
 ---
 title: About Harmony
 nav_order: 6
+parent: Beginners Guide to Modding Subnautica
 ---
 
 # About Harmony and HarmonyX

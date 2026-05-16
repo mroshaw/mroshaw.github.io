@@ -1,6 +1,7 @@
 ---
 title: Beginners Guide to Modding Subnautica
 nav_order: 2
+parent: Mroshaw Mod Tutorials
 ---
 
 # Beginners Guide to Modding Subnautica and Subnautica: Below Zero

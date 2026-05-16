@@ -2,6 +2,7 @@
 title: Your first mod
 nav_order: 8
 has_children: true
+parent: Beginners Guide to Modding Subnautica
 ---
 
 # Your first Subnautica mod

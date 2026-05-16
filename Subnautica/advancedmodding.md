@@ -2,6 +2,7 @@
 title: Advanced modding
 nav_order: 10
 has_children: true
+parent: Beginners Guide to Modding Subnautica
 ---
 
 # Advanced modding

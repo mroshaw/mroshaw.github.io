@@ -2,6 +2,7 @@
 title: Modding with ThunderKit
 nav_order: 12
 has_children: true
+parent: Beginners Guide to Modding Subnautica
 ---
 
 # Modding with ThunderKit

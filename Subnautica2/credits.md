@@ -1,7 +1,7 @@
 ---
 title: Credits
 nav_order: 99
-parent: Beginners Guide to Modding Subnautica
+parent: Beginners Guide to Modding Subnautica 2
 ---
 
 # Credits
@@ -10,27 +10,8 @@ Though I've written this guide, the hard work has been done by a community of am
 
 Thanks to, but not limited to:
 
--   PrimeSonic
+-   
 
--   Metious
-
--   tobeyStraitjacket
-
--   DaWrecka
-
--   Mikjaw
-
--   DarkOne
-
--   MrPurple6411
-
--   tobey
-
--   Essence
-
--   EldritchCarMaker
-
--   Ramune
 
 
 And to everyone else on the [Subnautica modding Discord](https://discord.com/invite/UpWuWwq).

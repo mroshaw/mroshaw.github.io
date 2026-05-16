@@ -5,7 +5,10 @@ nav_order: 1
 
 # Welcome modders!
 
-These pages house tutorials and guides for modders and Unity developers. Currently, you'll find a guide to modding the Subnautica and Subnautica: Below Zero games.
+These pages house tutorials and guides for modders and Unity developers. Currently, you'll find:
+
+- A guide to modding the Subnautica and Subnautica: Below Zero games.
+- A guide to modding Subnautica 2.
 
 # Introduction
 

@@ -2,6 +2,7 @@
 title: Setting up for development
 nav_order: 7
 has_children: true
+parent: Beginners Guide to Modding Subnautica
 ---
 
 # Setting up for development
