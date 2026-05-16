@@ -17,6 +17,7 @@ Irrespective of what you are making, you'll want to download and install these t
 
 ## Optional
 
+-   **Visual Studio Code** - a nice IDE for editing LUA code.
 -   **retoc** - rtoc is a command line tool for packing/unpacking Unreal Engine IoStore containers (.utoc/.ucas). Can be used to package mods without a full UE installation.
 -   **UAssetGUI** - a tool to help repackage assets without the need for the full UE installation. Some scenarios still require the full UE installation.
 -   **Unreal Engine** - the full game engine. Only needed if you want to go full on into creating your own systems, assets, behaviours etc. Might also be useful for repackaging modified assets, depending on the nature of your mod.
@@ -32,6 +33,7 @@ Here's a simple checklist of the tools that I've used in this tutorial and where
 | --------- | -------------------------------- | ------------------------------------------------------------ |
 | Essential | UE4SS (Subnautica 2 DEV version) | [Nexusmods.com](https://www.nexusmods.com/subnautica2/mods/36) |
 | Essential | Fmodel                           | [Fmodel.app](https://fmodel.app/)                            |
+| Optional  | Visual Studio Code               | [Visualstudio.com](https://code.visualstudio.com/)           |
 | Optional  | retoc                            | [Github.com](https://github.com/trumank/retoc/releases)      |
 | Optional  | UAssetGUI                        | [Github.com](https://github.com/atenfyr/UAssetGUI/releases)  |
 | Optional  | Unreal Engine 5                  | [Unrealengine.com](https://www.unrealengine.com/download)    |

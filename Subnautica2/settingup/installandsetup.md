@@ -12,6 +12,7 @@ Remember, you don't need to install everything, only the tools you need for the 
 
 - UE4SS
 - FModel
+- Visual Studio Code with the LUA extension
 
 You don't need to install the full Unreal Engine to get started.
 
@@ -67,6 +68,57 @@ Now to set up FModel:
 ## UAssetGUI
 
 Just download the `UAssetGUI.exe`file from the latest release on Github, and copy it to your Dev folder. I put it in `E:\Dev\UnrealDev/UAssetGUI`.
+
+## Visual Studio Code
+
+You can set up Visual Studio Code as a nice little IDE for editing your LUA mod code.
+
+### Generate game LUA types
+
+We can again leverage UE4SS to improve things even further by dumping LUA bindings for use in VS code:
+
+1. Having installed UE4SS, launch the game.
+
+2. Click the "Dumpers" button at the top of the screen.
+
+3. Click the "Generate Lua Types" button.
+
+4. This will generate a load of files in `\Subnautica2\Subnautica2\Binaries\Win64\ue4ss\Mods\shared\types`.
+
+5. In the `\Subnautica2\Subnautica2\Binaries\Win64\ue4ss\Mods` folder, create a file called `.luarc.json`.
+
+6. Open it and paste in this text:
+
+   ```json
+   
+   ```
+
+   
+
+### Install VS code
+
+1. Download the Visual Studio code installer and run it.
+2. Launch Visual Studio Code and click "Open Folder".
+3. Open your UE4SS "mods" folder, `\Subnautica2\Subnautica2\Binaries\Win64\ue4ss\Mods`.
+4. Go to File > Save Workspace As... and save the ".code-workspace" file to `\Subnautica2\Subnautica2\Binaries\Win64\ue4ss\Mods`
+5. Go to File > Preferences > Extensions
+6. Search for "LUA" and find the extension by "sumneko".
+7. Click "Install" next to that extension.
+8. Click "Trust publisher and install".
+9. In the root of the workspace create a file called `.luarc.json`
+10. Open this file and paste in this text:
+
+```json
+{
+    "$schema": "https://raw.githubusercontent.com/sumneko/vscode-lua/master/setting/schema.json",
+    "workspace.maxPreload": 50000,
+    "workspace.preloadFileSize": 5000,
+    "workspace.library": ["../shared", "Scripts"]
+}
+```
+
+11. Go to File > Close Workspace, then File > Open Workspace From File, and reopen the workspace file you saved.
+12. You'll have a really useful, lightweight IDE environment in which to develop your code:![](.\media\visualstudiocodelua.png)
 
 ## retoc
 
