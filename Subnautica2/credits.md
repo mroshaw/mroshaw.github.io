@@ -10,9 +10,8 @@ Though I've written this guide, the hard work has been done by a community of am
 
 Thanks to, but not limited to:
 
+-   Buckminsterfullerene
 -   
-
-
 
 And to everyone else on the [Subnautica modding Discord](https://discord.com/invite/UpWuWwq).
 

@@ -50,14 +50,17 @@ Asset replacement mods work by unpacking the game's existing content, modifying 
 
 - Can be used not just to change game behaviour, but to change physical assets like textures, games models, etc.
 - Potentially requires no code whatsoever.
+- Your mod is less likely to break when the base game is updated.
 
 ### Cons
 
 - Requires more detailed knowledge of the existing game structure.
+- Can cause incompatibility issues with other mods that touch the same assets.
 - Can require more proactive maintenance, as any game patch that changes the original assets can break your mod.
 - Requires understanding of UE's asset system and how assets reference each other.
 - Some asset types require a full UE install to repackage properly.
 - Requires a more advanced dev setup, with more tools to analyse, modify, and repack assets.
+- Mods will have to be repacked and redistributed if the base game UE version changes.
 
 ### Typical tools required
 
@@ -74,12 +77,15 @@ Blueprint and code mods involve creating entirely new game logic or assets withi
 ### Pros
 
 - Allows for the greatest flexibility in what your mod can do - new items, vehicles, creatures, game mechanics, anything really!
+- Less likely to cause a conflict with other mods.
 
 ### Cons
 
-- All of the cons of asset replacement mods.
-- Requires a more extensive dev environment setup.
+- Requires more detailed knowledge of the existing game structure.
+- Requires understanding of UE's asset system and how assets reference each other.
+- Requires a more extensive dev environment setup, typically requiring a full Unreal Engine install and configuration.
 - Calls for experience and understanding of Unreal Engine development tools and processes.
+- Mods will have to be repacked and redistributed if the base game UE version changes.
 
 ### Typical tools required
 
