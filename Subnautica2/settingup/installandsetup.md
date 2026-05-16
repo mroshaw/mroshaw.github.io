@@ -78,22 +78,9 @@ You can set up Visual Studio Code as a nice little IDE for editing your LUA mod 
 We can again leverage UE4SS to improve things even further by dumping LUA bindings for use in VS code:
 
 1. Having installed UE4SS, launch the game.
-
 2. Click the "Dumpers" button at the top of the screen.
-
 3. Click the "Generate Lua Types" button.
-
 4. This will generate a load of files in `\Subnautica2\Subnautica2\Binaries\Win64\ue4ss\Mods\shared\types`.
-
-5. In the `\Subnautica2\Subnautica2\Binaries\Win64\ue4ss\Mods` folder, create a file called `.luarc.json`.
-
-6. Open it and paste in this text:
-
-   ```json
-   
-   ```
-
-   
 
 ### Install VS code
 
