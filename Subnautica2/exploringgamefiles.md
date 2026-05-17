@@ -14,9 +14,41 @@ The UE4SS mod that you installed earlier is also fundamental to exploring the ga
 
 Having installed the mod you can launch the game and you'll see the UE4SS main window. I like to drag this over to my second monitor, so that I have the main game running on my primary screen, and can refer to the UE4SS window on the other.
 
+### Live View
 
+Click the "Live View" tab, top left. This is where you'll spend a lot of your time. Here, you can see all of the objects present in the running game, and you can query and filter here to find things that might be relevant. Once you've found something, you can expand it and examine it's properties in real time.
+
+A useful first tip is to right click in the search text box and select "Instances only". This filters the search results to actual instances of classes (so the actual objects themselves), rather than abstract class definitions for those objects.
+
+Having ticked that box, back in the search field enter "Player" and hit return.
+
+You'll see some interesting results, including a number of instances that start with "SN2Player". This feels suspiciously like it might be relevant to what we want to do in our mod, so change the search field to "SN2Player", hit return, and see a more refined list of results. "SN2PlayerCharacter" looks even better, so refine the search again:![](.\media\ue4ssplayersearch.png)
+
+You can expand the "SN2Playercharacter" instance to see all of it's properties, as well as the superclasses from which it inherits, along with their properties.
+
+Okay, so "SN2PlayerCharacter" looks pretty promising. Let's go back and see what UE4SS thinks about this class from a LUA perspective.
+
+In the UE4SS folder, within `mods`, you'll find a folder named `types` - we created and populated that earlier, when we set up UE4SS. The full path is `Subnautica2\Subnautica2\Binaries\Win64\ue4ss\Mods\shared\types`. If you look in there, you'll find a couple of relevant files:
+
+- ALI_SN2PlayerCharacter.lua - this relates to animation (Animation Layer Interface) so not anything useful for our purposes.
+- BP_SN2PlayerCharacter.lua - this related to the Blue Print (BP), which we know is a unit of useful functionality in UE.
+
+Open up `BP_SN2PlayerCharacter.lua` in VS Code and let's take a look:![](.\media\ue4ssplayercharacterlua.png)
+
+This is great - lots of useful properties and functions that we could leverage for our mod!
+
+And this is the kind of loop I find myself in when creating my mod:
+
+1. Use View Mode to find instances of things I'm interested in.
+2. Expand those to find useful properties or superclasses that may be relevant.
+3. Once I've narrowed it down, search through the Blue Print (BP_) types and see what properties and functions I have access to.
+4. Rinse and repeat until I have what I need.
+
+Like most things in life, trial and error, practice and experience is everything here. The more you do this, the greater the likelihood of finding what you need first time!
 
 ## Using FModel
+
+FModel gives you another way of exploring the assets and objects in the game. I tend to use it alongside UE4SS and the lua types files, just to expand and verify the things I've found. You may find that UE4SS gives you everything you need, if you're going for a pure LUA behaviour mod. If you're looking for other asset types, like textures and models, FModel is where you'll start.
 
 Having configured FModel to point to Subnautica 2, you should now see something like this:
 
@@ -26,7 +58,7 @@ As the game is built using Unreal 5.6, we're interested in the "utoc" file, so d
 
 Expand "Subnautica > Content" and you'll start to see some of the content and components that make up the game.
 
-Blueprints are UE components that encapsulate game logic, acting like a high level equivalent of code.
+
 
 
 
