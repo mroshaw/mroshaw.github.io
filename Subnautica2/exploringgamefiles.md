@@ -22,7 +22,7 @@ A useful first tip is to right click in the search text box and select "Instance
 
 Having ticked that box, back in the search field enter "Player" and hit return.
 
-You'll see some interesting results, including a number of instances that start with "SN2Player". This feels suspiciously like it might be relevant to what we want to do in our mod, so change the search field to "SN2Player", hit return, and see a more refined list of results. "SN2PlayerCharacter" looks even better, so refine the search again:![](.\media\ue4ssplayersearch.png)
+You'll see some interesting results, including a number of instances that start with "SN2Player". This feels like it might be relevant to what we want to do in our mod, so change the search field to "SN2Player", hit return, and see a more refined list of results. "SN2PlayerCharacter" looks even better, so refine the search again:![](.\media\ue4ssplayersearch.png)
 
 You can expand the "SN2Playercharacter" instance to see all of it's properties, as well as the superclasses from which it inherits, along with their properties.
 
@@ -54,11 +54,39 @@ Having configured FModel to point to Subnautica 2, you should now see something 
 
 ![](.\media\fmodelfirstopen.png)
 
-As the game is built using Unreal 5.6, we're interested in the "utoc" file, so double click that.
+As the game is built using Unreal 5.6 using Io Store, we're interested in the "utoc" file, so double click that.
 
 Expand "Subnautica > Content" and you'll start to see some of the content and components that make up the game.
 
+### Finding the player character blueprint
 
+A good starting point is the player character blueprint:
 
+1. Navigate to "Subnautica2 > Content > Blueprints > Character > player"
+2. Find the `BP_Character_01` blueprint.
+3. Double click it to export it as JSON, and FModel will display the asset's full structure in the right-hand panel:
 
+![](.\media\fmodelplayerjson.png)
 
+This JSON output describes the blueprint - its components, properties, and references to other assets. It can look intimidating at first, but you don't need to read all of it. What you're typically looking for is confirmation that an asset exists, its full content path, and references to other classes or components you might want to target.
+
+You'll notice that the class names and property names here mirror what you saw in the UE4SS Live View, and what appears in the generated Lua type files - for example, BP_SN2PlayerCharacter.lua. This is the bridge between the three tools: UE4SS shows you live instances at runtime, the Lua types give you the API surface for scripting, and FModel lets you inspect the underlying asset structure offline.
+
+### Finding gameplay effects
+
+For survival-related behaviour - things like oxygen consumption, hunger, and thirst - the relevant assets live under "Subnautica2 > Content > Blueprints > AbilitySystem > Effects > player".
+
+Here you'll find gameplay effects like GE_Breathe, GE_Suffocate, GE_Starve, and others. Double clicking any of these will show you their JSON structure, including the attribute modifiers they apply and the values they operate on:
+
+![](.\media\fmodelbreathjson.png)
+
+This is particularly useful when you want to understand what a gameplay effect does before you try to interact with it in Lua - for instance, confirming which attribute set and property name is being modified, so your Lua code targets exactly the right thing.
+
+### When to use FModel vs UE4SS Live View
+
+As a rough guide:
+
+- UE4SS Live View is your tool for runtime exploration - finding live instances of objects, inspecting current property values, and understanding what's active in a running game session.
+- FModel is your tool for offline exploration - browsing the full asset library, reading blueprint definitions, and cross-referencing class structures without needing the game running.
+
+In practice, you'll often use them together: find something interesting in UE4SS, then look it up in FModel to understand its full structure and any related assets.
