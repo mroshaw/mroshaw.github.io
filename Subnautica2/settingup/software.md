@@ -43,7 +43,7 @@ Here's a simple checklist of the tools that I've used in this tutorial and where
 
 ## Unreal Engine Version
 
-At the time of writing, Subnautica 2 was built using Unity Engine 5.6.1.0. This may well change over time. You can find out the exact version at any point in time by right clicking the `subnautica2.exe` file, select "Properties" and click "Details":
+At the time of writing, Subnautica 2 was built using Unreal Engine 5.6.1.0. This may well change over time. You can find out the exact version at any point in time by right clicking the `subnautica2.exe` file, select "Properties" and click "Details":
 
 ![](.\media\unrealversion.png)
 

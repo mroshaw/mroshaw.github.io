@@ -104,7 +104,7 @@ We can again leverage UE4SS to improve things even further by dumping LUA bindin
 }
 ```
 
-11. Go to File > Close Workspace, then File > Open Workspace From File, and reopen the workspace file you saved.
+11. To refresh everything with the new settings, go to File > Close Workspace, then File > Open Workspace From File, and reopen the workspace file you saved.
 12. You'll have a really useful, lightweight IDE environment in which to develop your code:![](.\media\visualstudiocodelua.png)
 
 ## retoc

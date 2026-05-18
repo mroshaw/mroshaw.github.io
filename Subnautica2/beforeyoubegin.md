@@ -34,7 +34,7 @@ There is a lot of material online regarding modding Unreal Engine games, as well
 
 Here are a few of my favourite resources, that have helped me to learn how it's done:
 
-- [UE4/5 Modding Guides](UE4/5 Modding Guides) - a curated list of various UE modding guides covering Unreal Engine versions 4 and 5.
+- [UE4/5 Modding Guides](https://github.com/Dmgvol/UE_Modding) - a curated list of various UE modding guides covering Unreal Engine versions 4 and 5.
 - [UE4SS Documentation](https://docs.ue4ss.com/dev/index.html) - official documentation site for the UE4SS Unreal Engine Scripting Engine.
 - [Programming in LUA](https://www.lua.org/pil/contents.html) - the original guide to developing in the LUA scripting language, written by the languages chief architect.
 
