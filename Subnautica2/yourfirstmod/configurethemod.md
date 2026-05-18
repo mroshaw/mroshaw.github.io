@@ -157,7 +157,7 @@ NotifyOnNewObject("/Game/Blueprints/Character/player/BP_Character_01.BP_Characte
 end)
 ```
 
-Rather than searching for the attribute set on every loop tick, we use `NotifyOnNewObject()` to watch for the player character being created. This fires both on initial spawn and on respawn after death, which means we always have a fresh reference. We explicitly nil attrSet before re-acquiring it to ensure we're never holding a stale reference to an old instance.
+Rather than searching for the attribute set on every loop tick, we use `NotifyOnNewObject()` to watch for the player character being created. This fires both on initial spawn and on respawn after death, which means we always have a fresh reference. We explicitly set `attrSet` to `nil` before re-acquiring it to ensure we're never holding a stale reference to an old instance.
 
 The asset path ""/Game/Blueprints/Character/player/BP_Character_01.BP_Character_01_C" is the "concrete" player character class that we identified in FModel. This is distinct from the base `BP_SN2PlayerCharacter` class in Blueprints/Core. Using the concrete class ensures the callback fires at the right point in the character's initialisation.
 
@@ -203,6 +203,16 @@ And once you're in game and the player character is initialised:
 `[Subnautica2CheatMod] Player character created - survival attributes found! Infinite Oxygen, Food, and Water enabled!`
 
 If you make changes to main.lua while the game is running, you can reload all mods without restarting by pressing Ctrl+R while the game window has focus. Note that this won't work if focus is on the UE4SS console window - click back into the game first. This is called "hot reload" and is the most amazing thing I've ever come across, especially having spent most of my time working with Unity mods! It makes tweaking and testing so much quicker, it', quite literally, unreal!
+
+> [!NOTE]
+>
+> When you make a change then "hot reload", you may notice your changes aren't taking effect. Remember that our particular mod is effectively "triggered" by the player object being created. So you may need to quit and reload to see your changes. Alternatively, you could temporarily check for and find the `attrSet` in the loop: 
+>
+> ```lua
+> if not attrSet or not attrSet:IsValid() then
+> 	attrSet = findPlayerAttrSet()
+> end
+> ```
 
 ### Building on this pattern
 
