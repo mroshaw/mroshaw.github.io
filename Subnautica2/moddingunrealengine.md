@@ -41,7 +41,7 @@ Lua script mods use the UE4SS scripting runtime to hook into the game's existing
 ### Typical tools required
 
 - **UE4SS** - provides the Lua scripting runtime and developer tools (Live Viewer, Console, etc) for identifying game objects and classes. Players also need UE4SS installed to run your mod.
-- **Text editor** - for writing scripts. There's no IDE or compiler needed.
+- **VS Code** - for writing Lua script code.
 
 ## Asset replacement mods
 
