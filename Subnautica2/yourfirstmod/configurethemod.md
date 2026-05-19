@@ -125,7 +125,7 @@ end
 
 `UEHelpers` is a utility library bundled with UE4SS that provides some handy convenience functions. We're not using it a lot here, but it's good practice to include it. You can see what functions it offers in the [UE4SS GitHub repository](https://github.com/UE4SS-RE/RE-UE4SS/blob/main/assets/Mods/shared/UEHelpers/UEHelpers.lua). Our little log helper simply prefixes our print output with the mod name, which makes it easy to spot our messages in the UE4SS console.
 
-Having a `debugMode` is really useful. You can refer to this in your code to add additional functionality and logging that you use while you're developing the mod. For example, you might log additional information or debug messages, or you might skip or add specific functionality when debugging is enabled. You can quickly change this between `true` and `false` as your working. Just remember to ship your mod with `debugMode` set to `false`.
+Having a `debugMode` is really useful. You can refer to this in your code to add additional functionality and logging that you use while you're developing the mod. For example, you might log additional information or debug messages, or you might skip or add specific functionality when debugging is enabled. You can quickly change this between `true` and `false` as you're working. Just remember to ship your mod with `debugMode` set to `false`.
 
 ## Finding the player's attribute set
 
@@ -222,7 +222,7 @@ And once you're in game and the player character is initialised:
 
 `[Subnautica2CheatMod] Player character created - survival attributes found! Infinite Oxygen, Food, and Water enabled!`
 
-If you make changes to main.lua while the game is running, you can reload all mods without restarting by pressing Ctrl+R while the game window has focus. Note that this won't work if focus is on the UE4SS console window - click back into the game first. This is called "hot reload" and is the most amazing thing I've ever come across, especially having spent most of my time working with Unity mods! It makes tweaking and testing so much quicker, it', quite literally, unreal!
+If you make changes to main.lua while the game is running, you can reload all mods without restarting by pressing Ctrl+R while the game window has focus. Note that this won't work if focus is on the UE4SS console window - click back into the game first. This is called "hot reload" and is the most amazing thing I've ever come across, especially having spent most of my time working with Unity mods! It makes tweaking and testing so much quicker, it is, quite literally, unreal!
 
 > [!NOTE]
 >
