@@ -18,7 +18,7 @@ The developers of Subnautica 2 have made the modding community aware that while 
 
 ## Mod packaging
 
-There's an important note about packaging Subnautica 2 mods that I want to call out here, as it's kind of tied to the latest versions of Enreal Engine that are used to build the game.
+There's an important note about packaging Subnautica 2 mods that I want to call out here, as it's kind of tied to the latest versions of Unreal Engine that are used to build the game.
 
 You may have come across mods for Unreal Engine games that use ".pak" files. Pak files are how many UE assets and mods are distributed - they are essentially compressed archive containers for game content, a bit like ZIP files.
 
