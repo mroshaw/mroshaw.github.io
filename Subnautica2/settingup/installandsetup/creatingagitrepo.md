@@ -59,8 +59,9 @@ To create a repository:
     └── 📁UnrealDev
         └── 📁FModel
         └── 📁retoc
-        └── 📁Subnautica2Mods	<-- this is our repository
-            └── 📁mods			<-- this is where we dev mods and these are loaded by UE4SS
+        └── 📁Subnautica2Mods <-- this is our repository
+            └── 📁mods      <-- this is where we dev mods and these are loaded by UE4SS
         └── 📁UAssetGUI
+    ```
 
 We'll configure the `.gitignore` file, and commit the code for our first mod, later in the guide.
