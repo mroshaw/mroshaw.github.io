@@ -1,70 +1,47 @@
 ---
 title: Coding your mod
-nav_order: 2
+nav_order: 3
 parent: Your first SN2 mod
 ---
 
 # Coding your mod
 
-Now that we know what we need to target, we can write the mod. Before we dive in, it's worth understanding the general shape of a UE4SS Lua mod, as the pattern we use here is one you'll see repeated across many mods.
+Right, you've got everything set up, you've created your `main.lua` file, and you're ready to code.
 
-## How UE4SS Lua mods work
-
-A UE4SS Lua mod is simply a `main.lua` script that runs inside the game process. UE4SS exposes a set of global functions that let you find game objects, read and write their properties, and respond to game events. Key patterns and functions that you'll see used often in LUA mods are:
-
-- `FindAllOf(className)` - searches for all live instances of a given class, returning a table you can iterate over. This is how we'll locate the player's survival attribute set.
-- `NotifyOnNewObject(path, callback)` - fires a callback whenever a new instance of the specified class is created. We use this to detect when the player character spawns or respawns, so we can acquire a fresh reference to the attribute set at the right moment.
-- `LoopAsync(intervalMs, callback)` - runs a function repeatedly on a background thread at a given interval. Because game objects may not exist the moment your mod loads, polling is a common and reliable way to find and persist a reference to something.
-- `ExecuteInGameThread(callback)` - runs code on the main game thread. This is important because directly modifying game object properties from a background thread is unsafe - UE4SS requires you to wrap those operations here.
-
-With those building blocks in mind, the structure of our mod should start to make sense.
-
-## Mod set up
-
-We create our mod directly in the UE4SS mod folder so that we can build and test it quickly. Later on, we can move it into our development folder and get it all checked in to GitHub.
-
-So, for now:
-
-1. Start by creating a folder in `\Subnautica2\Subnautica2\Binaries\Win64\ue4ss\Mods`, call it `Subnautica2CheatMod`.
-2. Within that folder, create an empty file called `enabled.txt` - this tells UE4SS to load and activate our mod.
-3. Within this folder create a folder called `scripts`.
-
-4. Within that folder, create a file called `main.lua`.
-
-5. Open this file in a VS code.
-
-
-## Coding the mod
-
-Here's the full mod code. We'll walk through each section below:
+Here's the full source code for our "Subnautica 2 Cheat" mod. We'll walk through each section below:
 
 ```lua
+---@type table
 local UEHelpers = require("UEHelpers")
+
+---@type string
 local MOD_NAME = "BeginnersGuideCheatMod"
 
--- Simple helper function to log messages with the mod name as a prefix and a timestamp
+-- Simple helper function to log messages with the mod name as a prefix
+---@param msg string
 local function log(msg)
     print(string.format("[%s] %s\n", MOD_NAME, msg))
 end
 
 -- Hold a reference to the player's attribute set so we can modify it each tick
+---@type UUWESurvivalAttributeSet|nil
 local attrSet = nil
 
 -- Function to find the player's survival attribute set in memory
+---@return UUWESurvivalAttributeSet|nil
 local function findPlayerAttrSet()
+    ---@type UUWESurvivalAttributeSet[]|nil
     local all = FindAllOf("UWESurvivalAttributeSet")
     if not all then return nil end
-
     for _, set in ipairs(all) do
         if set:IsValid() and set:GetFullName():find("BP_Character_01_C") then
             return set
         end
     end
-
     return nil
 end
 
--- When the player spawns, find and set the survival attribute
+-- When the player spawns, find and set the survival attribute set
 NotifyOnNewObject("/Game/Blueprints/Character/player/BP_Character_01.BP_Character_01_C", function()
     ExecuteInGameThread(function()
         attrSet = nil
@@ -75,7 +52,7 @@ NotifyOnNewObject("/Game/Blueprints/Character/player/BP_Character_01.BP_Characte
     end)
 end)
 
--- Loop every 500ms to check for the player's attribute set and modify it to give infinite oxygen, food, and water
+-- Loop every 500ms to keep oxygen, food, and water at their maximum values
 LoopAsync(500, function()
     ExecuteInGameThread(function()
         if not attrSet or not attrSet:IsValid() then
@@ -83,16 +60,19 @@ LoopAsync(500, function()
         end
 
         -- Oxygen
+        ---@type number
         local maxOxygen = attrSet.MaxOxygen.CurrentValue
         attrSet.Oxygen.BaseValue = maxOxygen
         attrSet.Oxygen.CurrentValue = maxOxygen
 
         -- Food
+        ---@type number
         local maxFood = attrSet.MaxFood.CurrentValue
         attrSet.Food.BaseValue = maxFood
         attrSet.Food.CurrentValue = maxFood
 
         -- Water
+        ---@type number
         local maxWater = attrSet.MaxWater.CurrentValue
         attrSet.Water.BaseValue = maxWater
         attrSet.Water.CurrentValue = maxWater
@@ -103,13 +83,29 @@ end)
 log("Loaded!")
 ```
 
-### Setup and logging
+## Annotations
+
+You'll see in the code that we "annotate" the local variable declarations and function parameters and return values. Annotations are those lines prefixed by "---". For example:
 
 ```lua
+-- Hold a reference to the player's attribute set so we can modify it each tick
+---@type UUWESurvivalAttributeSet|nil
+local attrSet = nil
+```
+
+Annotations are just there to help VS Code identify the various types and classes. When you explicitly specify the type or class of a variable or function, via an annotation, VS Code can highlight possible issues and incompatibilities, as well as offer code completion suggestions as you're developing your mod. It's well worth using annotation wherever possible, as it will just make your life easier, and save you lots of potential headaches in the future. 
+
+## Setup and logging
+
+```lua
+---@type table
 local UEHelpers = require("UEHelpers")
+
+---@type string
 local MOD_NAME = "BeginnersGuideCheatMod"
 
--- Simple helper function to log messages with the mod name as a prefix and a timestamp
+-- Simple helper function to log messages with the mod name as a prefix
+---@param msg string
 local function log(msg)
     print(string.format("[%s] %s\n", MOD_NAME, msg))
 end
@@ -117,23 +113,24 @@ end
 
 `UEHelpers` is a utility library bundled with UE4SS that provides some handy convenience functions. We're not using it a lot here, but it's good practice to include it. You can see what functions it offers in the [UE4SS GitHub repository](https://github.com/UE4SS-RE/RE-UE4SS/blob/main/assets/Mods/shared/UEHelpers/UEHelpers.lua). Our little log helper simply prefixes our print output with the mod name, which makes it easy to spot our messages in the UE4SS console.
 
-### Finding the player's attribute set
+## Finding the player's attribute set
 
 ```lua
 -- Hold a reference to the player's attribute set so we can modify it each tick
+---@type UUWESurvivalAttributeSet|nil
 local attrSet = nil
 
 -- Function to find the player's survival attribute set in memory
+---@return UUWESurvivalAttributeSet|nil
 local function findPlayerAttrSet()
+    ---@type UUWESurvivalAttributeSet[]|nil
     local all = FindAllOf("UWESurvivalAttributeSet")
     if not all then return nil end
-
     for _, set in ipairs(all) do
         if set:IsValid() and set:GetFullName():find("BP_Character_01_C") then
             return set
         end
     end
-
     return nil
 end
 ```
@@ -142,10 +139,10 @@ This is where our earlier investigation pays off. We know from the UE4SS Live Vi
 
 The `attrSet` variable is declared outside the function so we can hold onto the reference once we've found it, rather than searching on every poll.
 
-### Finding the reference on spawn
+## Finding the reference on spawn
 
 ```lua
--- When the player spawns, find and set the survival attribute
+-- When the player spawns, find and set the survival attribute set
 NotifyOnNewObject("/Game/Blueprints/Character/player/BP_Character_01.BP_Character_01_C", function()
     ExecuteInGameThread(function()
         attrSet = nil
@@ -161,10 +158,10 @@ Rather than searching for the attribute set on every loop tick, we use `NotifyOn
 
 The asset path ""/Game/Blueprints/Character/player/BP_Character_01.BP_Character_01_C" is the "concrete" player character class that we identified in FModel. This is distinct from the base `BP_SN2PlayerCharacter` class in Blueprints/Core. Using the concrete class ensures the callback fires at the right point in the character's initialisation.
 
-### Polling and updating the attributes
+## Polling and updating the attributes
 
 ```lua
--- Loop every 500ms to check for the player's attribute set and modify it to give infinite oxygen, food, and water
+-- Loop every 500ms to keep oxygen, food, and water at their maximum values
 LoopAsync(500, function()
     ExecuteInGameThread(function()
         if not attrSet or not attrSet:IsValid() then
@@ -172,27 +169,30 @@ LoopAsync(500, function()
         end
 
         -- Oxygen
+        ---@type number
         local maxOxygen = attrSet.MaxOxygen.CurrentValue
         attrSet.Oxygen.BaseValue = maxOxygen
         attrSet.Oxygen.CurrentValue = maxOxygen
 
         -- Food
+        ---@type number
         local maxFood = attrSet.MaxFood.CurrentValue
         attrSet.Food.BaseValue = maxFood
         attrSet.Food.CurrentValue = maxFood
 
         -- Water
+        ---@type number
         local maxWater = attrSet.MaxWater.CurrentValue
         attrSet.Water.BaseValue = maxWater
         attrSet.Water.CurrentValue = maxWater
     end)
-    return true
+    return false
 end)
 ```
 
 This loop runs every 500 milliseconds, and you can obviously tweak that to whatever poll frequency you want. On each "tick" it first checks whether we have a valid reference to the attribute set - if not, do nothing. We're waiting at this point for the player to spawn and for the survival attributes component to be found. Once found, it reads the current max value for each attribute and sets both `BaseValue` and `CurrentValue` to that max. We set both because Unreal's Gameplay Ability System maintains these separately, and setting only one may not produce the result you expect.
 
-### Testing the mod
+## Testing the mod
 
 Save main.lua and launch the game. UE4SS will load your mod automatically on startup. Watch the UE4SS console - you should see:
 
@@ -214,7 +214,7 @@ If you make changes to main.lua while the game is running, you can reload all mo
 > end
 > ```
 
-### Building on this pattern
+## Building on this pattern
 
 You'll see a pattern here:
 

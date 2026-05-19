@@ -1,5 +1,5 @@
 ---
-title: Software and tools
+title: Software and tools (SN2)
 nav_order: 1
 parent: Setting up for SN2 development
 ---
