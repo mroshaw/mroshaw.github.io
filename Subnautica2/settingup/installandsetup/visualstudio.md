@@ -21,6 +21,8 @@ To install, follow these steps:
    - C++ AddressSanitizer
    - Windows 10 or 11 SDK (10.0.18362 or Newer)
    - Unreal Engine installer![](.\media\visualstudioinstalloptions.png)
-4. Click Install
+4. Click "Individual components".
+5. Find and tick "MSVC v143 - VS 2022 C++ x64/x86 build tools (v14.38 - 17.8)(Out of support)":![](.\media\visualstudiocomponents.png)
+6. Click Install
 
 Visual Studio fits into the broader tool chain when creating more complex mods in Unreal Engine, which we'll cover in detail in the "Advanced Modding" section of the guide.
