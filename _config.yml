@@ -8,6 +8,7 @@ plugins:
   - jekyll-feed
   - jekyll-gfm-admonitions
   - jekyll-optional-front-matter
+  - jekyll-remote-theme
 aux_links:
   Subnautica Modding Discord: https://discord.gg/UpWuWwq
 
