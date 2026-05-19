@@ -53,15 +53,14 @@ To create a repository:
 
 11. In Windows Explorer, go into the created folder and create another folder called `mods`
 
-12. You should now have a folder structure like this:
+12. You should now have a folder structure something like this:
 
     ```
-└── 📁UnrealDev
-      └── 📁FModel
-  └── 📁retoc
-      └── 📁Subnautica2Mods
-    └── 📁mods
-      └── 📁UAssetGUI
-```
+    └── 📁UnrealDev
+        └── 📁FModel
+        └── 📁retoc
+        └── 📁Subnautica2Mods	<-- this is our repository
+            └── 📁mods			<-- this is where we dev mods and these are loaded by UE4SS
+        └── 📁UAssetGUI
 
 We'll configure the `.gitignore` file, and commit the code for our first mod, later in the guide.
