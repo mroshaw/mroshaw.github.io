@@ -21,6 +21,5 @@ Packaging Lua mods is much simpler than more complex asset or blueprint mods. Yo
 
 So you can generally just ZIP up the folder you created when you first set up your mod.
 
-At this point, you should follow the latest instructions on Nexus mods to create and upload your mod. Rather than replicate that information, you can simply follow this up-to-date guide direct from the source: 
+At this point, you should follow the latest instructions on Nexus mods to create and upload your mod. Rather than replicate that information, you can simply follow this [up-to-date guide](https://www.youtube.com/watch?v=Ncd2LrYfy8s) direct from the source.
 
-https://www.youtube.com/watch?v=Ncd2LrYfy8s
