@@ -22,7 +22,9 @@ A useful first tip is to right click in the search text box and select "Instance
 
 Having ticked that box, back in the search field enter "Player" and hit return.
 
-You'll see some interesting results, including a number of instances that start with "SN2Player". This feels like it might be relevant to what we want to do in our mod, so change the search field to "SN2Player", hit return, and see a more refined list of results. "SN2PlayerCharacter" looks even better, so refine the search again:![](.\media\ue4ssplayersearch.png)
+You'll see some interesting results, including a number of instances that start with "SN2Player". This feels like it might be relevant to what we want to do in our mod, so change the search field to "SN2Player", hit return, and see a more refined list of results. "SN2PlayerCharacter" looks even better, so refine the search again:
+
+![](.\media\ue4ssplayersearch.png)
 
 You can expand the "SN2Playercharacter" instance to see all of it's properties, as well as the superclasses from which it inherits, along with their properties.
 
@@ -33,7 +35,9 @@ In the UE4SS folder, within `mods`, you'll find a folder named `types` - we crea
 - ALI_SN2PlayerCharacter.lua - this relates to animation (Animation Layer Interface) so not anything useful for our purposes.
 - BP_SN2PlayerCharacter.lua - this related to the Blue Print (BP), which we know is a unit of useful functionality in UE.
 
-Open up `BP_SN2PlayerCharacter.lua` in VS Code and let's take a look:![](.\media\ue4ssplayercharacterlua.png)
+Open up `BP_SN2PlayerCharacter.lua` in VS Code and let's take a look:
+
+![](.\media\ue4ssplayercharacterlua.png)
 
 This is great - lots of useful properties and functions that we could leverage for our mod!
 

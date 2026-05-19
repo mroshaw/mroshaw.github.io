@@ -55,18 +55,13 @@ To create a repository:
 
 12. You should now have a folder structure like this:
 
-    └── 📁UnrealDev
-
+    ```
+└── 📁UnrealDev
       └── 📁FModel
-
-      └── 📁retoc
-
-      **└── 📁Subnautica2Mods**
-
-    ​    **└── 📁mods**
-
+  └── 📁retoc
+      └── 📁Subnautica2Mods
+    └── 📁mods
       └── 📁UAssetGUI
-
-      └── 📁UE_5.6
+```
 
 We'll configure the `.gitignore` file, and commit the code for our first mod, later in the guide.

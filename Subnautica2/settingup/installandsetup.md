@@ -14,13 +14,12 @@ I have a dedicated 1TB SSD on my machine that I have mounted as E: and I have a 
 
 I suggest creating a folder structure like this somewhere on your computer:
 
+```
 └── 📁UnrealDev
-
   └── 📁FModel
-
   └── 📁retoc
-
   └── 📁UAssetGUI
+```
 
 We'll refer to this folder structure as we go through the guide.
 
