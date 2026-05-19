@@ -26,4 +26,6 @@ Subnautica 2 uses the newer [Zen Loader system](https://dev.epicgames.com/docume
 
 This matters because if your mod includes new or modified game assets, you cannot simply repack them into a standard .pak file - you need to produce Io Store-compatible output instead. This affects which tools you use, and it's worth knowing before you choose your approach.
 
+Don't worry, this doesn't impact Lua mods at all. These are much simpler and are packaged and deployed as simple ZIP files.
+
 I'm still learning the tooling for Io Store and mod packing, and at the time of writing Subnautica 2 on UE 5.6 is a very new modding target. I cover the [retoc](https://github.com/trumank/retoc/) tool in the pages that follow, which seems to be the "industry standard" for addressing the Zen Loader challenge, but that may change over time as Subnautica 2 modding processes evolve.
