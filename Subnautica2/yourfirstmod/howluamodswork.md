@@ -1,10 +1,10 @@
 ---
-title: How LUA mods work
+title: Creating a Lua mod
 nav_order: 2
 parent: Your first SN2 mod
 ---
 
-# How UE4SS Lua mods work
+# Creating a Lua mod
 
 A UE4SS Lua mod is simply a `main.lua` script that runs inside the game process. UE4SS exposes a set of global functions that let you find game objects, read and write their properties, and respond to game events. Key patterns and functions that you'll see used often in LUA mods are:
 
