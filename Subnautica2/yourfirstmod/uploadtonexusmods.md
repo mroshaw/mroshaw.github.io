@@ -1,6 +1,6 @@
 ---
 title: Upload to Nexus Mods
-nav_order: 5
+nav_order: 6
 parent: Your first SN2 mod
 ---
 

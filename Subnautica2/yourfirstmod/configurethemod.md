@@ -18,7 +18,7 @@ local UEHelpers = require("UEHelpers")
 local MOD_NAME = "BeginnersGuideCheatMod"
 
 ---@type boolean
-local debugMode = true
+local debugMode = false
 
 -- Simple helper function to log messages with the mod name as a prefix
 ---@param msg string
