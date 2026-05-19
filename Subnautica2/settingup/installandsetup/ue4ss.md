@@ -63,7 +63,7 @@ You can generate these files as follows:
 2. Click the "Dumpers" button at the top of the screen.
 3. Click the "Generate Lua Types" button.
 4. This will generate a load of files in `\Subnautica2\Subnautica2\Binaries\Win64\ue4ss\Mods\shared\types`.
-5. Copy the entire `shared\types` folder into your development folder, `Subnautica2Mods\mods\`.
+5. Copy the entire `shared` folder into your development folder, `Subnautica2Mods\mods\`.
 
 ## Generate a USMAP file
 
