@@ -31,7 +31,7 @@ Here's a simple checklist of the tools that I've used in this tutorial and where
 
 | Category  | Tool Name                        | Where to download                                            |
 | --------- | -------------------------------- | ------------------------------------------------------------ |
-| Essential | UE4SS (Subnautica 2 DEV version) | [Nexusmods.com](https://www.nexusmods.com/subnautica2/mods/36) |
+| Essential | UE4SS (Subnautica 2 DEV version) | [Nexusmods.com](https://www.nexusmods.com/subnautica2/mods/36) / [Github.com](https://github.com/Subnautica2Modding/Subnautica2-UE4SS/releases) |
 | Essential | Fmodel                           | [Fmodel.app](https://fmodel.app/)                            |
 | Optional  | Visual Studio Code               | [Visualstudio.com](https://code.visualstudio.com/)           |
 | Optional  | retoc                            | [Github.com](https://github.com/trumank/retoc/releases)      |

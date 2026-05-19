@@ -31,6 +31,7 @@ Lua script mods use the UE4SS scripting runtime to hook into the game's existing
 - Easy to iterate and test - edit a text file, reload the mod using hot reload, see results immediately.
 - Mods are small and easy to distribute.
 - There's a good community of existing Lua/UE4SS mods to learn from and build on.
+- Provides a "REPL console" that allows you to run Lua scripts and code directly in the game runtime.
 
 ### Cons
 

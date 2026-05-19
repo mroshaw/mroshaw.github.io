@@ -17,6 +17,9 @@ local UEHelpers = require("UEHelpers")
 ---@type string
 local MOD_NAME = "BeginnersGuideCheatMod"
 
+---@type boolean
+local debugMode = true
+
 -- Simple helper function to log messages with the mod name as a prefix
 ---@param msg string
 local function log(msg)
@@ -56,6 +59,12 @@ end)
 LoopAsync(500, function()
     ExecuteInGameThread(function()
         if not attrSet or not attrSet:IsValid() then
+            -- If we're in debug mode, don't wait for the player to respawn. This allows us to hot reload the mod
+            -- by setting debugMode to true
+            if(debugMode) then
+                log("Survival attribute set not found or invalid. Attempting to find it again...")
+                attrSet = findPlayerAttrSet()
+            end
             return
         end
 
@@ -104,6 +113,9 @@ local UEHelpers = require("UEHelpers")
 ---@type string
 local MOD_NAME = "BeginnersGuideCheatMod"
 
+---@type boolean
+local debugMode = true
+
 -- Simple helper function to log messages with the mod name as a prefix
 ---@param msg string
 local function log(msg)
@@ -112,6 +124,8 @@ end
 ```
 
 `UEHelpers` is a utility library bundled with UE4SS that provides some handy convenience functions. We're not using it a lot here, but it's good practice to include it. You can see what functions it offers in the [UE4SS GitHub repository](https://github.com/UE4SS-RE/RE-UE4SS/blob/main/assets/Mods/shared/UEHelpers/UEHelpers.lua). Our little log helper simply prefixes our print output with the mod name, which makes it easy to spot our messages in the UE4SS console.
+
+Having a `debugMode` is really useful. You can refer to this in your code to add additional functionality and logging that you use while you're developing the mod. For example, you might log additional information or debug messages, or you might skip or add specific functionality when debugging is enabled. You can quickly change this between `true` and `false` as your working. Just remember to ship your mod with `debugMode` set to `false`.
 
 ## Finding the player's attribute set
 
@@ -165,6 +179,12 @@ The asset path ""/Game/Blueprints/Character/player/BP_Character_01.BP_Character_
 LoopAsync(500, function()
     ExecuteInGameThread(function()
         if not attrSet or not attrSet:IsValid() then
+            -- If we're in debug mode, don't wait for the player to respawn. This allows us to hot reload the mod
+            -- by setting debugMode to true
+            if(debugMode) then
+                log("Survival attribute set not found or invalid. Attempting to find it again...")
+                attrSet = findPlayerAttrSet()
+            end
             return
         end
 
@@ -206,13 +226,8 @@ If you make changes to main.lua while the game is running, you can reload all mo
 
 > [!NOTE]
 >
-> When you make a change then "hot reload", you may notice your changes aren't taking effect. Remember that our particular mod is effectively "triggered" by the player object being created. So you may need to quit and reload to see your changes. Alternatively, you could temporarily check for and find the `attrSet` in the loop: 
+> When you make a change then "hot reload", you may notice your changes aren't taking effect. Remember that our particular mod is effectively "triggered" by the player object being created. So you typically would need to quit and reload to see your changes. We've accomodated for this by checking the `debugMode` variable in the loop. So if you're testing with hot loading, don't forget to set `debugMode` to true to force the mod to find the `SurvivalAttributeSet` each time.
 >
-> ```lua
-> if not attrSet or not attrSet:IsValid() then
-> 	attrSet = findPlayerAttrSet()
-> end
-> ```
 
 ## Building on this pattern
 

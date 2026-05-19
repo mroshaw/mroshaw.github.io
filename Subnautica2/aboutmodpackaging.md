@@ -1,12 +1,24 @@
 ---
-title: About mod packaging
+title: Important notes for SN2
 nav_order: 5
 parent: Beginners Guide to Modding Subnautica 2
 ---
 
-# About mod packaging
+# Important notes regarding Subnautica 2
 
-There's an important note about packaging Subnautica 2 mods that I want to call out here.
+As I said in the introduction, Subnautica 2 has just been released into Early Access. This has some important implications for modders.
+
+## Unreal Engine versions
+
+The initial Early Access release was built with Unreal Engine 5.6.1. The developer has indicated that they may move to Unreal Engine 5.7 in a future release. Bear this in mind when building more complex mods, as you'll have to upgrade your dev environment and mods if and when this happens.
+
+## Blueprints and C++
+
+The developers of Subnautica 2 have made the modding community aware that while the game goes through Early Access, and possibly beyond, Unreal Engine Blueprints will be used for prototyping functionalty. Once proven out, the developers may then migrate that functionality out of Blueprints into core C++ code. In practice, this may mean that certain Blueprint functions and capabilities that you rely on in your mod may suddenly stop working, and/or require you to revisit your mod as new versions of the game are released. How this will impact you and to what degree will depend entirely on what's changed and when, but it's something you just need to be aware of.
+
+## Mod packaging
+
+There's an important note about packaging Subnautica 2 mods that I want to call out here, as it's kind of tied to the latest versions of Enreal Engine that are used to build the game.
 
 You may have come across mods for Unreal Engine games that use ".pak" files. Pak files are how many UE assets and mods are distributed - they are essentially compressed archive containers for game content, a bit like ZIP files.
 
