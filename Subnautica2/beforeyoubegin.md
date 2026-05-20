@@ -26,7 +26,7 @@ For you, it may vary.
 
 ## Tutorial mod source code
 
-You can find the full source code for the sample mods in this [repository on GitHub](https://github.com/mroshaw/Subnautica2Mods/tree/main/BeginnersGuideExampleMods).
+You can find the full source code for the sample mods in this [repository on GitHub](https://github.com/mroshaw/Subnautica2Mods/tree/main/mods).
 
 ## Further reading
 
