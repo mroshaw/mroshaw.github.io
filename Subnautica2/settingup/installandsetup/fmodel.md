@@ -26,5 +26,12 @@ Installation and setup of FModel is pretty straight-forward:
 14. Click the Settings menu item and enable "Local Mapping File (drag & drop)".
 15. You can either drag and drop the ".usmap" file created earlier, or click the three dots button and locate it. Remember, it was created by UE4SS as `Subnautica2\Subnautica2\Binaries\Win64\ue4ss\Subnautica2-x.y.z-nnnnn.usmap`.
 16. Click OK.
-17. You can test everything is working by double clicking "Subnautica2-Windows.utoc", then expanding "Subnautica2 > Content > Blueprints" until you see some assets. Doubling clicking a Blueprint asset should display a JSON file describing the asset contents:![](.\media\fmodeltesting.png)
+17. In the top left of the FModel main window, change the "Loading mode" dropdown to "All" and click "Load".
+    - Doing so will allow you to browse the contents of both the .pak and .utoc files together, which is handy if you're looking for localisation files, for example, that are still packed in .pak containers.
 
+18. You can test everything is working by expanding "Subnautica2 > Content > Blueprints" until you see some assets. Doubling clicking a Blueprint asset should display a JSON file describing the asset contents:![](.\media\fmodeltesting.png)
+
+18. To get the most out of FModel, you should go into Settings and enable these options:
+    - Serialize Script Bytecode
+    - Decompile Blueprint to Pseudo C++
+19. These options enable a right click context menu for Blueprints, "Decompile Blueprint", that will generate a kind of pseudo-C++ representation of the Blueprint that can help you understand the underlying game logic:![](.\media\fmodeldecompileblueprint.png)

@@ -51,7 +51,6 @@ Asset replacement mods work by unpacking the game's existing content, modifying 
 
 - Can be used not just to change game behaviour, but to change physical assets like textures, games models, etc.
 - Potentially requires no code whatsoever.
-- Your mod is less likely to break when the base game is updated.
 
 ### Cons
 
@@ -68,7 +67,7 @@ Asset replacement mods work by unpacking the game's existing content, modifying 
 - **UE4SS** - provides the Lua scripting runtime and developer tools (Live Viewer, Console, etc) for identifying game objects and classes.
 - **FModel** - used to analyse existing game structure, configuration, and assets.
 - **UAssetGUI** -  for viewing and editing `.uasset` files directly.
-- **UnrealPak** - used to package the mod into .pak, .ucas, .utoc files required by the game.
+- **retoc** - used to package the mod into .pak, .ucas, .utoc files required by the game.
 - **Unreal Engine** - depending on the complexity of the mod, you may need a full UE install to package.
 
 ## Blueprint/code mods
@@ -92,6 +91,6 @@ Blueprint and code mods involve creating entirely new game logic or assets withi
 
 - **UE4SS** - "Developer" version used to identify objects and classes required to implement changes.
 - **FModel** - used to analyse existing game structure, configuration, and assets.
-- **Unreal Engine** - used to create new UE components and assets.
-- **Visual Studio/Windows SDK** - used to build and package mods for distribution.
+- **Unreal Engine** - used to create new UE components and assets, and package mods for distribution.
+- **Visual Studio/Windows SDK** - used in the Unreal Engine build pipeline.
 

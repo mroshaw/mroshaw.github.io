@@ -153,6 +153,8 @@ This is where our earlier investigation pays off. We know from the UE4SS Live Vi
 
 The `attrSet` variable is declared outside the function so we can hold onto the reference once we've found it, rather than searching on every poll.
 
+The `for _, set in ipairs(all) do` construct is the Lua equivalent of a `for each` loop, that you might be familiar with from other languages. It allows you to iterate over lists or arrays, though be aware that those are referred to in Lua speak as "tables"!
+
 ## Finding the reference on spawn
 
 ```lua

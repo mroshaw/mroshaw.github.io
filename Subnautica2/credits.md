@@ -12,6 +12,7 @@ Thanks to, but not limited to:
 
 -   Buckminsterfullerene
 -   Kallie23
+-   hypermetric
 
 And to everyone else on the [Subnautica modding Discord](https://discord.com/invite/UpWuWwq).
 
