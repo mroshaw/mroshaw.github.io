@@ -1,0 +1,77 @@
+site_name: Subnautica Modding
+site_url: https://mroshaw.github.io/Subnautica/
+
+
+nav:
+  - Modding Guides: index.md
+
+  - Subnautica:
+      - Modding Subnautica: Subnautica/index.md
+
+      - Before You Begin: Subnautica/before-you-begin.md
+      - About Harmony: Subnautica/about-harmony.md
+
+      - Setting Up:
+          - Setting Up: Subnautica/setting-up/index.md
+          - Software: Subnautica/setting-up/software.md
+          - Install and Setup: Subnautica/setting-up/install-ands-etup.md
+
+      - Your First Mod:
+          - Your First Mod: Subnautica/your-first-mod/index.md
+          - Creating a Project: Subnautica/your-first-mod/creating-a-project.md
+          - Configuring Assembly: Subnautica/your-first-mod/configuring-assembly.md
+          - Adding References: Subnautica/your-first-mod/adding-references.md
+          - Exploring Game Files: Subnautica/your-first-mod/exploring-game-files.md
+          - Coding the Mod: Subnautica/your-first-mod/coding-the-mod.md
+          - Enhancing the Mod: Subnautica/your-first-mod/enhancing-the-mod.md
+          - Testing Your Mod: Subnautica/your-first-mod/testing-your-mod.md
+          - Checking into GitHub: Subnautica/your-first-mod/checking-into-github.md
+
+      - Modding with ThunderKit:
+          - Modding with ThunderKit: Subnautica/modding-with-thunderkit/index.md
+          - Installing ThunderKit: Subnautica/modding-with-thunderkit/installing-thunderkit.md
+          - Features of ThunderKit: Subnautica/modding-with-thunderkit/features-of-thunderkit.md
+          - Configure ThunderKit Mod: Subnautica/modding-with-thunderkit/configure-thunderkit-mod.md
+
+      - Advanced Topics:
+          - Advanced Topics: Subnautica/advanced-topics/index.md
+          - About MonoBehaviour: Subnautica/advanced-topics/about-monobehaviour.md
+          - Composition and Inheritance: Subnautica/advanced-topics/composition-and-inheritance.md
+          - Prefabs: Subnautica/advanced-topics/prefabs.md
+          - Creatures: Subnautica/advanced-topics/creatures.md
+          - Balancing Your Mod: Subnautica/advanced-topics/balancing-your-mod.md
+          - Compiling for Both Games: Subnautica/advanced-topics/compiling-for-both-games.md
+          - Unity Explorer Tools: Subnautica/advanced-topics/unity-explorer-tools.md
+
+      - References:
+          - References: Subnautica/references/index.md
+          - Layers (Subnautica): Subnautica/references/layers-subnautica.md
+          - Layers (Below Zero): Subnautica/references/layers-below-zero.md
+          - Tags (Subnautica): Subnautica/references/tag-ssubnautica.md
+          - Tags (Below Zero): Subnautica/references/tags-below-zero.md
+
+      - Credits: Subnautica/credits.md
+
+
+  - Subnautica 2:
+      - Modding Subnautica 2: Subnautica2/index.md
+
+theme:
+  name: material
+  palette:
+    scheme: slate
+    accent: cyan
+  logo: images/sn2logo.png
+  favicon: images/favicon.png
+  features:
+  - navigation.footer
+  - header.autohide
+  - navigation.tabs
+  - navigation.path
+  - navigation.indexes
+  
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
