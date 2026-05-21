@@ -1,6 +1,5 @@
 site_name: Subnautica Modding
-site_url: https://mroshaw.github.io/Subnautica/
-
+site_url: https://mroshaw.github.io/
 
 nav:
   - Modding Guides: index.md
