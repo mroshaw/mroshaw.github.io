@@ -34,7 +34,7 @@ As you can see, we don't have any of those methods in our Knife class. So are we
 
 Not quite. Click on the arrow to the left of "Base Type and Interfaces", under the Knife class. You'll see that the Knife "inherits" behaviour from a class called "PlayerTool". So, double click that:
 
-![](.\images\playertoolresult.png)
+![](./images/playertoolresult.png)
 
 Now we're talking! We have an `Awake` method, which is something we can intercept in order to change the behaviour of our component right at the point it "comes to life", so to speak. As Knife inherits from PlayerTool, and has a "damage" property for us to tweak, we now have what we need!
 

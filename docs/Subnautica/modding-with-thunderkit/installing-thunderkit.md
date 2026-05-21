@@ -23,9 +23,9 @@ Once the Unity Editor is installed, you can create a new project. This project c
 1. In Unity Hub, click the "New Project" button.
 2. In the "Editor Version" drop down, select "2019.4.36f1 LTS".
 3. Now click "Core" and select the "3D (Built-In Render Pipeline)" template.
-4. Give your project a name, for example "My Subnautica ThunderKit Mods", pick the location for where it will be saved, then click "Create project":![](.\images\createthunderkitproject.png)
+4. Give your project a name, for example "My Subnautica ThunderKit Mods", pick the location for where it will be saved, then click "Create project":![](./images/createthunderkitproject.png)
 
-5. You can now open your new project direct from Unity Hub by clicking it in the list:![](.\images\unityhubprojects.png)
+5. You can now open your new project direct from Unity Hub by clicking it in the list:![](./images/unityhubprojects.png)
 
 ## Install ThunderKit
 
@@ -44,7 +44,7 @@ Unity will open your new project once created, or you can open it through Unity 
 
 We now import the game files into our project.
 
-1. In the "Settings" window, click "ThunderKit Settings" and click the "Browse" button to locate the game files. In the screenshot below, I have Subnautica installed via Steam on my E: drive. Note that the same process applies for Below Zero:![](.\images\importgamefiles.png)
+1. In the "Settings" window, click "ThunderKit Settings" and click the "Browse" button to locate the game files. In the screenshot below, I have Subnautica installed via Steam on my E: drive. Note that the same process applies for Below Zero:![](./images/importgamefiles.png)
 2. Now click the "Import" button and follow the on screen instructions.
 3. Once done, you should be back in the Unity Editor (having restarted it a couple of times), and again you'll see a load of errors and warnings that can be ignored.
 
@@ -85,6 +85,6 @@ Nautilus is a great tool that provides loads of useful components and classes fo
 
 7. Go back into your Unity project. If you're prompted to update the API scripts, click "No thanks":
 
-   ![](.\images\apiupdatedialogue.png)
+   ![](./images/apiupdatedialogue.png)
 
 You've now got everything that we need to start creating a new mod in the ThunderKit framework.

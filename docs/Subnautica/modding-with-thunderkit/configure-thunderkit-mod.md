@@ -24,13 +24,13 @@ Now that ThunderKit is installed, you can set up your modding environment.
    - Assembly-CSharp-firstpass.dll
    - Nautilus.dll
 
-   ![](.\images\assembleyreferences.png)
+   ![](./images/assembleyreferences.png)
 
 8. If you plan on doing any coding with TextMeshPro and the UI, you can also add these to the "Assembly Definition References" properties:
 
    - Unity.TextMeshPro
 
-   ![](.\images\assembleydefreferences.png)
+   ![](./images/assembleydefreferences.png)
 
 ## Create your mod script
 
@@ -93,13 +93,13 @@ Everything to do with ThunderKit works off a manifest. This is basically a defin
 
    3. Version - the version number of the mod:
 
-      ![](.\images\manifestbasicsettings.png)
+      ![](./images/manifestbasicsettings.png)
 
 6. Now expand the "Assembly Definitions" drop down.
 
 7. Set "Definitions > Size" to 1 - that will create a new entry for you.
 
-8. Now drag the Assembly Definition that you created earlier (in the Scripts folder) onto the "Element 0" entry:![](.\images\manifestassemblysettings.png)
+8. Now drag the Assembly Definition that you created earlier (in the Scripts folder) onto the "Element 0" entry:![](./images/manifestassemblysettings.png)
 
 9. Don't worry about "Asset Bundle Definitions" at the moment - we'll cover that in a separate section in the future.
 
@@ -140,7 +140,7 @@ We'll create new pipeline assets for our mod, using the examples that are provid
 
 8. Finally, add a "Manifest Name" path component:
 
-   ![](.\images\bepinexpluginpathreference.png)
+   ![](./images/bepinexpluginpathreference.png)
 
 That gives us a dynamic path to which our mods files will be placed, when we deploy them to the game.
 
@@ -166,13 +166,13 @@ That gives us a dynamic path to which our mods files will be placed, when we dep
 
 3. Now expand "Arguments" and in "Element 0" change the game ID to 264710 (for Subnautica) or 848450 (for Below Zero):
 
-   ![](.\images\subnauticasteamid.png)
+   ![](./images/subnauticasteamid.png)
 
 4. Set the "Working Directory" to `<GamePath>`.
 
 5. Now set the arguments size to "1" to get rid of the BepInEx parameters - we don't need those at the moment:
 
-   ![](.\images\launchparameters.png)
+   ![](./images/launchparameters.png)
 
 6. Click "Execute" and the game should run.
 
@@ -196,7 +196,7 @@ That gives us a dynamic path to which our mods files will be placed, when we dep
 
 8. You can also do this from the Quick Access drop downs in the Editor UI:
 
-   ![](.\images\thunderkitquickaccess.png)
+   ![](./images/thunderkitquickaccess.png)
 
 The cool thing about this is that you can now create new folders for new mods, create a manifest for each, and re-use the pipeline jobs that you created earlier without having to create new versions. If you do this, you may want to move the `pipeline` and `pathreference` objects out of your mod folder into a folder on the Asset root. This shows they can be shared by multiple mod projects.
 
@@ -204,11 +204,11 @@ The cool thing about this is that you can now create new folders for new mods, c
 
 Let's see if that's all worked!
 
-1. Having staged and deployed you mod, you should see if in your Subnautica game folder:![](.\images\plugindeployedtogame.png)
+1. Having staged and deployed you mod, you should see if in your Subnautica game folder:![](./images/plugindeployedtogame.png)
 
 2. Run the game, and open up the "player.log" file from: `%LOCALAPPDATA%low\Unknown Worlds\Subnautica`
 
 3. You should see the output from your log commands in your plugin script:
 
-   ![](.\images\thunderkitmodlog.png)
+   ![](./images/thunderkitmodlog.png)
 

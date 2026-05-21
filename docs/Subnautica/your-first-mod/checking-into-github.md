@@ -12,7 +12,7 @@ Creating a repository is easy:
 4. You can choose to initialise a README, set a "Git ignore" and select a license for your code:
 5. Click "Create repository"
 
-![](.\images\githubdesktopcreaterepo.png)
+![](./images/githubdesktopcreaterepo.png)
 
 ## Publish your repository
 
@@ -24,7 +24,7 @@ Publishing is even easier:
 
 To share with others:
 
-1. You can now go to the GitHub website and you should see your new repository listed![](.\images\githubrepoonline.png)
+1. You can now go to the GitHub website and you should see your new repository listed![](./images/githubrepoonline.png)
 
 2. Click the link to your repository
 

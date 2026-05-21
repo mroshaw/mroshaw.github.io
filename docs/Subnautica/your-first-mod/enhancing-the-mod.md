@@ -130,7 +130,7 @@ Right click and "Build" your mod, ensuring there are no errors. The DLL should a
 
 Start the game but now go into Options > Mods. You should see something like this:
 
-![](.\images\nautilusmodoptions.png)
+![](./images/nautilusmodoptions.png)
 
 You can adjust the multiplier using the slider. Set it to something really high, like 50. Now start or load a game, equip a new, and have a look again at the BepInEx log file:
 

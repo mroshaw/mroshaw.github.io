@@ -14,17 +14,17 @@ Simply unzip the DLL and copy it into the game BepInEx plugins folder. For me, t
 
 Now launch the game and you should see something like this. If you don't, try pressing F7 to toggle the display of the console windows:
 
-![](.\images\runtimeeditor.png)
+![](./images/runtimeeditor.png)
 
 Once you've got this working, click play and load up a save game.
 
 Within the Object Explorer, search for "Player".Click on the "Player", and you'll see a "real time" view of properties of the player character. You can review and tweak properties within this, to find values of interest and observe the behaviour of changes that you make, in real time.
 
-![](.\images\runtimeeditorplayer.png)
+![](./images/runtimeeditorplayer.png)
 
 In the bottom right, click `LiveMixin`. This is a frequently used component that gives a game object functionality and fields that manage health and damage. You'll see a field called `health`. Click that, and change the value to "50.0". Press F7 to toggle away the windows, and you should see that your player character health has dropped to 50%:
 
-![](.\images\unityexplorerplayerhealth50.png)
+![](./images/unityexplorerplayerhealth50.png)
 
 You now know exactly how to impact the player's current health, and you know exactly how that change will be reflected in the game and in the players gaming experience. As you can imagine, this is a significantly more efficient process than looking up info in dnSpy, writing code, building a DLL, deploying, reloading the game and testing.
 

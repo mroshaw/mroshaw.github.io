@@ -4,7 +4,7 @@ ThunderKit is a Unity plugin that allows for a Unity Editor focussed approach to
 
 Setting up ThunderKit is not for the faint hearted, and the process has some complex technical steps, new terminology to learn and some limitations to consider. But once it's set up, it really does offer a load of benefits. I've found that it works well for me when developing particularly complex mods - for example, the latest versions of my Pet mods are now built using ThunderKit - as well as making the process for creating smaller, simpler mods very quick indeed.
 
-![](.\images\thunderkitinaction.png)
+![](./images/thunderkitinaction.png)
 
 The image above show my Unity setup for the Subnautica Pets mod, where I can manage and modify my pet prefabs, customer console UI, and automate the build and deployment of the mod and it's associated asset bundle and localisation files.
 

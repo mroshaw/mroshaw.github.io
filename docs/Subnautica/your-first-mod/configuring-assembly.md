@@ -6,23 +6,23 @@ Right click the project in the Solution Explorer and select `Properties`.
 
 In case you've forgotten, your project sits within your solution and can be seen in the Solution Explorer:
 
-![](.\images\newprojectsolutionexplorer.png)
+![](./images/newprojectsolutionexplorer.png)
 
 In the image above, the `solution` is in red, and the `project` is in yellow. It's the "KnifeDamageMod" project that you want to right click.
 
 You'll see an Assembly Name and Default Namespace. Namespaces are important, as they allow you to "ring fence" your mod code to avoid conflicts with other mods that may use the same methods and functions. I like to set the Default Namespace as follows, though you're free to choose what works best for you:
 
-![](.\images\assemblyapplication.png)
+![](./images/assemblyapplication.png)
 
 Click the `Assembly` button and you'll see something like this:
 
-![](.\images\assemblyinformation.png)
+![](./images/assemblyinformation.png)
 
 Again, you can leave Title as it is, or change it, and you can set some of the data items here with your name and copyright info. Your initial version will be 1.0.0.0, so leave this as is too. Click OK to close that dialog.
 
 Still in Properties, click the Build item. Here, we want to `Allow unsafe code`:
 
-![](.\images\allowunsafecode.png)
+![](./images/allowunsafecode.png)
 
 This prevents any issues when we try to use protected methods and fields that have been "unlocked" for us via the Publicizer. If you've chosen not to use the Publicizer, you can leave this as is.
 
@@ -41,7 +41,7 @@ What this does is:
 You can now actually build your mod DLL and check it gets deployed successfully. To do this:
 
 1. Right click your project and select "Buid"
-2. Check the output, there should be no errors and the compiled DLL should have been copied successfully to your game folder:![](.\images\buildoutput.png)
-3. You can check by opening the game folder in Explorer:![](.\images\moddeployed.png)
+2. Check the output, there should be no errors and the compiled DLL should have been copied successfully to your game folder:![](./images/buildoutput.png)
+3. You can check by opening the game folder in Explorer:![](./images/moddeployed.png)
 
 Okay, we're almost ready to get coding!

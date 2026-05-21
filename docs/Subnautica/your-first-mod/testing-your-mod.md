@@ -14,7 +14,7 @@ item knife 1
 
 If you tab out of the game and open Windows Explorer, you'll see that BepInEx has created a log file for you. You can find this in <game>\BepInEx and it's called`LogOutput.log`:
 
-![](.\images\debugfilelocation_bepinex.png)
+![](./images/debugfilelocation_bepinex.png)
 
 Open this in Notepad, and you should see you familiar output:
 

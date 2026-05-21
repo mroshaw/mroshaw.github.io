@@ -31,7 +31,7 @@ If you've not run Publicizer, add these:
 
 You should see something like this:
 
-![](.\images\projectreferences.png)
+![](./images/projectreferences.png)
 
 If you are using Nautilus, it's important to tell the modding framework that your mod will be referencing it. You do this by adding an attribute in your plugin code:
 

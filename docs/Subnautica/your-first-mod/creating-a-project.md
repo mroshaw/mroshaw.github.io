@@ -2,13 +2,13 @@
 
 Hop into Visual Studio and create a new project. You must use the "Class Library (.NET Framework)" template for this:
 
-![](.\images\classlibrarytemplate.png)
+![](./images/classlibrarytemplate.png)
 
 Note that the "Class Library" template is not the one you want as it targets .NET Standard or .NET Core. You specifically want to select the template for .NET Framework.
 
 Let's call the project `KnifeDamageMod`, set a location and select `.NET Framework 4.7.2`. Click the Create button, and you're done! Who said this was difficult, right?!
 
-![](.\images\vsprojectconfiguration.png)
+![](./images/vsprojectconfiguration.png)
 
 Just to reiterate: you **must** select `.NET Framework 4.7.2`. If you don't see it, go back to the Visual Studio installer and select it. Alternatively, you can download it manually from [Microsoft.com](https://dotnet.microsoft.com/download/visual-studio-sdks)
 
@@ -20,7 +20,7 @@ In the Solution Explorer window, right click the `Solution` and change the name 
 
 You should have something like this:
 
-![](.\images\newprojectsolutionexplorer.png)
+![](./images/newprojectsolutionexplorer.png)
 
 So, what you have now are
 

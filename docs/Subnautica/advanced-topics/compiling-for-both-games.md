@@ -17,9 +17,9 @@ First up, we'll create some `configurations` to allow us to do different things 
 
 As you can see from the screenshots below, I have a bunch of mods that will work with Below Zero, one that'll work with Subnautica, and one that will work for both:
 
-![](.\images\associatedconfig_bz.png)
+![](./images/associatedconfig_bz.png)
 
-![](.\images\associatedconfig_sn.png)
+![](./images/associatedconfig_sn.png)
 
 Okay, we're getting somewhere!
 
