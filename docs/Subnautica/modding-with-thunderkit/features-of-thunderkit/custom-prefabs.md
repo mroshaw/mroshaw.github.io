@@ -1,6 +1,6 @@
 # Creating Custom Prefabs
 
-One of the most useful features that Unity and Thunderkit has to offer is allowing you to create custom prefabs, and instantiating instances of them in the games.
+One of the most useful features that Unity and Thunderkit has to offer is allowing you to create custom prefabs, and spawn instances of them in the games.
 
 We've already talked about what prefabs are, but how do you create your own for use in your mods?
 
