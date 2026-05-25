@@ -13,7 +13,7 @@ nav:
       - Setting Up:
           - Setting Up: Subnautica/setting-up/index.md
           - Software: Subnautica/setting-up/software.md
-          - Install and Setup: Subnautica/setting-up/install-ands-etup.md
+          - Install and Setup: Subnautica/setting-up/install-and-setup.md
 
       - Your First Mod:
           - Your First Mod: Subnautica/your-first-mod/index.md
@@ -29,9 +29,16 @@ nav:
       - Modding with ThunderKit:
           - Modding with ThunderKit: Subnautica/modding-with-thunderkit/index.md
           - Installing ThunderKit: Subnautica/modding-with-thunderkit/installing-thunderkit.md
-          - Features of ThunderKit: Subnautica/modding-with-thunderkit/features-of-thunderkit.md
           - Configure ThunderKit Mod: Subnautica/modding-with-thunderkit/configure-thunderkit-mod.md
-
+          
+          - Features of ThunderKit:
+              - Features of ThunderKit: Subnautica/modding-with-thunderkit/features-of-thunderkit/index.md     
+              - Custom Prefabs: Subnautica/modding-with-thunderkit/features-of-thunderkit/custom-prefabs.md
+              - Creating Asset Bundles: Subnautica/modding-with-thunderkit/features-of-thunderkit/create-asset-bundle.md
+              - Spawning Prefab Instances: Subnautica/modding-with-thunderkit/features-of-thunderkit/spawn-prefab.md
+              - Custom UI: Subnautica/modding-with-thunderkit/features-of-thunderkit/custom-ui.md
+              - Using Game Components: Subnautica/modding-with-thunderkit/features-of-thunderkit/use-game-components.md
+          
       - Advanced Topics:
           - Advanced Topics: Subnautica/advanced-topics/index.md
           - About MonoBehaviour: Subnautica/advanced-topics/about-monobehaviour.md

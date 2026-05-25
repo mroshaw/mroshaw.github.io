@@ -45,8 +45,12 @@ Now you can create your mod code!
 4. It's always good practice to contain your code in a unique namespace. I usually follow a pattern to ensure uniqueness, so I prefix everything with `DaftAppleGames`. You should use something different. For testing, you can use this code:
 
    ```c#
+   using System.Reflection;
    using BepInEx;
+   using BepInEx.Logging;
    using HarmonyLib;
+   using Nautilus.Utility;
+   using UnityEngine;
    
    namespace DaftAppleGames.MyFirstThunderKitMod
    {
@@ -57,18 +61,23 @@ Now you can create your mod code!
            private const string MyGuid = "com.daftapplegames.myfirstthunderkitmod";
            private const string PluginName = "MyFirstThunderKitMod";
            private const string VersionString = "1.0.0";
-   
+                   
            private static readonly Harmony Harmony = new Harmony(MyGuid);
+   
+           // Static Logger reference that we can use throughout our mode code
+           internal static ManualLogSource ModLogger;
            
            private void Awake()
            {
-               Logger.LogInfo($"PluginName: {PluginName}, VersionString: {VersionString} is loading...");
+               ModLogger =  Logger;
+               ModLogger.LogInfo($"PluginName: {PluginName}, VersionString: {VersionString} is loading...");
                Harmony.PatchAll();
-               Logger.LogInfo($"PluginName: {PluginName}, VersionString: {VersionString} is loaded.");
-               Logger.LogInfo($"Welcome to my first ThunderKit Plugin!");
+               ModLogger.LogInfo($"PluginName: {PluginName}, VersionString: {VersionString} is loaded.");
+               ModLogger.LogInfo($"Welcome to my first ThunderKit Plugin!");
            }
        }
    }
+   
    ```
 
 Looks familiar? This is exactly the same code you'd write for a "normal" BepInEx mod.
