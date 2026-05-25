@@ -45,7 +45,7 @@ Copyright &copy; 2026 Subnautica Modding
 #
 # Read more: https://zensical.org/docs/setup/navigation/
 nav = [
-  { "Modding Guides" = "index.md" },
+  { "Welcome Modders!" = "index.md" },
 
   { "Modding Subnautica" = [
       { "Modding Subnautica" = "Subnautica/index.md" },
