@@ -34,7 +34,7 @@ site_url = "https://subnautica2modding.github.io/"
 #
 # Read more: https://zensical.org/docs/setup/basics/#copyright
 copyright = """
-Copyright &copy; 2026 The authors
+Copyright &copy; 2026 Subnautica Modding
 """
 
 # Zensical supports both implicit navigation and explicitly defined navigation.
