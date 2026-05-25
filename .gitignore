@@ -6,3 +6,5 @@ vendor
 _config _local.yml
 # Gemfile
 Gemfile.lock
+
+site

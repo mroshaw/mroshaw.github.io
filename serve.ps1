@@ -4,5 +4,5 @@ Start-Job -ScriptBlock {
     Start-Process "http://127.0.0.1:8000/"
 } | Out-Null
 
-# Run MkDocs in the foreground - Ctrl+C will stop it as normal
-python -m mkdocs serve
+# Run Zensical in the foreground - Ctrl+C will stop it as normal
+python -m zensical serve
